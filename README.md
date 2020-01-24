@@ -6,10 +6,10 @@ Unlike the traditional dungeon crawler that either uses pre made levels, or pure
 
 ## Team Members
 
-LifeAlert
+ William Chen || LifeAlert 
 
-WaffleFisher
+Dylan Campopiano || WaffleFisher 
 
-wc6255
+Kevin Samsoe || wc6255
 
 
