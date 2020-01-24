@@ -1,15 +1,15 @@
 
 # Product Vision
 
-For the player who wants a game that adapts itself to their needs, this product is a 2D dungeon crawler that leads to a unique experience for each person.
-Unlike the traditional dungeon crawler that either uses pre made levels, or purely random ones, our product uses an emergent AI that generates levels based on the playstyle of the user.
+For the player who wants a game that can be continously challenging and replayable, this product is a 2D dungeon crawler that offers a unique experience for each person by adapting to their needs.
+Unlike the traditional dungeon crawler that uses either pre-made or purely random levels, our product uses an emergent AI that keeps track of the player's decisions and playstyle to generate new levels and content appropriately. 
 
 ## Team Members
 
- William Chen || LifeAlert 
+William Chen || wc6255
 
 Dylan Campopiano || WaffleFisher 
 
-Kevin Samsoe || wc6255
+Kevin Samsoe || LifeAlertt
 
 
