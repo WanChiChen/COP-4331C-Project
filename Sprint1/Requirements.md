@@ -3,8 +3,7 @@
 | Requirement ID | Requirement                 | Status        |
 |----------------|-----------------------------|---------------|
 
-1	                The game will be built        Finished
-                  using the Unity engine.
+|1	               |The game will be built using the Unity engine. | Finished |
                   
 2	                The game will be a            Started
                   top down 2D game.
