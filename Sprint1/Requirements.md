@@ -2,7 +2,6 @@
 
 Requirement ID | Requirement | Status
 ---------------|-------------|-------
-
 1	| The game will be built using the Unity engine. | Finished 
 2	| The game will be a top down 2D game. | Started
 3	| The game will be a dungeon crawler. | Started
