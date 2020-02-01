@@ -23,3 +23,9 @@ Kevin Samsoe || LifeAlertt
 [Sprint 1 Backlog](https://github.com/wc6255/COP-4331C-Project/blob/master/Sprint1/SprintBacklog.md)
 
 [Requirements](https://github.com/wc6255/COP-4331C-Project/blob/master/Sprint1/Requirements.md)
+
+[Burndown Chart](https://docs.google.com/spreadsheets/d/e/2PACX-1vRpCwHK0m_Y5uWUopUpRww97rjWhkzWD7Qz4clGjjC2NcAZ5TmYNp6sn4vo_1VzIbScXj9wZ1RhW918/pubhtml)
+
+[Velocity Chart](https://docs.google.com/spreadsheets/d/e/2PACX-1vRpCwHK0m_Y5uWUopUpRww97rjWhkzWD7Qz4clGjjC2NcAZ5TmYNp6sn4vo_1VzIbScXj9wZ1RhW918/pubhtml)
+
+[Trello Board](https://trello.com/b/V1pN2FpK/project)
