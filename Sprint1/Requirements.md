@@ -17,6 +17,6 @@ Requirement ID | Requirement | Status
 13 | The game will have an inventory system where the player can swap out equipment earned from the loot drops. | Not Started
 14 | The game will have skills that are unique to each class. | Not Started
 15 | The game will have a skill tree that can be unlocked by earning XP. | Not Started
-16 | The game will have XP that can be earned by defeating enemies.
+16 | The game will have XP that can be earned by defeating enemies. | Not Started
 17 | The game will have a variety of enemies that can be encountered, as well as boss enemies. | Not Started
 18 | The enemies in the game can drop equipment, not all enemies will drop the same equipment. | Not Started
