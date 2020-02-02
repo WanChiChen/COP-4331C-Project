@@ -16,7 +16,7 @@
 |12 | 0008|The game will have multiple classes to choose from, each with unique abilities. | Not Started|
 |13 | 0006|The game will have an inventory system where the player can swap out equipment earned from the loot drops. | Not Started|
 |14 | 0008|The game will have skills that are unique to each class. | Not Started|
-|15 | temp|The game will have a skill tree that can be unlocked by earning XP. | Not Started|
-|16 | temp|The game will have XP that can be earned by defeating enemies. | Not Started|
-|17 | temp|The game will have a variety of enemies that can be encountered, as well as boss enemies. | Not Started|
-|18 |temp|The enemies in the game can drop equipment, not all enemies will drop the same equipment. | Not Started|
+|15 | 0018|The game will have a skill tree that can be unlocked by earning XP. | Not Started|
+|16 | 0017|The game will have XP that can be earned by defeating enemies. | Not Started|
+|17 | 0019|The game will have a variety of enemies that can be encountered, as well as boss enemies. | Not Started|
+|18 |0020|The enemies in the game can drop equipment, not all enemies will drop the same equipment. | Not Started|
