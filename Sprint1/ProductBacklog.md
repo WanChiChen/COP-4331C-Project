@@ -19,3 +19,7 @@
 |0014|As a user, I can save and load game files. |3|5| Player can save a current game state and load back into it with no changes to the state. |TO DO|
 |0015|As a user, I can close the game to the main menu. |3|3|Player can return to main menu screen from the game. |TO DO|
 |0016|As a user, I can change control options. |3|4|User can change which keys are bounded to game inputs. |TO DO|
+|0017|As a player, I can level by collecting experience from defeated enemies|4|7|Player will obtain high levels by defeating enemies|TO DO|
+|0018|As a player, I can unlock new skills in a talent tree as I level up. |6|7|Player will obtain new skills while leveling up|TO DO|
+|0019|As a player, I can encounter a variety of enemies ranging in type and difficulty. |7|8| Player will encounter different enemies throughout the game|TO DO|
+|0020|As a player, I can collect dropped items from enemies.|4|7| Enemies will sometimes drop loot that the player can collect|TO DO|
