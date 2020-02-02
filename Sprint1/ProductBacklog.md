@@ -3,7 +3,7 @@
 | ID | User Story | Effort | Priority | Validation Criteria | Status |
 |----|------------|--------|----------|---------------------|--------|
 |0000|As a user, I can open the game to play it. |2|10|The game is able to be opened from the built application. |DONE|
-|0001|As a player, I can move around. |3|9|Player movement is able to control the character sprite in near real-time. |DONE|
+|0001|As a player, I can move around. |3|9|Player is able to control the character sprite movement in near real-time. |DONE|
 |0002|As a player, I can interact with objects. |5|9|Player can pick up, collide with, and be damaged by objects. |TO DO|
 |0003|As a player, I can open my inventory to check for items. |5|8|Player can open an inventory screen and see obtained/equipped items. |TO DO|
 |0004|As a player, I can collect items. |4|8|Player can collect items and see them in the player's inventory. |TO DO|
