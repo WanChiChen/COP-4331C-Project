@@ -18,11 +18,11 @@ Kevin Samsoe || LifeAlertt
 
 ## Sprint 1
 
-[Product Backlog](https://github.com/wc6255/COP-4331C-Project/blob/master/Sprint1/ProductBacklog.md)
+[Product Backlog](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/ProductBacklog.md)
 
-[Sprint 1 Backlog](https://github.com/wc6255/COP-4331C-Project/blob/master/Sprint1/SprintBacklog.md)
+[Sprint 1 Backlog](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/SprintBacklog.md)
 
-[Requirements](https://github.com/wc6255/COP-4331C-Project/blob/master/Sprint1/Requirements.md)
+[Requirements](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/Requirements.md)
 
 [Burndown Chart](https://docs.google.com/spreadsheets/d/e/2PACX-1vRpCwHK0m_Y5uWUopUpRww97rjWhkzWD7Qz4clGjjC2NcAZ5TmYNp6sn4vo_1VzIbScXj9wZ1RhW918/pubhtml)
 
