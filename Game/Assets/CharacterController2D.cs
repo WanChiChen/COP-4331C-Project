@@ -20,19 +20,37 @@ public class CharacterController2D : MonoBehaviour
 
     private BoxCollider2D boxCollider;
 
-    private Vector2 velocity;
+    private Rigidbody2D rbody;
+
+    float moveInputx;
+
+    float moveInputy;
 
     private void Awake()
     {      
+        // initialize boxcollider and rigidbody
         boxCollider = GetComponent<BoxCollider2D>();
+        rbody = GetComponent<Rigidbody2D>();
+        rbody.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+        rbody.interpolation = RigidbodyInterpolation2D.Extrapolate;
+    }
+
+    private void FixedUpdate()
+    {
+        // Update velocity of the player
+        rbody.velocity = new Vector2(moveInputx * speed, moveInputy * speed);
     }
 
     private void Update()
     {
-        transform.Translate(velocity * Time.deltaTime);
-        float moveInputx = Input.GetAxisRaw("Horizontal");
-        float moveInputy = Input.GetAxisRaw("Vertical");
-        velocity.x = Mathf.MoveTowards(velocity.x, speed * moveInputx, walkAcceleration * Time.deltaTime);
-        velocity.y = Mathf.MoveTowards(velocity.y, speed * moveInputy, walkAcceleration * Time.deltaTime);
+        // Update movement inputs
+        moveInputx = Input.GetAxis("Horizontal");
+        moveInputy = Input.GetAxis("Vertical");
+    }
+
+    // Called when the player collides with another collidable object
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        Debug.Log("Player collided");
     }
 }
