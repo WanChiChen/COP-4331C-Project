@@ -610,10 +610,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 253eb3b7a61c48d49a42e296549cc3bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 9
+  speed: 7
   walkAcceleration: 75
   airAcceleration: 30
-  groundDeceleration: 70
+  groundDeceleration: 50
   jumpHeight: 4
 --- !u!61 &786270579
 BoxCollider2D:
@@ -719,14 +719,14 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_LinearDrag: 10
+  m_AngularDrag: 10
+  m_GravityScale: 0
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 2
   m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_CollisionDetection: 1
+  m_Constraints: 4
 --- !u!1 &1196820314
 GameObject:
   m_ObjectHideFlags: 0

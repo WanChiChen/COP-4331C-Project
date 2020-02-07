@@ -4,7 +4,7 @@
 public class CharacterController2D : MonoBehaviour
 {
     [SerializeField, Tooltip("Max speed, in units per second, that the character moves.")]
-    float speed = 9;
+    float speed = 4;
 
     [SerializeField, Tooltip("Acceleration while grounded.")]
     float walkAcceleration = 75;
@@ -13,7 +13,7 @@ public class CharacterController2D : MonoBehaviour
     float airAcceleration = 30;
 
     [SerializeField, Tooltip("Deceleration applied when character is grounded and not attempting to move.")]
-    float groundDeceleration = 70;
+    float groundDeceleration = 150;
 
     [SerializeField, Tooltip("Max height the character will jump regardless of gravity")]
     float jumpHeight = 4;
