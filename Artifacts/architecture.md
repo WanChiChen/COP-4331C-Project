@@ -3,6 +3,7 @@
 # Major Classes
 
 # Data Design
+This section does not apply to our project, as we are not using any databases. Our product is runs purely on a local level.
 
 # Business Rules
 
