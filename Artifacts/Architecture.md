@@ -92,8 +92,13 @@ Game assets could be re-used for future projects with similar artistic themes. T
 # Change Strategy
 
 1.) Identify the requested change.
+
 2.) Discuss the change with group members.
+
 3.) Evaluate high-level impacts.
+
 4.) Evaluate functional impacts.
+
 5.) Modify the affected user stories.
+
 6.) Add to product backlog.
