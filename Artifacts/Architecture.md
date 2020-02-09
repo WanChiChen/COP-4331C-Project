@@ -8,12 +8,24 @@
 
 [Component level game environment diagram](https://github.com/wc6255/COP-4331C-Project/blob/master/images/EnvironmentComponentView.png)
 
+Component | Relevant User Stories | Description |
+----------|-----------------------|-------------|
+Create Game Screen| 0014 | Allows user to pick a character name, class, and generate a new game.|
+Load Game Screen | 0014 | Allows user to select from a previously saved game and continue where they left off.|
+Options Screen | 0016 | Allows user to edit key-bindings, sound options, and control options. | 
+Talent Tree Screen | 0018 | Allows users to view and edit chosen talents and abilities. |
+Inventory Screen | 0003, 0006, 0020 | Allows users to view and organize inventory and equip items. |
+In-game Menu Screen | 0014, 0015, 0016 | Allows users to load into another game, save the current game, change options, or exit to the main menu. |
+
 # Major Classes
 
 <img src = "/images/ClassDiagram.png" width="1000" >
 
+Class | Relevant User Stories | Description |
+----------|-----------------------|-------------|
+
 # Data Design
-This section does not apply to our project, as we are not using any databases. Our product is runs purely on a local level.
+This section does not apply to our project, as we are not using any databases. Our product runs purely on a local level.
 
 # Business Rules
 
