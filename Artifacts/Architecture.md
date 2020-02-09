@@ -40,19 +40,40 @@ User assets such as game settings and save files will be stored in the current u
 
 # Performance
 
+As a lightweight 2D game, performance should be fast and consistent across modern machines. Framerate drops will be minimized by loading and unloading rooms accordingly, but should only seriously occur in the most animation and graphic heavy levels on lower-end machines. Transition times between rooms should be less than a second due to pre-loading rooms close to the player. Opening sub-menus such as the inventory and the talent tree should occur in less than half of a second. The longest loading times the user will encounter will only be when creating a new game or loading a game due to more information being processed. 
+
 # Scalability
+
+The game will be built in a modular, object-oriented manner, allowing for easy creation of additional content. Enemies, bosses, and rooms are pre-designed as templats and added to a queue for the level generation to randomly select from, so the creation of new designs can be easily added to that queue.  
 
 # Interoperability
 
+This section does not apply to our project, as we are not planning on sharing any data with other services, applications, or devices.
+
 # Internationalization/Localization
+
+Possible internationalization/localization will be handled by importing the appropriate fonts for languages that use different scripts and translating the game's content and interfaces.
 
 # Input/Output
 
+The majority of the input will be user generated, such as keyboard presses to control the in-game character and mouses clicks to select items from the inventory and menu. File input will occur when loading save files. File output will occur when creating and saving save files.
+
 # Error Processing
+
+Error processing will primarily deal with errors from file input/output and missing assets and will be dealt with by notifying the user. These errors will be detected when the game is unable to read or write to game files or load a necessary game asset, and will alert the user with a pop-up window. User errors will be handled through user notification (invalid character name).
+Game crashes will be detected and logged appropriately.
 
 # Fault Tolerance
 
+The application will have high tolerance for asset faults and attempt to continue running with invalid/missing assets. The application will have low tolerance for file input and output. If the application is unable to read a save file, it will not attempt to load the file and notify the user with an error. If the application is unable to properly write to a save file, it will not attempt to continue writing and notify the user with an error.
+
 # Architectural Feasibility
+
+This application is technically feasible for the base development of a dungeon crawler game. Game mechanics such as proper collisions, interactions, attacking, health, and level generation are the most feasible. Implementation of a complete AI that can react to the user's playstyle may be less possible, but will still be feasible with a normal algorithm.
+
+This application should be artistically feasible. Assets such as backgrounds, animations, and sprites will be very feasible to create at a functional level, but may not be completely satisfactory or high-level from an artistic lens.
+
+This application is economically feasible, using the free versions of GitHub, Trello, and Unity for product development.
 
 # Overengineering
 
