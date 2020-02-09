@@ -23,6 +23,16 @@ In-game Menu Screen | 0014, 0015, 0016 | Allows users to load into another game,
 
 Class | Relevant User Stories | Description |
 ----------|-----------------------|-------------|
+Entity| 0002 | Any interactble object with a sprite.|
+Objects| 0002 | Any inanimate entity.|
+Active Entities| 0002 | Any entity that can move, attack, or exhibit some behavior.|
+Item| 0003, 0004, 0006, 0007, 0020 | Any entity collectible by the player.|
+Player| 0001, 0002, 0003, 0004, 0005, 0006, 0007, 0008, 0010, 0013, 0017, 0018, 0020| What the user controls within the game environment.|
+Enemy| 0009, 0011, 0012, 0017, 0019, 0020| Any entity hostile to the player entity.|
+Equipment| 0006 | Any item that can be equipped by the player.|
+Usable Item| 0006, 0007 | Any item that can be used by the player.|
+Boss| 0009, 0011, 0012, 0017, 0019, 0020 | Any enemies that have more abilities than default attacks.|
+
 
 # Data Design
 This section does not apply to our project, as we are not using any databases. Our product runs purely on a local level.
