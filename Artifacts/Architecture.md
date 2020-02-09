@@ -77,8 +77,23 @@ This application is economically feasible, using the free versions of GitHub, Tr
 
 # Overengineering
 
+Possible overengineering could occur by creating too many classes/abilities for the player to choose from and using an over-kill algorithm for level generation. Overengineering should be avoided by focusing specfically on what the user needs to fully enjoy the game without being overloaded by options.
+
 # Build-vs-Buy Decisions
+
+We are choosing to use Unity as our game engine because of its effectiveness in rendering 2D scenes, portability, relative ease of use, economic feasability, and wealth of support and resources. Building our own game engine would require more time and resources than the rest of the game combined.
+
+We wil be building most our game's artistic assets, such as sprites, to unite the game's aesthetics for better user immersion. Some third-party assets may be used for animations, fonts, or icons. 
 
 # Reuse
 
+Game assets could be re-used for future projects with similar artistic themes. The level generation algorithm can be modified to fit other genres such as first-person-shooters or open-world rpgs.
+
 # Change Strategy
+
+1.) Identify the requested change.
+2.) Discuss the change with group members.
+3.) Evaluate high-level impacts.
+4.) Evaluate functional impacts.
+5.) Modify the affected user stories.
+6.) Add to product backlog.
