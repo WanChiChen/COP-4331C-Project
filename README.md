@@ -30,4 +30,4 @@ Kevin Samsoe || LifeAlertt
 
 [Trello Board](https://trello.com/b/V1pN2FpK/project)
 
-[Architecure] (https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/Architecture.md)
+[Architecure](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/Architecture.md)
