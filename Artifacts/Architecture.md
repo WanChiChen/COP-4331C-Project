@@ -1,4 +1,5 @@
 # Program Organization
+
 <img src = "/images/ContextView.png" width="1000" >
 
 [Container level diagram](https://github.com/wc6255/COP-4331C-Project/blob/master/images/ContainerView.png)
@@ -8,6 +9,8 @@
 [Component level game environment diagram](https://github.com/wc6255/COP-4331C-Project/blob/master/images/EnvironmentComponentView.png)
 
 # Major Classes
+
+<img src = "/images/ClassDiagram.png" width="1000" >
 
 # Data Design
 This section does not apply to our project, as we are not using any databases. Our product is runs purely on a local level.
