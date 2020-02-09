@@ -23,7 +23,7 @@ In-game Menu Screen | 0014, 0015, 0016 | Allows users to load into another game,
 
 Class | Relevant User Stories | Description |
 ----------|-----------------------|-------------|
-Entity| 0002 | Any interactble object with a sprite.|
+Entity| 0002 | Any interactable object with a sprite.|
 Objects| 0002 | Any inanimate entity.|
 Active Entities| 0002 | Any entity that can move, attack, or exhibit some behavior.|
 Item| 0003, 0004, 0006, 0007, 0020 | Any entity collectible by the player.|
