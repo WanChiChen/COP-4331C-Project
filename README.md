@@ -18,31 +18,35 @@ Kevin Samsoe || LifeAlertt
 
 ## Sprint 1
 
-[Product Backlog](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/ProductBacklog.md)
+- [Product Backlog](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/ProductBacklog.md)
 
-[Sprint 1 Backlog](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/Sprint1Backlog.md)
+- [Sprint 1 Backlog](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/Sprint1Backlog.md)
 
-[Requirements](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/Requirements.md)
+- [Requirements](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/Requirements.md)
 
-[Burndown Chart](https://docs.google.com/spreadsheets/d/e/2PACX-1vRpCwHK0m_Y5uWUopUpRww97rjWhkzWD7Qz4clGjjC2NcAZ5TmYNp6sn4vo_1VzIbScXj9wZ1RhW918/pubhtml)
+- [Burndown Chart](https://docs.google.com/spreadsheets/d/e/2PACX-1vRpCwHK0m_Y5uWUopUpRww97rjWhkzWD7Qz4clGjjC2NcAZ5TmYNp6sn4vo_1VzIbScXj9wZ1RhW918/pubhtml)
 
-[Velocity Chart](https://docs.google.com/spreadsheets/d/e/2PACX-1vRpCwHK0m_Y5uWUopUpRww97rjWhkzWD7Qz4clGjjC2NcAZ5TmYNp6sn4vo_1VzIbScXj9wZ1RhW918/pubhtml)
+- [Velocity Chart](https://docs.google.com/spreadsheets/d/e/2PACX-1vRpCwHK0m_Y5uWUopUpRww97rjWhkzWD7Qz4clGjjC2NcAZ5TmYNp6sn4vo_1VzIbScXj9wZ1RhW918/pubhtml)
 
-[Trello Board](https://trello.com/b/V1pN2FpK/project)
+- [Trello Board](https://trello.com/b/V1pN2FpK/project)
 
 
 ## Sprint 2
 
-[Product Backlog](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/ProductBacklog.md)
+- [Product Backlog](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/ProductBacklog.md)
 
-[Sprint 2 Backlog](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/Sprint2Backlog.md)
+- [Sprint 2 Backlog](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/Sprint2Backlog.md)
 
-[Requirements](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/Requirements.md)
+- [Requirements](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/Requirements.md)
 
-[Burndown Chart](https://docs.google.com/spreadsheets/d/e/2PACX-1vRpCwHK0m_Y5uWUopUpRww97rjWhkzWD7Qz4clGjjC2NcAZ5TmYNp6sn4vo_1VzIbScXj9wZ1RhW918/pubhtml)
+- [Burndown Chart](https://docs.google.com/spreadsheets/d/e/2PACX-1vRpCwHK0m_Y5uWUopUpRww97rjWhkzWD7Qz4clGjjC2NcAZ5TmYNp6sn4vo_1VzIbScXj9wZ1RhW918/pubhtml)
 
-[Velocity Chart](https://docs.google.com/spreadsheets/d/e/2PACX-1vRpCwHK0m_Y5uWUopUpRww97rjWhkzWD7Qz4clGjjC2NcAZ5TmYNp6sn4vo_1VzIbScXj9wZ1RhW918/pubhtml)
+- [Velocity Chart](https://docs.google.com/spreadsheets/d/e/2PACX-1vRpCwHK0m_Y5uWUopUpRww97rjWhkzWD7Qz4clGjjC2NcAZ5TmYNp6sn4vo_1VzIbScXj9wZ1RhW918/pubhtml)
 
-[Trello Board](https://trello.com/b/V1pN2FpK/project)
+- [Trello Board](https://trello.com/b/V1pN2FpK/project)
 
-[Architecure](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/Architecture.md)
+- Design Documents
+
+  - [Architecure](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/Architecture.md)
+  - [Class Diagrams](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/Architecture.md#major-classes)
+  - [Sequence Diagrams](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/Architecture.md#program-organization)
