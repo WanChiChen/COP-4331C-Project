@@ -1,5 +1,12 @@
 # Program Organization
 <img src = "/images/ContextView.png" width="1000" >
+
+[Container level diagram](https://github.com/wc6255/COP-4331C-Project/blob/master/images/ContainerView.png)
+
+[Component level main menu diagram](https://github.com/wc6255/COP-4331C-Project/blob/master/images/MenuComponentView.png)
+
+[Component level game environment diagram](https://github.com/wc6255/COP-4331C-Project/blob/master/images/EnvironmentComponentView.png)
+
 # Major Classes
 
 # Data Design
