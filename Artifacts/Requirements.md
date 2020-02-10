@@ -1,7 +1,7 @@
 # Requirements
 
 |Requirement ID | User Story ID| Priority| Requirement | Status|
-|---------------|--------------|-------------|-------
+|---------------|--------------|-------------|---------|-------|
 |1	| 0001|Necessary|The game shall be built using the Unity engine. | Working |
 |2	| 0001|Necessary|The game shall be a top down 2D game. | Working|
 |3	| 0001|Necessary|The game shall be a dungeon crawler. | Working|
