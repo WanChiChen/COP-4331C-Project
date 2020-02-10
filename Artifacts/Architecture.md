@@ -52,7 +52,7 @@ Business Rule ID | Rule
 
 Upon opening the application, the user will will encounter the main menu screen. From the main menu, the user can start a new game, load or delete an existing game, change game settings and options, or close the application.
 
-<img src = "/images/UI Screens/MainMenu.png" width="1000" >
+<img src = "/images/UI Screens/Main Menu.png" width="1000" >
 
 When the user chooses to change game settings and options, the main menu will transition to an options screen, where the user will be presented with a list of adjustable settings. At the bottom of the options screen will be buttons to allows the user to save current settings, revert to default settings, or return to the main menu.
 
