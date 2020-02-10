@@ -2,21 +2,22 @@
 
 |Requirement ID | User Story ID| Priority| Requirement | Status|
 |---------------|--------------|-------------|---------|-------|
-|1	| 0001|Necessary|The game shall be built using the Unity engine. | Working |
-|2	| 0001|Necessary|The game shall be a top down 2D game. | Working|
-|3	| 0001|Necessary|The game shall be a dungeon crawler. | Working|
-|4	| 0015|Necessary|The game shall have a main menu. | Planned|
-|5	| 0014|Necessary|The game shall be able to save your progress, saves can be accessed from the main menu. | Planned|
-|6	| 0016|Important|The game shall have an options menu to change key bindings, resolution, and more. | Planned|
-|7	| 0011|Important|The game shall use an AI to generate levels. | Planned|
-|8 | 0011|Important|The AI generated levels shall be based on the recent playstyle of the user, and will be done by keeping track of average statistics (distance from enemies, damage taken, items/skill used, etc.). | Planned|
-|9 |	0011|Necessary|The game shall use pre-designed, modular rooms that the AI will assemble for each level. |Planned|
-|10 | 0012|Important|The game shall increase in difficulty over time. | Planned|
-|11 | 0004|Necessary|The game shall have a loot drop system. | Planned|
-|12 | 0008|Necessary|The game shall have multiple classes to choose from, each with unique abilities. | Planned|
-|13 | 0006|Necessary|The game shall have an inventory system where the player can swap out equipment earned from the loot drops. | Planned|
-|14 | 0008|Necessary|The game shall have skills that are unique to each class. | Planned|
-|15 | 0018|Necessary|The game shall have a skill tree that can be unlocked by earning XP. | Planned|
-|16 | 0017|Necessary|The game shall have XP that can be earned by defeating enemies. | Planned|
-|17 | 0019|Necessary|The game shall have a variety of enemies that can be encountered, as well as boss enemies. | Planned|
-|18 |0020|Necessary|The enemies in the game can drop equipment, not all enemies will drop the same equipment. | Planned|
+|1	| 001|Necessary|The application shall be able to be successfully launched. | Working |
+|4	| 015|Necessary|The game shall have a main menu. | Working|
+|5	| 014|Necessary|The game shall be able to save your progress.| Planned|
+|6	| 014|Necessary|The user shall be able to load saved game files.| Planned|
+|7	| 016|Important|The game shall have an options menu to change key bindings and settings. | Planned|
+|8	| 011|Important|The game shall generate levels as the user progresses through the game. |Working|
+|9  | 011|Important|The levels shall be generated based on tracked user statistics (distance from enemies, damage taken, items/skill used, etc.). | Planned|
+|10 |	011|Necessary|The game shall use modular rooms that will be assembled together for each level. |Working|
+|11 | 012|Important|The game shall increase in difficulty as the user progresses. | Planned|
+|12 | 004|Necessary|The user shall be able to collect items. | Planned|
+|13 | 008|Necessary|The user shall be select from multiple pre-designed classes.| Planned|
+|14 | 006|Necessary|The user shall be able to manage items and equipment from an inventory screen.| Working|
+|15 | 008|Necessary|User selectable classes shall have abilitites and attributes unique to each class.| Planned|
+|16 | 018|Necessary|The game shall have a skill tree that can be unlocked by earning XP. | Planned|
+|17 | 017|Necessary|The game shall have XP that can be earned by defeating enemies. | Planned|
+|18 | 019|Necessary|The game shall have a variety of enemies that can be encountered.| Planned|
+|19 | 020|Necessary|Enemies shall be able to drop items. | Planned|
+|20 | 005|Necessary|The user shall be able to traverse within and between rooms. | Planned|
+|21 | 009|Necessary|The user shall be able to attack enemies and objects. | Working|
