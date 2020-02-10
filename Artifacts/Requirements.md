@@ -17,6 +17,6 @@
 |13 | 0006|Necessary|The game shall have an inventory system where the player can swap out equipment earned from the loot drops. | Planned|
 |14 | 0008|Necessary|The game shall have skills that are unique to each class. | Planned|
 |15 | 0018|Necessary|The game shall have a skill tree that can be unlocked by earning XP. | Planned|
-|16 | 0017|Necessary||The game shall have XP that can be earned by defeating enemies. | Planned|
+|16 | 0017|Necessary|The game shall have XP that can be earned by defeating enemies. | Planned|
 |17 | 0019|Necessary|The game shall have a variety of enemies that can be encountered, as well as boss enemies. | Planned|
 |18 |0020|Necessary|The enemies in the game can drop equipment, not all enemies will drop the same equipment. | Planned|
