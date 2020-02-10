@@ -41,7 +41,7 @@ Kevin Samsoe || LifeAlertt
 
 - [Burndown Chart](https://docs.google.com/spreadsheets/d/1cEIhjvbf4xIU_I3rYDAOpBDpUd6463Z5NWv78gA_hYI/edit?usp=sharing)
 
-- [Velocity Chart](https://docs.google.com/spreadsheets/d/e/2PACX-1vRpCwHK0m_Y5uWUopUpRww97rjWhkzWD7Qz4clGjjC2NcAZ5TmYNp6sn4vo_1VzIbScXj9wZ1RhW918/pubhtml)
+- [Velocity Chart](https://docs.google.com/spreadsheets/d/1cEIhjvbf4xIU_I3rYDAOpBDpUd6463Z5NWv78gA_hYI/edit?usp=sharing)
 
 - [Trello Board](https://trello.com/b/V1pN2FpK/project)
 
