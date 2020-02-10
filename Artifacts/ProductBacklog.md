@@ -4,7 +4,7 @@
 |----|------------|--------|----------|---------------------|--------|
 |0000|As a user, I can open the game to play it. |2|10|The game is able to be opened from the built application. |DONE|
 |0001|As a player, I can move around. |3|9|Player is able to control the character sprite movement in near real-time. |TESTING|
-|0002|As a player, I can interact with objects. |5|9|Player can pick up, collide with, and be damaged by objects. |TESTING|
+|0002|As a player, I can interact with objects. |5|9|Player can pick up and be damaged by objects. |TESTING|
 |0003|As a player, I can open my inventory to check for items. |5|8|Player can open an inventory screen and see obtained/equipped items. |TESTING|
 |0004|As a player, I can collect items. |4|8|Player can collect items and see them in the player's inventory. |TO DO|
 |0005|As a player, I can move between rooms. |4|7|Player can transition between rooms with no issues or extreme delays. |TO DO|
@@ -23,3 +23,4 @@
 |0018|As a player, I can unlock new skills in a talent tree as I level up. |6|7|Player will obtain new skills while leveling up|TO DO|
 |0019|As a player, I can encounter a variety of enemies ranging in type and difficulty. |7|8| Player will encounter different enemies throughout the game|TO DO|
 |0020|As a player, I can collect dropped items from enemies.|4|7| Enemies will sometimes drop loot that the player can collect|TO DO|
+|0021| As a player, I can collide with objects. |4|9| Player can collide with different objects and entities properly.| TESTING|
