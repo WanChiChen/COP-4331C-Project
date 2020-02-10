@@ -2,11 +2,17 @@
 
 <img src = "/images/ContextView.png" width="1000" >
 
-[Container level diagram](https://github.com/wc6255/COP-4331C-Project/blob/master/images/ContainerView.png)
+Container Level Diagram
 
-[Component level main menu diagram](https://github.com/wc6255/COP-4331C-Project/blob/master/images/MenuComponentView.png)
+<img src = "/images/ContainerView.png" width="1000" >
 
-[Component level game environment diagram](https://github.com/wc6255/COP-4331C-Project/blob/master/images/EnvironmentComponentView.png)
+Main Menu Component Level Diagram
+
+<img src = "/images/MenuComponentView.png" width="1000" >
+
+Game Environment Component Level Diagram
+
+<img src = "/images/EnvironmentComponentView.png" width="1000" >
 
 Component | Relevant User Stories | Description |
 ----------|-----------------------|-------------|
