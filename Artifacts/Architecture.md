@@ -52,11 +52,20 @@ Business Rule ID | Rule
 
 Upon opening the application, the user will will encounter the main menu screen. From the main menu, the user can start a new game, load or delete an existing game, change game settings and options, or close the application.
 
+<img src = "/images/UI Screens/MainMenu.png" width="1000" >
+
 When the user chooses to change game settings and options, the main menu will transition to an options screen, where the user will be presented with a list of adjustable settings. At the bottom of the options screen will be buttons to allows the user to save current settings, revert to default settings, or return to the main menu.
 
-When the user creates or loads a game file, the application will transition to a game screen. The game screen consists of a top-down view of the game overlayed by the in-game user interface. This UI will display the player's current health and resources, current level, and current game progress. It will also have buttons to open the player's inventory and talent tree. Doing so will pause the game and open an in-game pop-up of chosen option. Pressing a certain button within the game screen will pause the game and open an in-game menu. From here, the player can choose to save the game, load another game file, change options, exit to the main menu, or return to the game screen.
+<img src = "/images/UI Screens/Options.png" width="1000" >
 
-TO DO: ADD UI SCREENS
+When the user creates or loads a game file, the application will transition to a game screen. The game screen consists of a top-down view of the game overlayed by the in-game user interface. This UI will display the player's current health and resources, current level, and current game progress. It will also have buttons to open the player's inventory and talent tree. Doing so will pause the game and open an in-game pop-up of chosen option. 
+
+<img src = "/images/UI Screens/GameUI.png" width="1000" >
+
+Pressing a certain button within the game screen will pause the game and open an in-game menu. From here, the player can choose to save the game, load another game file, change options, exit to the main menu, or return to the game screen.
+
+<img src = "/images/UI Screens/Paused.png" width="1000" >
+
 
 # Resource Management
 
