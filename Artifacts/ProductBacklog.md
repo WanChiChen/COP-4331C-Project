@@ -4,8 +4,8 @@
 |----|------------|--------|----------|---------------------|--------|
 |0000|As a user, I can open the game to play it. |2|10|The game is able to be opened from the built application. |DONE|
 |0001|As a player, I can move around. |3|9|Player is able to control the character sprite movement in near real-time. |TESTING|
-|0002|As a player, I can interact with objects. |5|9|Player can pick up, collide with, and be damaged by objects. |TO DO|
-|0003|As a player, I can open my inventory to check for items. |5|8|Player can open an inventory screen and see obtained/equipped items. |TO DO|
+|0002|As a player, I can interact with objects. |5|9|Player can pick up, collide with, and be damaged by objects. |TESTING|
+|0003|As a player, I can open my inventory to check for items. |5|8|Player can open an inventory screen and see obtained/equipped items. |TESTING|
 |0004|As a player, I can collect items. |4|8|Player can collect items and see them in the player's inventory. |TO DO|
 |0005|As a player, I can move between rooms. |4|7|Player can transition between rooms with no issues or extreme delays. |TO DO|
 |0006|As a player, I can equip tools and equipment. |5|8|Player can move items from player inventory to player equipment manager. |TO DO|
@@ -15,7 +15,7 @@
 |0010|As a player, I can die in the game. |2|9|Player can have health lowered to 0, causing the game to end. |TO DO|
 |0011|As a player, I can experience adaptive level and enemy design. |10|10| Level design and enemy behavior can respond to patterns/changes in player behavior. |TO DO|
 |0012|As a player, I can experience scaling difficulty as the game progresses. |8|7| Stronger or more numerous enemies can be encounntered as player progresses through the game. |TO DO|
-|0013|As a player, I can see the changes in my health/resources. |5|8| Player can observe changes in player-owned resources and their corresponding effects as a result of diminished/increased resource amounts. |TO DO|
+|0013|As a player, I can see the changes in my health/resources. |5|8| Player can observe changes in player-owned resources and their corresponding effects as a result of diminished/increased resource amounts. |TESTING|
 |0014|As a user, I can save and load game files. |3|5| Player can save a current game state and load back into it with no changes to the state. |TO DO|
 |0015|As a user, I can close the game to the main menu. |3|3|Player can return to main menu screen from the game. |TO DO|
 |0016|As a user, I can change control options. |3|4|User can change which keys are bounded to game inputs. |TO DO|
