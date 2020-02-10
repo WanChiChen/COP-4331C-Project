@@ -50,3 +50,5 @@ Kevin Samsoe || LifeAlertt
   - [Architecure](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/Architecture.md)
   - [Class Diagrams](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/Architecture.md#major-classes)
   - [Sequence Diagrams](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/Architecture.md#program-organization)
+  
+- [Demonstration](https://youtu.be/W4IW2PBGrH0)
