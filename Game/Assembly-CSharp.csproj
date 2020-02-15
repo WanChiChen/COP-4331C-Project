@@ -62,9 +62,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\CharacterController2D.cs" />
-    <Compile Include="Assets\Weapon.cs" />
-    <Compile Include="Assets\bullet.cs" />
+    <Compile Include="Assets\Scripts\CharacterController2D.cs" />
+    <Compile Include="Assets\Scripts\Weapon.cs" />
+    <Compile Include="Assets\Scripts\bullet.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Dylan/Documents/GitHub/COP-4331C-Project/Game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
