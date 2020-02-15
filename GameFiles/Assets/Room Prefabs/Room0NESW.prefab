@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241e55215c76c194f93caa799f3787d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roomOpening: 78
 --- !u!61 &1585950319002439952
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -137,6 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241e55215c76c194f93caa799f3787d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roomOpening: 87
 --- !u!61 &1585950319865705366
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -229,6 +231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241e55215c76c194f93caa799f3787d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roomOpening: 69
 --- !u!61 &1585950320044098957
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -321,6 +324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241e55215c76c194f93caa799f3787d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roomOpening: 83
 --- !u!61 &1585950320798575964
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -382,7 +386,7 @@ GameObject:
   - component: {fileID: 2525534196259012826}
   m_Layer: 0
   m_Name: Room0NESW
-  m_TagString: Wall
+  m_TagString: Grid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

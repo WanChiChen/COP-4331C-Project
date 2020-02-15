@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241e55215c76c194f93caa799f3787d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roomOpening: 83
 --- !u!61 &8931888484728335059
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1207,6 +1208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241e55215c76c194f93caa799f3787d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roomOpening: 69
 --- !u!61 &8977106760688098797
 BoxCollider2D:
   m_ObjectHideFlags: 0
