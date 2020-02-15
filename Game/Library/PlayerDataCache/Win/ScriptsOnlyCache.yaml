@@ -1,9 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
-    NewAssembly.dll:
-    - AttackPlayer
-    - PlayerHealth
-    - PlayerMovement
+    Assembly-CSharp.dll:
+    - CharacterController2D
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
@@ -14,17 +12,8 @@ ScriptsOnlyBuild:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
-    - UnityEditor.TestTools.TestRunner.CommandLineTest.RunData
-    - UnityEditor.TestTools.TestRunner.RerunCallbackData
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
-    UnityEngine.UI.dll:
-    - UnityEngine.EventSystems.EventSystem
-    - UnityEngine.EventSystems.StandaloneInputModule
-    - UnityEngine.UI.CanvasScaler
-    - UnityEngine.UI.GraphicRaycaster
-    - UnityEngine.UI.Image
-    - UnityEngine.UI.Slider
   sceneClasses:
     Assets/Scenes/SampleScene.unity:
     - Class: 1
@@ -39,8 +28,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 50
-      Script: {instanceID: 0}
     - Class: 61
       Script: {instanceID: 0}
     - Class: 81
@@ -48,25 +35,7 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 574}
-    - Class: 114
-      Script: {instanceID: 11154}
-    - Class: 114
-      Script: {instanceID: 11246}
-    - Class: 114
-      Script: {instanceID: 11366}
-    - Class: 114
-      Script: {instanceID: 11780}
-    - Class: 114
-      Script: {instanceID: 12064}
-    - Class: 114
-      Script: {instanceID: 12080}
-    - Class: 114
-      Script: {instanceID: 12700}
-    - Class: 114
-      Script: {instanceID: 13082}
-    - Class: 114
-      Script: {instanceID: 13114}
+      Script: {instanceID: 14580}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -76,20 +45,6 @@ ScriptsOnlyBuild:
     - Class: 212
       Script: {instanceID: 0}
     - Class: 213
-      Script: {instanceID: 0}
-    - Class: 222
-      Script: {instanceID: 0}
-    - Class: 223
-      Script: {instanceID: 0}
-    - Class: 224
-      Script: {instanceID: 0}
-    - Class: 19719996
-      Script: {instanceID: 0}
-    - Class: 156049354
-      Script: {instanceID: 0}
-    - Class: 483693784
-      Script: {instanceID: 0}
-    - Class: 1839735485
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -116,12 +71,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_Dropdown
-  - hash:
-      serializedVersion: 2
-      Hash: 339e8e37852789f99cf6daea8daaf30a
-    assemblyName: NewAssembly.dll
-    namespaceName: 
-    className: PlayerHealth
   - hash:
       serializedVersion: 2
       Hash: e7a73f5f78ba6445195ec23b74a1ce2d
@@ -310,16 +259,10 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
-      Hash: e9cc0bc3f5f640ead3fe91fb3c6acfe9
-    assemblyName: NewAssembly.dll
+      Hash: 94af7d7c17fa17cfc3fb48aff21d224c
+    assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: PlayerMovement
-  - hash:
-      serializedVersion: 2
-      Hash: a42e93c48faf2631899d9c3026ddfc08
-    assemblyName: NewAssembly.dll
-    namespaceName: 
-    className: AttackPlayer
+    className: CharacterController2D
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
