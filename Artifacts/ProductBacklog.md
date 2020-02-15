@@ -24,3 +24,4 @@
 |019|As a player, I can encounter a variety of enemies ranging in type and difficulty. |7|8| Player will encounter different enemies throughout the game|TO DO|
 |020|As a player, I can collect dropped items from enemies.|4|7| Enemies will sometimes drop loot that the player can collect|TO DO|
 |021| As a player, I can collide with objects. |4|9| Player can collide with different objects and entities properly.| TESTING|
+|022| As a player, I can rotate which way my sprite is facing. | 4| 8| Player sprite can face different directions. | TO DO|
