@@ -12,7 +12,7 @@ public class DamageTesting : MonoBehaviour
 
     void Awake()
     {
-       player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.FindGameObjectWithTag("Player");
         playerHealth = player.GetComponent<PlayerHealth>();
     }
 

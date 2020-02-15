@@ -16,10 +16,12 @@ public class PlayerHealth : MonoBehaviour
     void Awake()
     {
         // Setting up the references.
-        playerMovement = GetComponent<PlayerMovement>();
+        InitializeMovement();
 
         // Set the initial health of the player.
         currentHealth = startingHealth;
+
+        healthSlider.value = currentHealth;
     }
 
 
@@ -58,6 +60,15 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    public bool isAlive()
+    {
+        return !isDead;
+    }
+
+    public void InitializeMovement()
+    {
+        playerMovement = GetComponent<PlayerMovement>();
+    }
 
     void Death()
     {

@@ -3,6 +3,8 @@
 [RequireComponent(typeof(BoxCollider2D))]
 public class PlayerMovement : MonoBehaviour
 {
+    private PlayerMovementInput input;
+
     [SerializeField, Tooltip("Max speed, in units per second, that the character moves.")]
     float speed = 4;
 
@@ -14,9 +16,6 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField, Tooltip("Deceleration applied when character is grounded and not attempting to move.")]
     float groundDeceleration = 150;
-
-    [SerializeField, Tooltip("Max height the character will jump regardless of gravity")]
-    float jumpHeight = 4;
 
     private BoxCollider2D boxCollider;
 
@@ -30,15 +29,14 @@ public class PlayerMovement : MonoBehaviour
     {      
         // initialize boxcollider and rigidbody
         boxCollider = GetComponent<BoxCollider2D>();
-        rbody = GetComponent<Rigidbody2D>();
-        rbody.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
-        rbody.interpolation = RigidbodyInterpolation2D.Extrapolate;
+        InitializeRigidBody();
+        input = new PlayerMovementInput();
     }
 
     private void FixedUpdate()
     {
         // Update velocity of the player
-        rbody.velocity = new Vector2(moveInputx * speed, moveInputy * speed);
+        UpdateVelocity(input.UpdateVelocity(moveInputx, moveInputy, speed));
     }
 
     private void Update()
@@ -53,4 +51,35 @@ public class PlayerMovement : MonoBehaviour
     {
         Debug.Log("Player collided");
     }
+
+    public float GetSpeed()
+    {
+        return speed;
+    }
+
+    public Rigidbody2D GetRigidBody()
+    {
+        return rbody;
+    }
+
+    public void UpdateVelocity(Vector2 input)
+    {
+        rbody.velocity = input;
+    }
+
+    public void InitializeRigidBody()
+    {
+        rbody = GetComponent<Rigidbody2D>();
+        rbody.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+        rbody.interpolation = RigidbodyInterpolation2D.Extrapolate;
+    }
+}
+
+public class PlayerMovementInput
+{
+    public Vector2 UpdateVelocity(float moveInputx, float moveInputy, float speed)
+    {
+        return new Vector2(moveInputx * speed, moveInputy * speed);
+    }
+
 }

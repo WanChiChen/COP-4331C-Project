@@ -710,14 +710,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 786270577}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 253eb3b7a61c48d49a42e296549cc3bc, type: 3}
+  m_Script: {fileID: 11500000, guid: a27011c312c806745a2053ccb50b98dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7
+  speed: 4
   walkAcceleration: 75
   airAcceleration: 30
-  groundDeceleration: 50
-  jumpHeight: 4
+  groundDeceleration: 150
 --- !u!61 &786270579
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1486,7 +1485,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2065423457}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f60096c703bc01f448ae3c94c2f2831d, type: 3}
+  m_Script: {fileID: 11500000, guid: a160bc0fbed8cbd41aa57fe42cfe99ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 10
+  attackDamage: 50
