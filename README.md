@@ -52,3 +52,26 @@ Kevin Samsoe || LifeAlertt
   - [Sequence Diagrams](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/Architecture.md#program-organization)
   
 - [Demonstration](https://youtu.be/W4IW2PBGrH0)
+
+## Sprint 3
+
+- [Product Backlog](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/ProductBacklog.md)
+
+- [Sprint 3 Backlog](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/Sprint3Backlog.md)
+
+- [Requirements](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/Requirements.md)
+
+- [Burndown Chart](https://docs.google.com/spreadsheets/d/1KmVynfoX74c4Kq03LmEoTWq-GvSmo7IaW8sPvuBxo6E/edit?usp=sharing)
+
+- [Velocity Chart](https://docs.google.com/spreadsheets/d/1KmVynfoX74c4Kq03LmEoTWq-GvSmo7IaW8sPvuBxo6E/edit?usp=sharing)
+
+- [Trello Board](https://trello.com/b/V1pN2FpK/project)
+
+- Design Documents
+
+  - [Architecure](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/Architecture.md)
+  - [Class Diagrams](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/Architecture.md#major-classes)
+  - [Sequence Diagrams](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/Architecture.md#program-organization)
+  
+- [Demonstration]()
+
