@@ -73,5 +73,9 @@ Kevin Samsoe || LifeAlertt
   - [Class Diagrams](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/Architecture.md#major-classes)
   - [Sequence Diagrams](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/Architecture.md#program-organization)
   
+- [Source Code](https://github.com/wc6255/COP-4331C-Project/tree/master/Game/Assets/Scripts)
+
+- [Unit Tests](https://github.com/wc6255/COP-4331C-Project/tree/master/Game/Assets/UnitTests)
+  
 - [Demonstration]()
 
