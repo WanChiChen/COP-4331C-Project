@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackPlayer : MonoBehaviour
+public class DamageTesting : MonoBehaviour
 {
 
     public int attackDamage = 10;
