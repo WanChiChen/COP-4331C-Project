@@ -7,7 +7,7 @@
 |002|As a player, I can interact with objects. |5|9|Player can pick up and be damaged by objects. |TESTING|
 |003|As a player, I can open my inventory to check for items. |5|8|Player can open an inventory screen and see obtained/equipped items. |TESTING|
 |004|As a player, I can collect items. |4|8|Player can collect items and see them in the player's inventory. |TO DO|
-|005|As a player, I can move between procedurally generated rooms. |5|7|Player can transition between rooms with no issues or extreme delays. |TESTING|
+|005|As a player, I can move between procedurally generated rooms. |5|7|Player can transition between rooms with no issues or extreme delays. |IN DEVELOPMENT|
 |006|As a player, I can equip tools and equipment. |5|8|Player can move items from player inventory to player equipment manager. |TO DO|
 |007| As a player, I can use skills and equipped items. |7|8|Player can use skills and equipment by equipping the items and being able to use/observe the corresponding item/skills' effects. |TO DO|
 |008|As a player, I can select from a variety of classes. |7|5|Player choose a certain class and use the abilities that come with it. |TO DO|
