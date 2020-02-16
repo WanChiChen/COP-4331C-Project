@@ -25,3 +25,4 @@
 |020|As a player, I can collect dropped items from enemies.|4|7| Enemies will sometimes drop loot that the player can collect|TO DO|
 |021| As a player, I can collide with objects. |4|9| Player can collide with different objects and entities properly.| TESTING|
 |022| As a player, I can rotate which way my sprite is facing. | 4| 8| Player sprite can face different directions. | TO DO|
+|023| As a player, I can enter a new dungeon upon completing the current one. |3|7| Current level is removed and a new one is generated upon reaching the exit for the current level. |IN DEVELOPMENT| 
