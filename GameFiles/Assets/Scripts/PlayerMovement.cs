@@ -49,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
     // Called when the player collides with another collidable object
     void OnCollisionEnter2D(Collision2D col)
     {
-        Debug.Log("Player collided");
+        Debug.Log("Player collided with " + col.gameObject.name, col.gameObject);
     }
 
     public float GetSpeed()

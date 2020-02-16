@@ -14,7 +14,7 @@ public class RoomSpawner : MonoBehaviour
     private int rand;
 
     // Flag to check if room has already been spawned
-    private bool spawnedFlag = false;
+    public bool spawnedFlag = false;
 
     // Start is called before the first frame update
     void Start()
@@ -77,7 +77,7 @@ public class RoomSpawner : MonoBehaviour
                 if (!other.GetComponent<RoomSpawner>().spawnedFlag && !spawnedFlag)
                 {
                     Instantiate(roomPalette.emptyRoom, transform.position, Quaternion.identity);
-                    spawnedFlag = true;
+                    Destroy(gameObject);
                 }
             }
 

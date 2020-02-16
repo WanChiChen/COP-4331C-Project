@@ -8,6 +8,7 @@ TagManager:
   - roomSpawner
   - Grid
   - Rooms
+  - OriginRoom
   layers:
   - Default
   - TransparentFX
