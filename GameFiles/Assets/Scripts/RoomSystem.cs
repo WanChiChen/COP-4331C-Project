@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rooms : MonoBehaviour
+public class RoomSystem : MonoBehaviour
 {
     // Rooms with South opening
     public GameObject[] southRooms;
