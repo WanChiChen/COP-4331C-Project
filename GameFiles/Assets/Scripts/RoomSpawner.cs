@@ -29,7 +29,7 @@ public class RoomSpawner : MonoBehaviour
     // Update is called once per frame
     void SpawnRoom()
     {
-        if(spawnedFlag == false)
+        if(!spawnedFlag)
         {
             // If we require a room with a North opening, choose from selection of North doors
             if (roomOpening == 'N')
@@ -70,6 +70,13 @@ public class RoomSpawner : MonoBehaviour
         // If a room has already been generated here, dont spawn another one
         if(other.CompareTag("roomSpawner"))
         {
+            // In this case, we will have open doors to the rest of the scene, so we place an empty room to block the path
+            if(!other.GetComponent<RoomSpawner>().spawnedFlag && !spawnedFlag)
+            {
+                Instantiate(roomPalette.emptyRoom, transform.position, Quaternion.identity);
+                spawnedFlag = true;
+            }
+
             spawnedFlag = true;
         }
     }

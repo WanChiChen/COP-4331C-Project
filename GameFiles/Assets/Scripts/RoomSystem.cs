@@ -15,4 +15,7 @@ public class RoomSystem : MonoBehaviour
 
     // Rooms with West opening
     public GameObject[] westRooms;
+
+    // Empty room for plugging up holes
+    public GameObject emptyRoom;
 }
