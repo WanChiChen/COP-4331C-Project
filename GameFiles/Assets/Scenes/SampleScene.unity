@@ -1165,6 +1165,7 @@ MonoBehaviour:
   - {fileID: 2788489121267475264, guid: 9812d2c2b90cfed418f05b06a32f9e45, type: 3}
   - {fileID: 7185460428536736769, guid: 245e1fa7343741d41b171c094ab833ea, type: 3}
   - {fileID: 2788489121267475264, guid: 9812d2c2b90cfed418f05b06a32f9e45, type: 3}
+  - {fileID: 7719737886720099723, guid: 1cbfc5441441cd84894dab4e28ca3541, type: 3}
   northRooms:
   - {fileID: 8496894362299251084, guid: c4559055fe921a944afb731d0d1b87c1, type: 3}
   - {fileID: 9136720873471552539, guid: 51d9b52fe4ce5e14f96f606a27c54444, type: 3}
@@ -1178,6 +1179,7 @@ MonoBehaviour:
   - {fileID: 8496894362299251084, guid: c4559055fe921a944afb731d0d1b87c1, type: 3}
   - {fileID: 7185460428536736769, guid: 245e1fa7343741d41b171c094ab833ea, type: 3}
   - {fileID: 8496894362299251084, guid: c4559055fe921a944afb731d0d1b87c1, type: 3}
+  - {fileID: 7719737886720099723, guid: 1cbfc5441441cd84894dab4e28ca3541, type: 3}
   eastRooms:
   - {fileID: 257252528088048950, guid: 928a7e0b2dff1f34ba2bce848057881e, type: 3}
   - {fileID: 9136720873471552539, guid: 51d9b52fe4ce5e14f96f606a27c54444, type: 3}
@@ -1191,6 +1193,7 @@ MonoBehaviour:
   - {fileID: 257252528088048950, guid: 928a7e0b2dff1f34ba2bce848057881e, type: 3}
   - {fileID: 7185460428536736769, guid: 245e1fa7343741d41b171c094ab833ea, type: 3}
   - {fileID: 257252528088048950, guid: 928a7e0b2dff1f34ba2bce848057881e, type: 3}
+  - {fileID: 5733409333915025145, guid: 29e4076316d565044863b3ffa3a35cb1, type: 3}
   westRooms:
   - {fileID: 1925317660461936739, guid: 792742a9ae64d514ea5331d17d94ec07, type: 3}
   - {fileID: 9179054119129855160, guid: 2e83255222d461f418a864a5b913de06, type: 3}
@@ -1204,7 +1207,9 @@ MonoBehaviour:
   - {fileID: 1925317660461936739, guid: 792742a9ae64d514ea5331d17d94ec07, type: 3}
   - {fileID: 7185460428536736769, guid: 245e1fa7343741d41b171c094ab833ea, type: 3}
   - {fileID: 1925317660461936739, guid: 792742a9ae64d514ea5331d17d94ec07, type: 3}
-  emptyRoom: {fileID: 0}
+  - {fileID: 5733409333915025145, guid: 29e4076316d565044863b3ffa3a35cb1, type: 3}
+  emptyRoom: {fileID: 2231304852276333156, guid: 51bad71bfe118a34aac7c91c7dd22e38,
+    type: 3}
 --- !u!1 &1712561595
 GameObject:
   m_ObjectHideFlags: 0

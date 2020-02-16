@@ -23,7 +23,7 @@ public class RoomSpawner : MonoBehaviour
         roomPalette = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomSystem>();
 
         // Invoke function on a delay to make sure spawning occurs properly
-        Invoke("SpawnRoom", 0.05f);
+        Invoke("SpawnRoom", 0.1f);
     }
 
     // Update is called once per frame
@@ -70,11 +70,19 @@ public class RoomSpawner : MonoBehaviour
         // If a room has already been generated here, dont spawn another one
         if(other.CompareTag("roomSpawner"))
         {
-            // In this case, we will have open doors to the rest of the scene, so we place an empty room to block the path
-            if(!other.GetComponent<RoomSpawner>().spawnedFlag && !spawnedFlag)
+            // ensure object isn't null
+            try
             {
-                Instantiate(roomPalette.emptyRoom, transform.position, Quaternion.identity);
-                spawnedFlag = true;
+                // In this case, we will have open doors to the rest of the scene, so we place an empty room to block the path
+                if (!other.GetComponent<RoomSpawner>().spawnedFlag && !spawnedFlag)
+                {
+                    Instantiate(roomPalette.emptyRoom, transform.position, Quaternion.identity);
+                    spawnedFlag = true;
+                }
+            }
+
+            catch (System.Exception e)
+            {
             }
 
             spawnedFlag = true;
