@@ -4,3 +4,4 @@
 |015| 	As a user, I can close the game to the main menu. |	3 |	3 |	Player can return to main menu screen from the game.| William|
 |019| 	As a player, I can encounter a variety of enemies ranging in type and difficulty. |	7 |	8 |	Player will encounter different enemies throughout the game| Dylan|
 |011 |	As a player, I can experience adaptive level and enemy design.| 	10 |	10 |	Level design and enemy behavior can respond to patterns/changes in player behavior.| Kevin|
+|05 |	As a player, I can move between procedurally generated rooms.| 	5 |	10 |	Levels will be procedurally generated from a selection of prefab modular rooms.| Kevin|
