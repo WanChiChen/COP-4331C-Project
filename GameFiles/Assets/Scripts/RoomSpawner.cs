@@ -23,7 +23,7 @@ public class RoomSpawner : MonoBehaviour
         roomPalette = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomSystem>();
 
         // Invoke function on a delay to make sure spawning occurs properly
-        Invoke("SpawnRoom", 0.3f);
+        Invoke("SpawnRoom", 0.05f);
     }
 
     // Update is called once per frame
