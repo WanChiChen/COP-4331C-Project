@@ -3,7 +3,7 @@ using UnityEngine.TestTools;
 using NUnit.Framework;
 using System.Collections;
 
-//
+// Tests that player sprite can be controlled properly
 public class PlayerMovementTest
 {
 

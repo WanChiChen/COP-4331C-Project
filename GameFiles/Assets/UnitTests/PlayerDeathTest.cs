@@ -3,10 +3,11 @@ using UnityEngine.TestTools;
 using NUnit.Framework;
 using System.Collections;
 
+// Tests that player can properly die
 public class PlayerDeathTest
 {
     [Test]
-    public void PlayerCanBeDamaged()
+    public void PlayerCanBeDamaged() // Tests that player health can be lowered
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         PlayerHealth health = player.GetComponent<PlayerHealth>();
@@ -18,7 +19,7 @@ public class PlayerDeathTest
     }
 
     [Test]
-    public void PlayerCanDie()
+    public void PlayerCanDie() // Tests that player dies when health reaches 0
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         PlayerHealth health = player.GetComponent<PlayerHealth>();
