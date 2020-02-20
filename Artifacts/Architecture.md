@@ -132,6 +132,8 @@ We are choosing to use Unity as our game engine because of its effectiveness in 
 
 We wil be building most our game's artistic assets, such as sprites, to unite the game's aesthetics for better user immersion. Some third-party assets may be used for animations, fonts, or icons. 
 
+The only third-party libraries we use are the default Unity libraries.
+
 # Reuse
 
 Game assets could be re-used for future projects with similar artistic themes. The level generation algorithm can be modified to fit other genres such as first-person-shooters or open-world rpgs.
