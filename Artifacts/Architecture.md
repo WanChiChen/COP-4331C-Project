@@ -1,24 +1,24 @@
 # Program Organization
 
-Context Level Diagram
+### Context Level Diagram
 
 <img src = "/images/ContextView.png" width="1000" >
 
 The user plays the game and manages any game information by interacting with the Game Application. The Game Application responds to any user inputs and obtains the data required for those responses by obtaining it from stored assets in the user's local computer file system. 
 
-Container Level Diagram
+### Container Level Diagram
 
 <img src = "/images/ContainerView.png" width="1000" >
 
 Within the Game Application context are two main containers the user will interact with: the menu container and the game environment container. The game environment is responsible for any interactions the user will have with the game itself, such as playing the game and managing game related information such as inventory. The menu container is responsible for all user interactions that will affect how the user plays the game, such as settings, creating new game data, saving and loading save data, and entering/exiting the game.
 
-Main Menu Component Level Diagram
+### Main Menu Component Level Diagram
 
 <img src = "/images/MenuComponentView.png" width="1000" >
 
 Within the main menu container, the user will interact with three main components, the create game screen, the load game screen, and the options screen. The create game screen will allow the user to adjust the settings for the new game they wish to create, then bring the user to game environment. The load game screen will allow the user to load into the game environment at a previously saved point; the load game screen obtains the save data from the local system. The options screen will allow the user to change key bindings and UI-related game settings.
 
-Game Environment Component Level Diagram
+### Game Environment Component Level Diagram
 
 <img src = "/images/EnvironmentComponentView.png" width="1000" >
 
@@ -35,7 +35,7 @@ In-game Menu Screen | 0014, 0015, 0016 | Allows users to load into another game,
 
 # Major Classes
 
-Class Diagram 
+### Class Diagram 
 
 <img src = "/images/ClassDiagram.png" width="1000" >
 
@@ -53,7 +53,7 @@ Boss| 0009, 0011, 0012, 0017, 0019, 0020 | Any enemies that have more abilities 
 
 
 # Data Design
-This section does not apply to our project, as we are not using any databases. Our product runs purely on a local level.
+Our application will store all data locally. All game assets (such as sounds, sprites, and the built application) will be stored in the install directory. The game will also create a folder in a user-specific directory to store data (such as the documents folder on windows), to allow the user to view/modify the data without interfering with the data of other users on the local machine. The data stored within this folder will be user options (keybindings, sound settings, game settings, and anything else set within the options screen) and save file data. The former will be left as a text file to to allow for user modification, while the latter will be encrypted to prevent potential data corruption via modification. Upon launch, the game will read the options file to load the current user options and write any modifications when the user saves new settings. Save file data will be read when the user selects that specific file to load into the game environment, and will be written when the user saves their game.
 
 # Business Rules
 
