@@ -1,18 +1,28 @@
 # Program Organization
 
+Context Level Diagram
+
 <img src = "/images/ContextView.png" width="1000" >
+
+The user plays the game and manages any game information by interacting with the Game Application. The Game Application responds to any user inputs and obtains the data required for those responses by obtaining it from stored assets in the user's local computer file system. 
 
 Container Level Diagram
 
 <img src = "/images/ContainerView.png" width="1000" >
 
+Within the Game Application context are two main containers the user will interact with: the menu container and the game environment container. The game environment is responsible for any interactions the user will have with the game itself, such as playing the game and managing game related information such as inventory. The menu container is responsible for all user interactions that will affect how the user plays the game, such as settings, creating new game data, saving and loading save data, and entering/exiting the game.
+
 Main Menu Component Level Diagram
 
 <img src = "/images/MenuComponentView.png" width="1000" >
 
+Within the main menu container, the user will interact with three main components, the create game screen, the load game screen, and the options screen. The create game screen will allow the user to adjust the settings for the new game they wish to create, then bring the user to game environment. The load game screen will allow the user to load into the game environment at a previously saved point; the load game screen obtains the save data from the local system. The options screen will allow the user to change key bindings and UI-related game settings.
+
 Game Environment Component Level Diagram
 
 <img src = "/images/EnvironmentComponentView.png" width="1000" >
+
+Within the game environment, the user will interact with three components aside from the game itself. The inventory screen will allow the user to view or edit their inventory. The talent tree screen will allow the user to view or choose new skills/abilities. The in-game menu will present a slimmed-down version of the main menu, allowing the user to pause, save, load a different game, or quit to the main menu.
 
 Component | Relevant User Stories | Description |
 ----------|-----------------------|-------------|
@@ -24,6 +34,8 @@ Inventory Screen | 0003, 0006, 0020 | Allows users to view and organize inventor
 In-game Menu Screen | 0014, 0015, 0016 | Allows users to load into another game, save the current game, change options, or exit to the main menu. |
 
 # Major Classes
+
+Class Diagram 
 
 <img src = "/images/ClassDiagram.png" width="1000" >
 
