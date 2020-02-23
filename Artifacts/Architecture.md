@@ -68,6 +68,8 @@ Business Rule ID | Rule
 
 # User Interface Design
 
+<img src = "/images/UI Diagram.png" width="1000" >
+
 Upon opening the application, the user will will encounter the main menu screen. From the main menu, the user can start a new game, load or delete an existing game, change game settings and options, or close the application.
 
 <img src = "/images/UI Screens/Main Menu.png" width="1000" >
