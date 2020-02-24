@@ -35,28 +35,32 @@ public class RoomSpawner : MonoBehaviour
             if (roomOpening == 'N')
             {
                 rand = Random.Range(0, roomPalette.northRooms.Length);
-                Instantiate(roomPalette.northRooms[rand], transform.position, Quaternion.identity);
+                GameObject currentRoom = Instantiate(roomPalette.northRooms[rand], transform.position, Quaternion.identity);
+                roomPalette.rooms.Add(currentRoom);
             }
 
             // If we require a room with a South opening, choose from selection of South doors
             if (roomOpening == 'S')
             {
                 rand = Random.Range(0, roomPalette.southRooms.Length);
-                Instantiate(roomPalette.southRooms[rand], transform.position, Quaternion.identity);
+                GameObject currentRoom = Instantiate(roomPalette.southRooms[rand], transform.position, Quaternion.identity);
+                roomPalette.rooms.Add(currentRoom);
             }
 
             // If we require a room with a East opening, choose from selection of East doors
             if (roomOpening == 'E')
             {
                 rand = Random.Range(0, roomPalette.eastRooms.Length);
-                Instantiate(roomPalette.eastRooms[rand], transform.position, Quaternion.identity);
+                GameObject currentRoom = Instantiate(roomPalette.eastRooms[rand], transform.position, Quaternion.identity);
+                roomPalette.rooms.Add(currentRoom);
             }
 
             // If we require a room with a West opening, choose from selection of West doors
             if (roomOpening == 'W')
             {
                 rand = Random.Range(0, roomPalette.westRooms.Length);
-                Instantiate(roomPalette.westRooms[rand], transform.position, Quaternion.identity);
+                GameObject currentRoom = Instantiate(roomPalette.westRooms[rand], transform.position, Quaternion.identity);
+                roomPalette.rooms.Add(currentRoom);
             }
 
             // Raise flag now that we have spawned a room
