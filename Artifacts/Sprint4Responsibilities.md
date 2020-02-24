@@ -14,5 +14,5 @@
 
 ## Dylan:
 - Fix Movement (uncomplete)
-- Pathing
+- Pathing (uncomplete)
 
