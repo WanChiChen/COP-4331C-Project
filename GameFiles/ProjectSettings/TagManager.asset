@@ -9,6 +9,7 @@ TagManager:
   - Grid
   - Rooms
   - OriginRoom
+  - Item
   layers:
   - Default
   - TransparentFX
