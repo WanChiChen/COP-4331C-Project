@@ -65,11 +65,18 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\DamageTesting.cs" />
     <Compile Include="Assets\Scripts\EmptyRoom.cs" />
+    <Compile Include="Assets\Scripts\Inventory.cs" />
+    <Compile Include="Assets\Scripts\InventoryEditor.cs" />
+    <Compile Include="Assets\Scripts\Item.cs" />
+    <Compile Include="Assets\Scripts\ItemBehavior.cs" />
+    <Compile Include="Assets\Scripts\ItemDatabase.cs" />
     <Compile Include="Assets\Scripts\MainCamera.cs" />
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\RoomSpawner.cs" />
     <Compile Include="Assets\Scripts\RoomSystem.cs" />
+    <Compile Include="Assets\Scripts\UIInventory.cs" />
+    <Compile Include="Assets\Scripts\UIItem.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\Weapon.cs" />
     <Compile Include="Assets\Scripts\bullet.cs" />
