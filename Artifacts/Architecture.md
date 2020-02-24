@@ -1,18 +1,28 @@
 # Program Organization
 
+### Context Level Diagram
+
 <img src = "/images/ContextView.png" width="1000" >
 
-Container Level Diagram
+The user plays the game and manages any game information by interacting with the Game Application. The Game Application responds to any user inputs and obtains the data required for those responses by obtaining it from stored assets in the user's local computer file system. 
+
+### Container Level Diagram
 
 <img src = "/images/ContainerView.png" width="1000" >
 
-Main Menu Component Level Diagram
+Within the Game Application context are two main containers the user will interact with: the menu container and the game environment container. The game environment is responsible for any interactions the user will have with the game itself, such as playing the game and managing game related information such as inventory. The menu container is responsible for all user interactions that will affect how the user plays the game, such as settings, creating new game data, saving and loading save data, and entering/exiting the game.
+
+### Main Menu Component Level Diagram
 
 <img src = "/images/MenuComponentView.png" width="1000" >
 
-Game Environment Component Level Diagram
+Within the main menu container, the user will interact with three main components, the create game screen, the load game screen, and the options screen. The create game screen will allow the user to adjust the settings for the new game they wish to create, then bring the user to game environment. The load game screen will allow the user to load into the game environment at a previously saved point; the load game screen obtains the save data from the local system. The options screen will allow the user to change key bindings and UI-related game settings.
+
+### Game Environment Component Level Diagram
 
 <img src = "/images/EnvironmentComponentView.png" width="1000" >
+
+Within the game environment, the user will interact with three components aside from the game itself. The inventory screen will allow the user to view or edit their inventory. The talent tree screen will allow the user to view or choose new skills/abilities. The in-game menu will present a slimmed-down version of the main menu, allowing the user to pause, save, load a different game, or quit to the main menu.
 
 Component | Relevant User Stories | Description |
 ----------|-----------------------|-------------|
@@ -24,6 +34,8 @@ Inventory Screen | 0003, 0006, 0020 | Allows users to view and organize inventor
 In-game Menu Screen | 0014, 0015, 0016 | Allows users to load into another game, save the current game, change options, or exit to the main menu. |
 
 # Major Classes
+
+### Class Diagram 
 
 <img src = "/images/ClassDiagram.png" width="1000" >
 
@@ -41,7 +53,7 @@ Boss| 0009, 0011, 0012, 0017, 0019, 0020 | Any enemies that have more abilities 
 
 
 # Data Design
-This section does not apply to our project, as we are not using any databases. Our product runs purely on a local level.
+Our application will store all data locally. All game assets (such as sounds, sprites, and the built application) will be stored in the install directory. The game will also create a folder in a user-specific directory to store data (such as the documents folder on windows), to allow the user to view/modify the data without interfering with the data of other users on the local machine. The data stored within this folder will be user options (keybindings, sound settings, game settings, and anything else set within the options screen) and save file data. The former will be left as a text file to to allow for user modification, while the latter will be encrypted to prevent potential data corruption via modification. Upon launch, the game will read the options file to load the current user options and write any modifications when the user saves new settings. Save file data will be read when the user selects that specific file to load into the game environment, and will be written when the user saves their game.
 
 # Business Rules
 
@@ -55,6 +67,8 @@ Business Rule ID | Rule
 005 | Users can only adjust their own game settings and options.
 
 # User Interface Design
+
+<img src = "/images/UI Diagram.png" width="1000" >
 
 Upon opening the application, the user will will encounter the main menu screen. From the main menu, the user can start a new game, load or delete an existing game, change game settings and options, or close the application.
 
@@ -131,6 +145,8 @@ Possible overengineering could occur by creating too many classes/abilities for 
 We are choosing to use Unity as our game engine because of its effectiveness in rendering 2D scenes, portability, relative ease of use, economic feasability, and wealth of support and resources. Building our own game engine would require more time and resources than the rest of the game combined.
 
 We wil be building most our game's artistic assets, such as sprites, to unite the game's aesthetics for better user immersion. Some third-party assets may be used for animations, fonts, or icons. 
+
+The only third-party libraries we use are the default Unity libraries.
 
 # Reuse
 
