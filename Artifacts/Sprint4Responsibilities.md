@@ -13,7 +13,11 @@
 
 ## Kevin:
 
+- Add room tracking (complete)
+- Add exit to level (complete)
+- When exit is touched, new level is generated (complete)
+
 ## Dylan:
-- Fix Movement (uncomplete)
-- Pathing (uncomplete)
+- Fix Movement (incomplete)
+- Pathing (incomplete)
 
