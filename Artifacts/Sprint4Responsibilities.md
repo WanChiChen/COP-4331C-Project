@@ -13,4 +13,6 @@
 ## Kevin:
 
 ## Dylan:
+- Fix Movement (uncomplete)
+- Pathing
 
