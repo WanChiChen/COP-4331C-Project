@@ -8,8 +8,8 @@
 - Updated Requirements Document to better fufill grading criteria
 - Updated Burndown and Velocity Charts
 - Added Unit Test Overview document
-- Added Items to game
-- Added Inventory to game
+- Completed user story 3 (added items to game)
+- Completed user story 4 (added inventory to game)
 
 ## Kevin:
 
