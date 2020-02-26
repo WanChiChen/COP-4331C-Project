@@ -10,6 +10,7 @@ public class Inventory : MonoBehaviour
     public List<Item> characterItems = new List<Item>();
     public ItemDatabase itemDB;
     public UIInventory ui;
+    
     public void collectItem(int id)
     {
         Item itemToAdd = itemDB.getItem(id);
@@ -62,6 +63,7 @@ public class Inventory : MonoBehaviour
     }
     private void Start()
     {
+        ui.gameObject.SetActive(!ui.gameObject.activeSelf);
         //collectItem(0);
     }
 }

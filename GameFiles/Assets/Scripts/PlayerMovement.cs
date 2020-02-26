@@ -35,9 +35,19 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        Vector2 currDirection = input.UpdateVelocity(moveInputx, moveInputy, speed);
+
         // Update velocity of the player
-        UpdateVelocity(input.UpdateVelocity(moveInputx, moveInputy, speed));
+        UpdateVelocity(currDirection);
+
+        // Update sprite direction
+        if (currDirection != Vector2.zero)
+        {
+             float angle = Mathf.Atan2(currDirection.y, currDirection.x) * Mathf.Rad2Deg;
+             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        }
     }
+   
 
     private void Update()
     {

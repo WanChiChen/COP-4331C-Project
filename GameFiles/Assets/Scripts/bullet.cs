@@ -18,13 +18,14 @@ public class bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("Player collided with " + collision.gameObject.name, collision.gameObject);
         // Check if trigger is a room spawner node or origin node
-        if(!collision.CompareTag("roomSpawner") && !collision.CompareTag("OriginRoom"))
+        if (!collision.CompareTag("roomSpawner") || !collision.CompareTag("OriginRoom"))
         {
             Destroy(gameObject);
         }
     }
-
+   
     private void Update()
     {
         if (body.position.x > 50 || body.position.y > 50 || body.position.x < -50 || body.position.y < -50)
