@@ -6,16 +6,7 @@ public class PlayerMovement : MonoBehaviour
     private PlayerMovementInput input;
 
     [SerializeField, Tooltip("Max speed, in units per second, that the character moves.")]
-    float speed = 4;
-
-    [SerializeField, Tooltip("Acceleration while grounded.")]
-    float walkAcceleration = 75;
-
-    [SerializeField, Tooltip("Acceleration while in the air.")]
-    float airAcceleration = 30;
-
-    [SerializeField, Tooltip("Deceleration applied when character is grounded and not attempting to move.")]
-    float groundDeceleration = 150;
+    public float speed = 4;
 
     private BoxCollider2D boxCollider;
 
