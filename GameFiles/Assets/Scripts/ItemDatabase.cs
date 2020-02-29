@@ -7,7 +7,7 @@ public class ItemDatabase : MonoBehaviour
     public List<Item> items = new List<Item>();
 
     // Start is called before the first frame update
-    void BuildDatabase()
+    public void BuildDatabase()
     {
         items = new List<Item>()
         {
