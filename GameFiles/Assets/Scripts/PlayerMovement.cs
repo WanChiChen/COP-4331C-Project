@@ -6,7 +6,9 @@ public class PlayerMovement : MonoBehaviour
     private PlayerMovementInput input;
 
     [SerializeField, Tooltip("Max speed, in units per second, that the character moves.")]
-    public float speed = 4;
+    public float startingSpeed = 4;
+
+    public float speed;
 
     private BoxCollider2D boxCollider;
 
@@ -22,6 +24,8 @@ public class PlayerMovement : MonoBehaviour
         boxCollider = GetComponent<BoxCollider2D>();
         InitializeRigidBody();
         input = new PlayerMovementInput();
+
+        speed = startingSpeed;
     }
 
     private void FixedUpdate()
@@ -73,6 +77,11 @@ public class PlayerMovement : MonoBehaviour
         rbody = GetComponent<Rigidbody2D>();
         rbody.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
         rbody.interpolation = RigidbodyInterpolation2D.Extrapolate;
+    }
+
+    public void wakeUp()
+    {
+        Awake();
     }
 }
 

@@ -63,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\UnitTests\EquipmentTest.cs" />
     <Compile Include="Assets\UnitTests\ItemsTest.cs" />
     <Compile Include="Assets\UnitTests\PlayerDeathTest.cs" />
     <Compile Include="Assets\UnitTests\PlayerMovementTest.cs" />

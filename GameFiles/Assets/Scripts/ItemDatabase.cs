@@ -33,4 +33,9 @@ public class ItemDatabase : MonoBehaviour
     {
         return items.Find(item => item.title == title);
     }
+
+    public void addItem(Item item)
+    {
+        items.Add(item);
+    }
 }

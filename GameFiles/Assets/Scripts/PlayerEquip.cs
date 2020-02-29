@@ -55,4 +55,9 @@ public class PlayerEquip : MonoBehaviour
             equippedItems[slot] = null;
         }  
     }
+
+    public void wakeUp()
+    {
+        Awake();
+    }
 }

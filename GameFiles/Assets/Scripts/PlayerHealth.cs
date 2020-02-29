@@ -79,5 +79,10 @@ public class PlayerHealth : MonoBehaviour
         playerMovement.enabled = false;
 
     }
+
+    public void wakeUp()
+    {
+        Awake();
+    }
 }
 
