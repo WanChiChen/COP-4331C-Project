@@ -10,6 +10,8 @@
   - Added requirements corresponding to user stories 24, 25, 26
 - TO DO: Add user story to UI diagram
 - TO DO: User story 15
+- TO DO: Update Tests Overview
+- TO DO: Upload Demonstration
 ## Kevin:
 
 ## Dylan:
