@@ -11,6 +11,7 @@ TagManager:
   - OriginRoom
   - Item
   - ItemDB
+  - ShowOnPause
   layers:
   - Default
   - TransparentFX
