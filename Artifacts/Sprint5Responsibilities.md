@@ -2,7 +2,7 @@
 - Updated Burndown Chart
 - Updated Velocity Chart
 - Updated Trello Board
-- Completed User Story 6 (Added Items to game)
+- Completed User Story 6 (Added Equipment to game)
 - Wrote tests for user story 6
 - Wrote tests for user story 3
 - TO DO: Update Requirements
