@@ -130,5 +130,5 @@ Kevin Samsoe || LifeAlertt
 
 - [Tests Overview](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/Tests.md)
   
-- [Demonstration]()
+- [Demonstration](https://youtu.be/12OBD2hc0Hw)
 
