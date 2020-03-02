@@ -86,6 +86,14 @@ Pressing a certain button within the game screen will pause the game and open an
 
 <img src = "/images/UI Screens/Paused.png" width="1000" >
 
+|Interface Component|Relevant User Stories|Description|
+|-------------------|---------------------|-----------|
+|Main Menu Screen|000, 014, 015, 016|Allows user to select between creating a new game, loading a game, changing options.
+|Options Screen|016|Allows user to adjust game settings and keyboard binds.|
+|Game Screen|001, 005, 007, 013, 019, 018|Allows user to play the game and interact with the game environment while viewing game resources.|
+|Pause Screen|014, 015, 016, 024, 025, 026| Allows user to pause the game and select between creating a new game, loading a game, changing options, exiting to the main menu, or exiting the application.|
+
+
 
 # Resource Management
 
