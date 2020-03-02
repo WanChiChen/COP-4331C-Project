@@ -21,4 +21,8 @@
 |17 | 020|Enemies shall be able to drop items.|Enemies shall drop items collectable by the users.|3|Necessary|Planned|
 |18 | 005|The user shall be able to traverse within and between rooms.|User can move player sprite between rooms|4|Necessary|Working|
 |19 | 009|The user shall be able to attack enemies and objects.|User can damage other game entities.|4|Necessary|Working|
+|20 | 025|The user shall be able to pause the game| User can freeze the state of the game environment.|3|Necessary| Planned|
+|21 | 026|The user shall be able to access a menu to save the game and change options after pausing a game.| User can access main menu screens from the pause menu.|4|Necessary|Planned|
+|22 |  024|The user shall be able to exit the application. | User can close the application.|2|Necessary|Working|
+ 
 
