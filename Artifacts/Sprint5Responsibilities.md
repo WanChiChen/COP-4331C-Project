@@ -15,6 +15,7 @@
 ## Kevin:
 - Work on user story 11 (design adaptive level generator)
 - Write automated tests for user stories 5 and 23
+- Update class diagram for new functionality
 ## Dylan:
 - Polished Rotation
 - Fix Bullet Collision
