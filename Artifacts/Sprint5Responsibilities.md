@@ -13,7 +13,8 @@
   - Added requirements corresponding to user stories 24, 25, 26
 - Added Demonstration
 ## Kevin:
-
+- Work on user story 11 (design adaptive level generator)
+- Write automated tests for user stories 5 and 23
 ## Dylan:
 - Polished Rotation
 - Fix Bullet Collision
