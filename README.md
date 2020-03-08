@@ -132,3 +132,28 @@ Kevin Samsoe || LifeAlertt
   
 - [Demonstration](https://youtu.be/12OBD2hc0Hw)
 
+## Sprint 6
+
+- [Responsibilities](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/Sprint6Responsibilities.md)
+
+- [Requirements](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/Requirements.md)
+
+- [Burndown Chart]()
+
+- [Velocity Chart]()
+
+- [Trello Board](https://trello.com/b/V1pN2FpK/project)
+
+- Design Documents
+
+  - [Architecure](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/Architecture.md)
+  - [Class Diagrams](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/Architecture.md#major-classes)
+  - [Sequence Diagrams](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/Architecture.md#program-organization)
+  
+- [Source Code](https://github.com/wc6255/COP-4331C-Project/tree/master/GameFiles/Assets/Scripts)
+
+- [Unit Tests](https://github.com/wc6255/COP-4331C-Project/tree/master/GameFiles/Assets/UnitTests)
+
+- [Tests Overview](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/Tests.md)
+  
+- [Demonstration]()
