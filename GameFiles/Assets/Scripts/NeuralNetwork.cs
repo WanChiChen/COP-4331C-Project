@@ -5,21 +5,25 @@ using UnityEngine;
 public class NeuralNetwork : MonoBehaviour
 {
     // Array of input layer nodes
-    public AINode[] inputLayer;
+    public List<AINode> inputLayer = new List<AINode>();
 
     // Array of hidden layer nodes
-    public AINode[] hiddenLayer;
+    public List<AINode> hiddenLayer = new List<AINode>();
 
     // Array of output layer nodes;
-    public AINode[] outputLayer;
+    public List<AINode> outputLayer = new List<AINode>();
 
 
     // Start is called before the first frame update
     void Start()
     {
-        SetupLayers();
-        
+        InitializeNetwork(1, 1, 1);
 
+        SendInputs();
+
+        //RunHiddenLayer();
+
+        //RunOutputLayer();
     }
 
     // Update is called once per frame
@@ -28,43 +32,49 @@ public class NeuralNetwork : MonoBehaviour
         
     }
 
-    //Gives nodes access to network, assigns layers
-    void SetupLayers()
-    {
-        SetupInputLayer();
-
-        SetupHiddenLayer();
-
-        SetupOutputLayer();
-    }
-
-    // Setup each node in input layer
-    void SetupInputLayer()
+    // Send inputs to input layer nodes
+    void SendInputs()
     {
         foreach(AINode node in inputLayer)
         {
-            // Set node as layer 0
-            node.Setup(0);
+            node.SetInput(1);
         }
     }
 
-    // Setup each node in hidden layer
-    void SetupHiddenLayer()
+    // Initialize nodes in each layer
+    void InitializeNetwork(int layer1, int layer2, int layer3)
     {
-        foreach (AINode node in hiddenLayer)
+        InitializeInputLayer(layer1);
+
+        InitializeHiddenLayer(layer2);
+
+        InitializeOutputLayer(layer3);
+    }
+
+    //Initialize nodes in input layer
+    void InitializeInputLayer(int size)
+    {
+        for(int i = 0; i < size; i++)
         {
-            // Set node as layer 1
-            node.Setup(1);
+            inputLayer.Add(new AINode(0));
         }
     }
 
-    // Setup each node in output layer
-    void SetupOutputLayer()
+    //Initialize nodes in hidden layer
+    void InitializeHiddenLayer(int size)
     {
-        foreach (AINode node in outputLayer)
+        for (int i = 0; i < size; i++)
         {
-            // Set node as layer 2
-            node.Setup(2);
+            hiddenLayer.Add(new AINode(1));
+        }
+    }
+
+    //Initialize nodes in output layer
+    void InitializeOutputLayer(int size)
+    {
+        for (int i = 0; i < size; i++)
+        {
+            outputLayer.Add(new AINode(2));
         }
     }
 }

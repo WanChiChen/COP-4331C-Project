@@ -5,10 +5,10 @@ using UnityEngine;
 public class AINode : MonoBehaviour
 {
     // Array of weights to each connection
-    public float[] weights;
+    public List<float> weights = new List<float>();
 
     // Array of numbers corresponding to connected nodes
-    public int[] connections;
+    public List<int> connections = new List<int>();
 
     // Value of the node
     private float output;
@@ -22,6 +22,13 @@ public class AINode : MonoBehaviour
     // Reference to network
     private NeuralNetwork network;
 
+    // Give node access to neural network, set layer of node
+    public AINode(int layer)
+    {
+        this.network = GameObject.FindGameObjectWithTag("Network").GetComponent<NeuralNetwork>();
+        this.layer = layer;
+    }
+
     // Access output
     public float GetOutput()
     {
@@ -32,13 +39,7 @@ public class AINode : MonoBehaviour
     public void SetInput(float value)
     {
         input = value;
-    }
-
-    // Give node access to neural network, set layer of node
-    public void Setup(int layer)
-    {
-        network = GameObject.FindGameObjectWithTag("Network").GetComponent<NeuralNetwork>();
-        this.layer = layer;
+        Debug.Log("Node input = " + input);
     }
 
     // Using the established connections and weights, calculate the output
@@ -65,7 +66,7 @@ public class AINode : MonoBehaviour
     // Check to make sure there are the same amount of connections as weights
     private bool ValidConnectionsAndWeights()
     {
-        if(weights.Length == connections.Length)
+        if(weights.Capacity == connections.Capacity)
         {
             return true;
         }
