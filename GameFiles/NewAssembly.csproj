@@ -73,10 +73,12 @@
     <Compile Include="Assets\Scripts\ItemDatabase.cs" />
     <Compile Include="Assets\Scripts\MainCamera.cs" />
     <Compile Include="Assets\Scripts\PlayerEquip.cs" />
+    <Compile Include="Assets\Scripts\PlayerExperience.cs" />
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\RoomSpawner.cs" />
     <Compile Include="Assets\Scripts\RoomSystem.cs" />
+    <Compile Include="Assets\Scripts\SceneControl.cs" />
     <Compile Include="Assets\Scripts\UIInventory.cs" />
     <Compile Include="Assets\Scripts\UIItem.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
