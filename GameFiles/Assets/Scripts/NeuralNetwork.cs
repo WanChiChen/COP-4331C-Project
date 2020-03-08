@@ -18,19 +18,17 @@ public class NeuralNetwork : MonoBehaviour
     void Start()
     {
         // Numbers are the number of nodes for input, hidden, and output layers respectively
-        InitializeNetwork(1, 1, 1);
+        InitializeNetwork(1, 2, 2);
 
         SendInputs();
 
-        //RunHiddenLayer();
+        RunInputLayer();
 
-        //RunOutputLayer();
-    }
+        RunHiddenLayer();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        RunOutputLayer();
+
+        PrintOutput();
     }
 
     // Send inputs to input layer nodes
@@ -86,15 +84,24 @@ public class NeuralNetwork : MonoBehaviour
     // Adjust hidden layer weights and connections here
     private void InitializeHiddenLayerConnectionsAndWeights()
     {
-        // Hidden Layer index 0, connect to input layer index 0, weight 1
-        AddConnection(1, 0, 0, 1);
+        // Hidden Layer index 0, connect to input layer index 0, weight 0.5
+        AddConnection(1, 0, 0, (float)0.5);
+
+        // Hidden Layer index 1, connect to input layer index 0, weight 1
+        AddConnection(1, 1, 0, (float)1);
     }
 
     // Adjust hidden layer weights and connections here
     private void InitializeOutputLayerConnectionsAndWeights()
     {
-        // Output layer index 0, connect to hidden layer index 0, weight 1
-        AddConnection(2, 0, 0, 1);
+        // Output layer index 0, connect to hidden layer index 0, weight 0.5
+        AddConnection(2, 0, 0, (float)0.5);
+
+        // Output layer index 1, connect to hidden layer index 0, weight 1
+        AddConnection(2, 1, 0, (float)1);
+
+        // Output layer index 1, connect to hidden layer index 1, weight -1
+        AddConnection(2, 1, 1, (float)-1);
     }
 
     // Adds a connection for the node in the specified layer to the specified node in the previous layer with a weight
@@ -114,4 +121,40 @@ public class NeuralNetwork : MonoBehaviour
             //outputLayer[index].test();
         }
     }
+
+    // Runs the calculations for all of the hidden layer nodes
+    private void RunHiddenLayer()
+    {
+        foreach (AINode node in hiddenLayer)
+        {
+            node.CalculateOutput();
+        }
+    }
+
+    // Runs the calculations for all of the hidden layer nodes
+    private void RunInputLayer()
+    {
+        foreach(AINode node in inputLayer)
+        {
+            node.CalculateOutput();
+        }
+    }
+
+    // Runs the calculations for all of the output layer nodes
+    private void RunOutputLayer()
+    {
+        foreach (AINode node in outputLayer)
+        {
+            node.CalculateOutput();
+        }
+    }
+
+    private void PrintOutput()
+    {
+        foreach(AINode node in outputLayer)
+        {
+            Debug.Log("Output: " + node.GetOutput());
+        }
+    }
 }
+
