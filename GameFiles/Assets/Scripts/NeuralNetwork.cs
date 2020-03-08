@@ -17,6 +17,7 @@ public class NeuralNetwork : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Numbers are the number of nodes for input, hidden, and output layers respectively
         InitializeNetwork(1, 1, 1);
 
         SendInputs();
@@ -33,7 +34,7 @@ public class NeuralNetwork : MonoBehaviour
     }
 
     // Send inputs to input layer nodes
-    void SendInputs()
+    private void SendInputs()
     {
         foreach(AINode node in inputLayer)
         {
@@ -42,7 +43,7 @@ public class NeuralNetwork : MonoBehaviour
     }
 
     // Initialize nodes in each layer
-    void InitializeNetwork(int layer1, int layer2, int layer3)
+    private void InitializeNetwork(int layer1, int layer2, int layer3)
     {
         InitializeInputLayer(layer1);
 
@@ -52,7 +53,7 @@ public class NeuralNetwork : MonoBehaviour
     }
 
     //Initialize nodes in input layer
-    void InitializeInputLayer(int size)
+    private void InitializeInputLayer(int size)
     {
         for(int i = 0; i < size; i++)
         {
@@ -61,20 +62,56 @@ public class NeuralNetwork : MonoBehaviour
     }
 
     //Initialize nodes in hidden layer
-    void InitializeHiddenLayer(int size)
+    private void InitializeHiddenLayer(int size)
     {
         for (int i = 0; i < size; i++)
         {
             hiddenLayer.Add(new AINode(1));
         }
+
+        InitializeHiddenLayerConnectionsAndWeights();
     }
 
     //Initialize nodes in output layer
-    void InitializeOutputLayer(int size)
+    private void InitializeOutputLayer(int size)
     {
         for (int i = 0; i < size; i++)
         {
             outputLayer.Add(new AINode(2));
+        }
+
+        InitializeOutputLayerConnectionsAndWeights();
+    }
+
+    // Adjust hidden layer weights and connections here
+    private void InitializeHiddenLayerConnectionsAndWeights()
+    {
+        // Hidden Layer index 0, connect to input layer index 0, weight 1
+        AddConnection(1, 0, 0, 1);
+    }
+
+    // Adjust hidden layer weights and connections here
+    private void InitializeOutputLayerConnectionsAndWeights()
+    {
+        // Output layer index 0, connect to hidden layer index 0, weight 1
+        AddConnection(2, 0, 0, 1);
+    }
+
+    // Adds a connection for the node in the specified layer to the specified node in the previous layer with a weight
+    private void AddConnection(int layer, int index, int connection, float weight)
+    {
+        if(layer == 1)
+        {
+            hiddenLayer[index].connections.Add(connection);
+            hiddenLayer[index].weights.Add(weight);
+            //hiddenLayer[index].test();
+        }
+
+        else if(layer == 2)
+        {
+            outputLayer[index].connections.Add(connection);
+            outputLayer[index].weights.Add(weight);
+            //outputLayer[index].test();
         }
     }
 }

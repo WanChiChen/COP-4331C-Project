@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AINode : MonoBehaviour
+public class AINode
 {
     // Array of weights to each connection
     public List<float> weights = new List<float>();
@@ -46,19 +46,19 @@ public class AINode : MonoBehaviour
     // Using the established connections and weights, calculate the output
     public void CalculateOutput()
     {
-        // If invalid weights and connections, print error and return
-        if(!ValidConnectionsAndWeights())
-        {
-            Debug.Log("Error in Neural Network: Number of weights does not match number of connections");
-            return;
-        }
-
         // If this is an input layer node, we just set output equal to input
-        if(layer == 0)
+        if (layer == 0)
         {
             output = input;
             return;
         }
+
+        // If invalid weights and connections, print error and return
+        if (!ValidConnectionsAndWeights())
+        {
+            Debug.Log("Error in Neural Network: Number of weights does not match number of connections");
+            return;
+        } 
 
         // Standard output calculation
         CalcOutput();
@@ -95,6 +95,19 @@ public class AINode : MonoBehaviour
                 float val = network.hiddenLayer[connect].GetOutput();
                 output += val * weights[connect];
             }
+        }
+    }
+
+    public void test()
+    {
+        foreach (int i in connections)
+        {
+            Debug.Log("Connection: " + i);
+        }
+
+        foreach (float f in weights)
+        {
+            Debug.Log("Weights: " + f);
         }
     }
 }
