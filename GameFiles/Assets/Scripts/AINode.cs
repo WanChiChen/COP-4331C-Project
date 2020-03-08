@@ -27,6 +27,7 @@ public class AINode : MonoBehaviour
     {
         this.network = GameObject.FindGameObjectWithTag("Network").GetComponent<NeuralNetwork>();
         this.layer = layer;
+        this.output = 0;
     }
 
     // Access output
@@ -86,13 +87,13 @@ public class AINode : MonoBehaviour
             if(layer == 1)
             {
                 float val = network.inputLayer[connect].GetOutput();
-                output =  val * weights[connect];
+                output +=  val * weights[connect];
             }
 
             else
             {
                 float val = network.hiddenLayer[connect].GetOutput();
-                output = val * weights[connect];
+                output += val * weights[connect];
             }
         }
     }
