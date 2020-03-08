@@ -16,9 +16,8 @@ public class AINode : MonoBehaviour
     // Node input (for input layer nodes only)
     private float input;
 
-    // Check for if input node
+    // Check flag for if input node
     private bool isInputLayer;
-
 
     // Access output
     public float GetOutput()
@@ -31,5 +30,32 @@ public class AINode : MonoBehaviour
     {
         input = value;
         isInputLayer = true;
+    }
+
+    // Using the established connections and weights, calculate the output
+    public void calculateOutput()
+    {
+        // If invalid weights and connections, print error and return
+        if(!validConnectionsAndWeights())
+        {
+            Debug.Log("Error in Neural Network: Number of weights does not match number of connections");
+            return;
+        }
+
+
+    }
+
+    // Check to make sure there are the same amount of connections as weights
+    private bool validConnectionsAndWeights()
+    {
+        if(weights.Length == connections.Length)
+        {
+            return true;
+        }
+
+        else
+        {
+            return false;
+        }
     }
 }
