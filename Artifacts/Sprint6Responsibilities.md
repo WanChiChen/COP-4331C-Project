@@ -13,4 +13,4 @@
 ## Dylan:
 - Write automated tests for user stories 1 (WIP)
 - Work on user story 19 (enemies) (WIP)
-- Work on user story 21 (hitting enemies) (WIP)
+- Work on user story 27 (hitting enemies) (WIP)
