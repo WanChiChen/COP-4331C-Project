@@ -24,5 +24,7 @@
 |20 | 025|The user shall be able to pause the game| User can freeze the state of the game environment.|3|Necessary| Planned|
 |21 | 026|The user shall be able to access a menu to save the game and change options after pausing a game.| User can access main menu screens from the pause menu.|4|Necessary|Planned|
 |22 |  024|The user shall be able to exit the application. | User can close the application.|2|Necessary|Working|
- 
+|23 |  013|The user shall be able to take damage.|User health is lowered by damage amount when attacked.|4|Necessary|Working|
+|24 |  010|The user shall be directed to a "game over" screen upon death.|Application switches to "game over" scene upon user health reaching 0 and dying.|2|Necessary|Planned|
+
 
