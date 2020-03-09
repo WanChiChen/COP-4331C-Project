@@ -8,7 +8,7 @@
 |4  | 014|The user shall be able to load saved game files.| User is able to open a previously saved game file.|4|Necessary|Planned|
 |5  | 016|The game shall have an options menu to change key bindings and settings.|User can change game settings and key bindings|3|Important|Planned|
 |6  | 011|The game shall generate levels as the user progresses through the game.|New levels are created as the user plays the game.|4| Necessary| Working|
-|7  | 011|The levels shall be generated based on tracked user statistics (distance from enemies, damage taken, items/skill used, etc.).|User playstyle changes causes levels to generate differently.|6|Necessary|Planned.|
+|7  | 011|The levels shall be generated based on tracked user statistics (distance from enemies, damage taken, items/skill used, etc.).|User playstyle changes causes levels to generate differently.|6|Necessary|In Progress.|
 |8  | 011|The game shall use modular rooms that will be assembled together for each level.|Levels are assembeled from a list of pre-designed rooms.|3|Necessary|Working|
 |9  | 012|The game shall increase in difficulty as the user progresses.|Enemy health, attack, and/or generation rate increases as user progresses through the game|3|Important|Planned|
 |10 | 004|The user shall be able to collect items.|User can collect items in their inventory.|4|Necessary|Planned|
