@@ -12,6 +12,7 @@ TagManager:
   - Item
   - ItemDB
   - ShowOnPause
+  - Network
   layers:
   - Default
   - TransparentFX
