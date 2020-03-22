@@ -73,12 +73,7 @@ public class PlayerAbilities : MonoBehaviour
         {
             Shoot();
         }
-        
-        if(Input.GetKeyDown("Alpha1"))
-        {
-            //useSkill(abilities[0]);
-        }
-
+       
     }
     void Shoot()
     {

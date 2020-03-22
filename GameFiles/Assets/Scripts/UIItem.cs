@@ -8,10 +8,29 @@ public class UIItem : MonoBehaviour, IPointerClickHandler
 {
     public Item item;
     private Image itemImage;
+    private UIItem selectedItem;
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        throw new System.NotImplementedException();
+        if(this.item != null)
+        {
+            if(selectedItem != null)
+            {
+                Item clone = new Item(selectedItem.item);
+                selectedItem.updateItem(this.item);
+                updateItem(clone);
+            }
+            else
+            {
+                selectedItem.updateItem(this.item);
+                updateItem(null);
+            }
+        }
+        else if(selectedItem.item != null)
+        {
+            updateItem(selectedItem.item);
+            selectedItem.updateItem(null);
+        }
     }
 
     public void updateItem(Item item)
@@ -19,7 +38,7 @@ public class UIItem : MonoBehaviour, IPointerClickHandler
         this.item = item;
         if(this.item != null)
         {
-            itemImage.color = Color.black;
+            itemImage.color = Color.white;
             itemImage.sprite = this.item.icon;
         }
         else
@@ -32,7 +51,8 @@ public class UIItem : MonoBehaviour, IPointerClickHandler
 
     private void Awake()
     {
-        itemImage = GetComponent<Image>();
+        itemImage = this.gameObject.GetComponent<Image>();
         updateItem(null); // test
+        selectedItem = GameObject.Find("SelectedItem").GetComponent<UIItem>();
     }
 }
