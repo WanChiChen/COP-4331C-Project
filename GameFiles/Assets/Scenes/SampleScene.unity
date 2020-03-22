@@ -982,10 +982,10 @@ GameObject:
   - component: {fileID: 786270578}
   - component: {fileID: 786270582}
   - component: {fileID: 786270583}
-  - component: {fileID: 786270584}
   - component: {fileID: 786270585}
   - component: {fileID: 786270586}
   - component: {fileID: 786270587}
+  - component: {fileID: 786270588}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1135,20 +1135,6 @@ MonoBehaviour:
   startingHealth: 100
   currentHealth: 0
   healthSlider: {fileID: 985133703}
---- !u!114 &786270584
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 786270577}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f60096c703bc01f448ae3c94c2f2831d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firepoint: {fileID: 1023678952}
-  bullet: {fileID: 5770026337282706964, guid: 33eccfb871c5d0d4f93d16e932d72fbc, type: 3}
 --- !u!114 &786270585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1192,6 +1178,22 @@ MonoBehaviour:
   level: 0
   expThreshold: 0
   skillPoints: 0
+--- !u!114 &786270588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786270577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3d7d64e028282647a6f88c09c97c781, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  firepoint: {fileID: 1023678952}
+  bullet: {fileID: 5770026337282706964, guid: 33eccfb871c5d0d4f93d16e932d72fbc, type: 3}
+  damage: 1
 --- !u!1 &804011042
 GameObject:
   m_ObjectHideFlags: 0

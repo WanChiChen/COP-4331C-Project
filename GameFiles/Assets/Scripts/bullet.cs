@@ -5,10 +5,17 @@ using static UnityEngine.EventSystems.EventTrigger;
 
 public class bullet : MonoBehaviour
 {
-
+    GameObject player;
+    PlayerAbilities skill;
     public float speed = 10;
     public Rigidbody2D body;
-    public float dmg = 1;
+    public float dmg;
+
+    private void Awake()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        skill = player.GetComponent<PlayerAbilities>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +31,13 @@ public class bullet : MonoBehaviour
         {
             Debug.Log("Bullet collided with " + collision.gameObject.name, collision.gameObject);
             Destroy(gameObject);
+        }
+        
+        //collides with enemy
+        if(collision.CompareTag("Enemy"))
+        {
+            dmg = skill.damage;
+            //reduce enemy health by damage
         }
     }
    
