@@ -37,7 +37,7 @@ In-game Menu Screen | 0014, 0015, 0016 | Allows users to load into another game,
 
 ### Class Diagram 
 
-<img src = "/images/Class_Diagram_3.png" width="1000" >
+<img src = "/images/ClassDiagram-3.png" width="1000" >
 
 Class | Relevant User Stories | Description |
 ----------|-----------------------|-------------|
