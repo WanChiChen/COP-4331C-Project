@@ -82,18 +82,22 @@ public class AINode
     // Gets output from connections and multiplies them by the weight for that connection
     private void CalcOutput()
     {
+        int i = 0;
+
         foreach(int connect in connections)
         {
             if(layer == 1)
             {
                 float val = network.inputLayer[connect].GetOutput();
-                output +=  val * weights[connect];
+                output +=  val * weights[i];
+                i++;
             }
 
             else
             {
                 float val = network.hiddenLayer[connect].GetOutput();
-                output += val * weights[connect];
+                output += val * weights[i];
+                i++;
             }
         }
     }

@@ -18,7 +18,7 @@ public class NeuralNetwork : MonoBehaviour
     void Start()
     {
         // Numbers are the number of nodes for input, hidden, and output layers respectively
-        InitializeNetwork(1, 2, 2);
+        InitializeNetwork(5, 4, 8);
 
         SendInputs();
 
@@ -84,24 +84,69 @@ public class NeuralNetwork : MonoBehaviour
     // Adjust hidden layer weights and connections here
     private void InitializeHiddenLayerConnectionsAndWeights()
     {
-        // Hidden Layer index 0, connect to input layer index 0, weight 0.5
-        AddConnection(1, 0, 0, (float)0.5);
+        // Hidden Layer index 0, connect to input layer index 0, weight 1
+        AddConnection(1, 0, 0, (float)1);
 
-        // Hidden Layer index 1, connect to input layer index 0, weight 1
-        AddConnection(1, 1, 0, (float)1);
+        // Hidden Layer index 0, connect to input layer index 1, weight -1
+        AddConnection(1, 0, 1, (float)-1);
+
+        // Hidden Layer index 0, connect to input layer index 1, weight -1
+        AddConnection(1, 0, 4, (float)-1);
+
+
+        // Hidden Layer index 1, connect to input layer index 0, weight -1
+        AddConnection(1, 1, 0, (float)-1);
+
+        // Hidden Layer index 1, connect to input layer index 1, weight -1
+        AddConnection(1, 1, 1, (float)-1);
+
+        // Hidden Layer index 1, connect to input layer index 4, weight -1
+        AddConnection(1, 1, 4, (float)-1);
+
+
+        // Hidden Layer index 2, connect to input layer index 2, weight 1
+        AddConnection(1, 2, 2, (float)-1);
+
+        // Hidden Layer index 2, connect to input layer index 3, weight -1
+        AddConnection(1, 2, 3, (float)-1);
+
+
+        // Hidden Layer index 3, connect to input layer index 1, weight -1
+        AddConnection(1, 3, 1, (float)-1);
+
+        // Hidden Layer index 3, connect to input layer index 2, weight 1
+        AddConnection(1, 3, 2, (float)1);
+
+        // Hidden Layer index 3, connect to input layer index 4, weight -1
+        AddConnection(1, 3, 4, (float)-1);
     }
 
-    // Adjust hidden layer weights and connections here
+    // Adjust output layer weights and connections here
     private void InitializeOutputLayerConnectionsAndWeights()
     {
-        // Output layer index 0, connect to hidden layer index 0, weight 0.5
-        AddConnection(2, 0, 0, (float)0.5);
+        // Output layer index 0, connect to hidden layer index 0, weight 1
+        AddConnection(2, 0, 0, (float)1);
 
-        // Output layer index 1, connect to hidden layer index 0, weight 1
-        AddConnection(2, 1, 0, (float)1);
+        // Output layer index 1, connect to hidden layer index 1, weight 1
+        AddConnection(2, 1, 1, (float)1);
 
-        // Output layer index 1, connect to hidden layer index 1, weight -1
-        AddConnection(2, 1, 1, (float)-1);
+        // Output layer index 2, connect to hidden layer index 0, weight -1
+        AddConnection(2, 2, 0, (float)-1);
+
+        // Output layer index 3, connect to hidden layer index 1, weight -1
+        AddConnection(2, 3, 1, (float)-1);
+
+        // Output layer index 4, connect to hidden layer index 2, weight 1
+        AddConnection(2, 4, 2, (float)1);
+
+        // Output layer index 5, connect to hidden layer index 2, weight -1
+        AddConnection(2, 5, 2, (float)-1);
+
+        // Output layer index 6, connect to hidden layer index 3, weight 1
+        AddConnection(2, 6, 3, (float)1);
+
+        // Output layer index 7, connect to hidden layer index 3, weight -1
+        AddConnection(2, 7, 3, (float)-1);
     }
 
     // Adds a connection for the node in the specified layer to the specified node in the previous layer with a weight
@@ -125,9 +170,11 @@ public class NeuralNetwork : MonoBehaviour
     // Runs the calculations for all of the hidden layer nodes
     private void RunHiddenLayer()
     {
+        int i = 0;
         foreach (AINode node in hiddenLayer)
         {
             node.CalculateOutput();
+            i++;
         }
     }
 
