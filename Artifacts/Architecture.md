@@ -37,7 +37,7 @@ In-game Menu Screen | 0014, 0015, 0016 | Allows users to load into another game,
 
 ### Class Diagram 
 
-<img src = "/images/ClassDiagram.png" width="1000" >
+<img src = "/images/Class_Diagram_3.png" width="1000" >
 
 Class | Relevant User Stories | Description |
 ----------|-----------------------|-------------|
@@ -50,7 +50,8 @@ Enemy| 0009, 0011, 0012, 0017, 0019, 0020| Any entity hostile to the player enti
 Equipment| 0006 | Any item that can be equipped by the player.|
 Usable Item| 0006, 0007 | Any item that can be used by the player.|
 Boss| 0009, 0011, 0012, 0017, 0019, 0020 | Any enemies that have more abilities than default attacks.|
-
+NeuralNetwork| 0011 | Creates and Operates a network of AINodes
+AINode| 0011 | Stores an output which is calculated based on weighted connections to other AINodes.|
 
 # Data Design
 Our application will store all data locally. All game assets (such as sounds, sprites, and the built application) will be stored in the install directory. The game will also create a folder in a user-specific directory to store data (such as the documents folder on windows), to allow the user to view/modify the data without interfering with the data of other users on the local machine. The data stored within this folder will be user options (keybindings, sound settings, game settings, and anything else set within the options screen) and save file data. The former will be left as a text file to to allow for user modification, while the latter will be encrypted to prevent potential data corruption via modification. Upon launch, the game will read the options file to load the current user options and write any modifications when the user saves new settings. Save file data will be read when the user selects that specific file to load into the game environment, and will be written when the user saves their game.
