@@ -8,4 +8,7 @@
   -TO DO: Update Charts
   
 ## Kevin:
+- Work on user story 11 (design adaptive level generator) (created neural network design)
+- Write automated tests for user storiy 11 (WIP)
+- Update class diagram for new functionality
 ## Dylan:
