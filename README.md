@@ -164,9 +164,9 @@ Kevin Samsoe || LifeAlertt
 
 - [Requirements](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/Requirements.md)
 
-- [Burndown Chart]()
+- [Burndown Chart](https://docs.google.com/spreadsheets/d/1RvI7sw7QaxcpuKL2UW6cscJsnSfXl_iMruaYZAgMnzI/edit?usp=sharing)
 
-- [Velocity Chart]()
+- [Velocity Chart](https://docs.google.com/spreadsheets/d/1RvI7sw7QaxcpuKL2UW6cscJsnSfXl_iMruaYZAgMnzI/edit?usp=sharing)
 
 - [Trello Board](https://trello.com/b/V1pN2FpK/project)
 
