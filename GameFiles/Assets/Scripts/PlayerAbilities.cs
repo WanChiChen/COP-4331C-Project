@@ -22,6 +22,10 @@ public class PlayerAbilities : MonoBehaviour
         movement = player.GetComponent<PlayerMovement>();
     }
 
+    public void wakeUp()
+    {
+        Awake();
+    }
     public void learnAbility(Ability ability)
     {
         abilities.Add(ability);
@@ -49,8 +53,13 @@ public class PlayerAbilities : MonoBehaviour
         int damageUpdate = ability.modifiers[2];
 
         health.startingHealth += healthUpdate;
+        health.currentHealth += healthUpdate;
+        if (health.currentHealth > health.startingHealth)
+            health.currentHealth = health.startingHealth;
         movement.speed += movementUpdate;
         damage += damageUpdate;
+
+
     }
 
     void useSkill(Skill skill)
