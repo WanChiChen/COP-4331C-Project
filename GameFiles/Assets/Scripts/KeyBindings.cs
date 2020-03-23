@@ -6,7 +6,7 @@ public class KeyBindings : MonoBehaviour
 {
     //changeable key bindings
     const int numKeys = 12;
-    KeyCode[] keyCodes = new KeyCode[numKeys];
+    public KeyCode[] keyCodes = new KeyCode[numKeys];
 
     // Start is called before the first frame update
     void Start()
@@ -47,8 +47,10 @@ public class KeyBindings : MonoBehaviour
         Debug.Log("key " + keyID + " has been changed to " + key);
     }
 
-    /*
-    public void inputKeyID(int keyID)
+    
+
+    
+    /*public void inputKeyID(int keyID)
     {
         Event e;
         bool repeat = true;
@@ -64,4 +66,6 @@ public class KeyBindings : MonoBehaviour
         }
         
     }*/
+
+
 }

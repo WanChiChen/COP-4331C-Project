@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\AINode.cs" />
     <Compile Include="Assets\Scripts\Ability.cs" />
     <Compile Include="Assets\Scripts\AbilityDatabase.cs" />
+    <Compile Include="Assets\Scripts\ButtonModifier.cs" />
     <Compile Include="Assets\Scripts\DamageTesting.cs" />
     <Compile Include="Assets\Scripts\EmptyRoom.cs" />
     <Compile Include="Assets\Scripts\Equipment.cs" />
