@@ -15,7 +15,7 @@ public class PlayerExperience : MonoBehaviour
         exp = 0;
         level = 1;
         expThreshold = 100;
-        skillPoints = 0;
+        skillPoints = 1;
     }
 
     // Update is called once per frame

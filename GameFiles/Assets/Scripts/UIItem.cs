@@ -46,7 +46,6 @@ public class UIItem : MonoBehaviour, IPointerClickHandler
             itemImage.color = Color.clear;
         }
     }
-    // Start is called before the first frame update
 
 
     private void Awake()

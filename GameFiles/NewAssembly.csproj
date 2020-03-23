@@ -87,7 +87,8 @@
     <Compile Include="Assets\Scripts\RoomSystem.cs" />
     <Compile Include="Assets\Scripts\SceneControl.cs" />
     <Compile Include="Assets\Scripts\Skill.cs" />
-    <Compile Include="Assets\Scripts\Skills.cs" />
+    <Compile Include="Assets\Scripts\SkillCanvas.cs" />
+    <Compile Include="Assets\Scripts\SkillTree.cs" />
     <Compile Include="Assets\Scripts\UIInventory.cs" />
     <Compile Include="Assets\Scripts\UIItem.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />

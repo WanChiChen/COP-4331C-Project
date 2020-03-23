@@ -14,10 +14,28 @@ public class UISkill : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if(exp.skillPoints > 0)
+        Debug.Log("ability clicked!");
+        if (exp.skillPoints > 0)
         {
             playerAbilities.learnAbility(this.ability);
             exp.skillPoints--;
+            abilityImage.color = Color.red;
+            Debug.Log("ability learned!");
+        }
+        
+    }
+
+    public void showAbility(Ability ability)
+    {
+        this.ability = ability;
+        if (this.ability != null)
+        {
+            abilityImage.color = Color.white;
+            abilityImage.sprite = this.ability.icon;
+        }
+        else
+        {
+            abilityImage.color = Color.clear;
         }
     }
 
@@ -38,5 +56,6 @@ public class UISkill : MonoBehaviour, IPointerClickHandler
         player = GameObject.FindGameObjectWithTag("Player");
         exp = player.GetComponent<PlayerExperience>();
         playerAbilities = player.GetComponent<PlayerAbilities>();
+        abilityImage = this.gameObject.GetComponent<Image>();
     }
 }

@@ -13,6 +13,7 @@ public class AbilityDatabase : MonoBehaviour
         {
             new Ability(1, "TestAbility", "Test Ability", new int[]{4,4,4})
         };
+        Debug.Log("built");
     }
 
     private void Awake()

@@ -64,6 +64,5 @@ public class Inventory : MonoBehaviour
     private void Start()
     {
         ui.gameObject.SetActive(!ui.gameObject.activeSelf);
-        //collectItem(0);
     }
 }
