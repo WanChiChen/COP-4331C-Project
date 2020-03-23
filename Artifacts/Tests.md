@@ -16,3 +16,7 @@
 |Equipment|testCorrectAttributes|Tests equipment attribute values are stored and retrieved correctly.|Equipment attribute value = expected value|
 |PlayerEquip|testCorrectHealthModification|Tests that equipment health modifier attribute modifies player health correctly when equipped.|Player health = starting health + equipment health modifier|
 |PlayerEquip|testCorrectSpeedModification|Tests that equipment speed modifier attribute modifies player speed correctly when equipped.|Player speed = starting speed + equipment speed modifier|
+|SceneControl|Manual Test|Tests that application closes when QuitGame() is called.|Game application is no longer running|
+|SceneControl|Manual Test|Tests that application changes to main menu when LoadMainMenu is called.|Current game scene is the main menu scene|
+|UIManager|Manual Test|Tests that game environnment is frozen when game is paused.|Game environment is completely frozen.|
+|UIManager|Manual Test|Tests that pause menu appears when the game is paused.|Pause menu is visible in the application.|
