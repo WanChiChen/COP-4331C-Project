@@ -26,5 +26,7 @@
 |22 |  024|The user shall be able to exit the application. | User can close the application.|2|Necessary|Working|
 |23 |  013|The user shall be able to take damage.|User health is lowered by damage amount when attacked.|4|Necessary|Working|
 |24 |  010|The user shall be directed to a "game over" screen upon death.|Application switches to "game over" scene upon user health reaching 0 and dying.|2|Necessary|Planned|
+|25 |  018|The user shall be able to view the skills they have acquired.|Obtained skills are visible on the skill tree.|2|Important|Working|
+|26 |  018|The user shall be able to interact with game environment normally while the skill tree and inventory are opened.|Game environment continues running while skill tree or inventory is open. | 2| Important| Working|
 
 
