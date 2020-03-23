@@ -33,7 +33,6 @@ public class UIManager : MonoBehaviour
             }
             else if (Time.timeScale == 0)
             {
-                Debug.Log("high");
                 Time.timeScale = 1;
                 hidePaused();
             }

@@ -13,6 +13,7 @@ TagManager:
   - ItemDB
   - ShowOnPause
   - Network
+  - AbilityDB
   layers:
   - Default
   - TransparentFX

@@ -34,11 +34,11 @@ public class bullet : MonoBehaviour
         }
         
         //collides with enemy
-        if(collision.CompareTag("Enemy"))
-        {
-            dmg = skill.damage;
+        //if(collision.CompareTag("Enemy"))
+       // {
+        //    dmg = skill.damage;
             //reduce enemy health by damage
-        }
+        //}
     }
    
     private void Update()

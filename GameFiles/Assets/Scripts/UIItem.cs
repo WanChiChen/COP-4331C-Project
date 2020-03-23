@@ -14,7 +14,7 @@ public class UIItem : MonoBehaviour, IPointerClickHandler
     {
         if(this.item != null)
         {
-            if(selectedItem != null)
+            if(selectedItem.item != null)
             {
                 Item clone = new Item(selectedItem.item);
                 selectedItem.updateItem(this.item);

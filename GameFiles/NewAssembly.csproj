@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\EmptyRoom.cs" />
     <Compile Include="Assets\Scripts\Equipment.cs" />
     <Compile Include="Assets\Scripts\ExitScript.cs" />
+    <Compile Include="Assets\Scripts\FollowMousePosition.cs" />
     <Compile Include="Assets\Scripts\Inventory.cs" />
     <Compile Include="Assets\Scripts\Item.cs" />
     <Compile Include="Assets\Scripts\ItemBehavior.cs" />
@@ -90,6 +91,7 @@
     <Compile Include="Assets\Scripts\UIInventory.cs" />
     <Compile Include="Assets\Scripts\UIItem.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
+    <Compile Include="Assets\Scripts\UISkill.cs" />
     <Compile Include="Assets\Scripts\Weapon.cs" />
     <Compile Include="Assets\Scripts\bullet.cs" />
     <Reference Include="UnityEditor.UI">
