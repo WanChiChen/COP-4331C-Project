@@ -155,7 +155,10 @@ We are choosing to use Unity as our game engine because of its effectiveness in 
 
 We wil be building most our game's artistic assets, such as sprites, to unite the game's aesthetics for better user immersion. Some third-party assets may be used for animations, fonts, or icons. 
 
-The only third-party libraries we use are the default Unity libraries.
+We are using an [Input Manager](https://github.com/daemon3000/InputManager) by daemon3000 to manage keyboard/mice IO. It adds many helpful features missing from unity's default input manager (such as rebinding input at runtime) that we would otherwise have to rewrite on our own and is free to use under the MIT license.
+
+The only other third party libraries we use are unity's default libraries.
+
 
 # Reuse
 
