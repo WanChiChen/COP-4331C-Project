@@ -5,6 +5,8 @@
   
   -User Story 18 - Player can unlock new skills
   
+  -Wrote unit tests for user story 18
+  
   -Updated Charts, Requirements, Tests Overview documents
   
 ## Kevin:
