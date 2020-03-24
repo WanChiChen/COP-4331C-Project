@@ -20,3 +20,10 @@
 |SceneControl|Manual Test|Tests that application changes to main menu when LoadMainMenu is called.|Current game scene is the main menu scene|
 |UIManager|Manual Test|Tests that game environnment is frozen when game is paused.|Game environment is completely frozen.|
 |UIManager|Manual Test|Tests that pause menu appears when the game is paused.|Pause menu is visible in the application.|
+|Ability|testInitializeAbility|Tests that an ability object can be initalized. | testAbility != NULL|
+|Ability|testDuplicateAbility|Tests that an ability object can be initialized from an existing ability object| testAbility != NULL|
+|PlayerAbility|testCorrectStartingHealthModification|Tests that player correctly receives starting health modification upon learning an ability| initialHealth + healthModifier = finalHealth|
+|PlayerAbility|testCorrectCurrentHealthModification|Tests that player correctly receives current health modification upon learning an ability| initialHealth + healthModifier = finalHealth|
+|PlayerAbility|testCorrectSpeedModification|Tests that player correctly receives speed modification upon learning an ability|initialSpeed + speedModifier = finalSpeed|
+|PlayerAbility|testCorrectDamageModification|Tests that player correctly receives damage modification upon learning an ability|initialDamage + damageModifier = finalDamage|
+
