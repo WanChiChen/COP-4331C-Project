@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Luminosity.IO;
 
 
 public class UIManager : MonoBehaviour
@@ -23,8 +24,7 @@ public class UIManager : MonoBehaviour
 
     private void Update()
     {
-        //uses the p button to pause and unpause the game
-        if (Input.GetKeyDown(KeyCode.P))
+        if (InputManager.GetButtonDown("Pause"))
         {
             if (Time.timeScale == 1)
             {

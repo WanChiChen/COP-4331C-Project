@@ -72,6 +72,87 @@
     <Compile Include="Assets\Scripts\Equipment.cs" />
     <Compile Include="Assets\Scripts\ExitScript.cs" />
     <Compile Include="Assets\Scripts\FollowMousePosition.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Addons\InputEvents\Editor\InputEventGroupInspector.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Addons\InputEvents\Editor\InputEventManagerInspector.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Addons\InputEvents\Runtime\InputEvent.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Addons\InputEvents\Runtime\InputEventGroup.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Addons\InputEvents\Runtime\InputEventManager.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Addons\InputEvents\Runtime\InputEventType.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Addons\InputEvents\Runtime\InputState.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Addons\UIInputModule\Editor\Scripts\UIInputModuleVersionManager.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Addons\UIInputModule\Runtime\StandaloneInputModule.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Addons\UIInputModule\Runtime\UIInputAdapter.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Addons\XInput\Scripts\UWPGamepadAdapter.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Addons\XInput\Scripts\XInputDotNetAdapter.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Examples\01 - Controls Menu\Scripts\GamepadToggle.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Examples\01 - Controls Menu\Scripts\InvertAnalogAxis.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Examples\01 - Controls Menu\Scripts\LoadInputsOnStart.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Examples\01 - Controls Menu\Scripts\PauseMenu.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Examples\01 - Controls Menu\Scripts\RebindInput.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Examples\01 - Controls Menu\Scripts\ResetControlScheme.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Examples\01 - Controls Menu\Scripts\SaveInputs.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Examples\03 - Mobile Input\Scripts\TouchPad.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Examples\03 - Mobile Input\Scripts\VirtualDirectionalPad.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Examples\03 - Mobile Input\Scripts\VirtualInputButton.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Examples\03 - Mobile Input\Scripts\VirtualJoystick.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Examples\04 - Local Co-Op\Scripts\TPSInputController.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Examples\05 - X Input\Scripts\ConvertAxisToVibration.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Examples\06 - UI Navigation\Scripts\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Examples\06 - UI Navigation\Scripts\MenuPage.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Examples\07 - Generic Gamepad Adapter\Scripts\GenericGamepadAdapterTest.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Examples\Common\Packages\FirstPersonController\Sources\Scripts\CharacterMotor.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Examples\Common\Packages\FirstPersonController\Sources\Scripts\FPSInputController.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Examples\Common\Packages\FirstPersonController\Sources\Scripts\MouseLook.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Examples\Common\Scripts\HideCursorOnStart.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Examples\Common\Scripts\PathUtility.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Examples\Common\Scripts\PauseManager.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Editor\Scripts\GenericGamepadProfileInspector.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Editor\Scripts\GenericGamepadProfileSelectorInspector.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Editor\Scripts\GenericGamepadStateAdapterInspector.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Editor\Scripts\InputEditor.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Editor\Scripts\InputEditor_Data.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Editor\Scripts\InputManagerInspector.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Editor\Scripts\_Support\EditorToolbox.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Editor\Scripts\_Support\KeyCodeField.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Editor\Scripts\_Support\MenuCommands.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Runtime\ActionReference.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Runtime\BindingReference.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Runtime\ButtonState.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Runtime\ControlScheme.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Runtime\DeadZoneType.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Runtime\DeviceChangeService.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Runtime\GamepadAxis.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Runtime\GamepadButton.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Runtime\GamepadDPadType.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Runtime\GamepadIndex.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Runtime\GamepadProfileSelector.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Runtime\GamepadState.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Runtime\GamepadStateService.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Runtime\GamepadTriggerType.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Runtime\GenericGamepadProfile.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Runtime\GenericGamepadProfileSelector.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Runtime\GenericGamepadStateAdapter.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Runtime\IGamepadStateAdapter.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Runtime\IInputLoader.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Runtime\IInputSaver.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Runtime\IInputService.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Runtime\InputAction.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Runtime\InputBinding.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Runtime\InputDevice.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Runtime\InputLoaderXML.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Runtime\InputManager.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Runtime\InputManager_Unity.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Runtime\InputSaverXML.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Runtime\InputType.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Runtime\KeyUtils.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Runtime\KeyboardState.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Runtime\KeyboardStateService.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Runtime\PlayerID.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Runtime\SaveData.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Runtime\ScanFlags.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Runtime\ScanResult.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Runtime\ScanService.cs" />
+    <Compile Include="Assets\Scripts\InputManager\Source\Runtime\ScanSettings.cs" />
     <Compile Include="Assets\Scripts\Inventory.cs" />
     <Compile Include="Assets\Scripts\Item.cs" />
     <Compile Include="Assets\Scripts\ItemBehavior.cs" />
@@ -96,6 +177,21 @@
     <Compile Include="Assets\Scripts\UISkill.cs" />
     <Compile Include="Assets\Scripts\Weapon.cs" />
     <Compile Include="Assets\Scripts\bullet.cs" />
+    <None Include="Assets\Scripts\InputManager\Addons\UIInputModule\Editor\Resources\ui_input_module_index.xml" />
+    <None Include="Assets\Scripts\InputManager\Examples\Common\Packages\KennyUI\on_screen_controls_license.txt" />
+    <None Include="Assets\Scripts\InputManager\Addons\UIInputModule\Editor\Resources\ui_input_modules\unity_2017_2_classic.txt" />
+    <None Include="Assets\Scripts\InputManager\Addons\UIInputModule\Editor\Resources\ui_input_modules\unity_2018_3_classic.txt" />
+    <None Include="Assets\Scripts\InputManager\Examples\Common\Packages\KennyFonts\license.txt" />
+    <None Include="Assets\Scripts\InputManager\Addons\UIInputModule\Editor\Resources\ui_input_modules\unity_2018_3.txt" />
+    <None Include="Assets\Scripts\InputManager\Examples\03 - Mobile Input\Data\default_input.xml" />
+    <None Include="Assets\Scripts\InputManager\Source\Editor\Resources\input_manager_project_settings.txt" />
+    <None Include="Assets\Scripts\InputManager\Addons\UIInputModule\Editor\Resources\ui_input_modules\unity_5_6.txt" />
+    <None Include="Assets\Scripts\InputManager\Addons\UIInputModule\Editor\Resources\ui_input_modules\unity_2017_2.txt" />
+    <None Include="Assets\Scripts\InputManager\Addons\UIInputModule\Editor\Resources\ui_input_modules\unity_5_6_classic.txt" />
+    <None Include="Assets\Scripts\InputManager\Examples\Common\Packages\KennyUI\ui_pack_license.txt" />
+    <None Include="Assets\Scripts\InputManager\Examples\01 - Controls Menu\Data\default_input.xml" />
+    <None Include="Assets\Scripts\InputManager\Addons\XInput\Plugins\XInputDotNetPure_License.txt" />
+    <None Include="Assets\Scripts\InputManager\Source\Editor\Resources\input_manager_default_scheme.xml" />
     <Reference Include="UnityEditor.UI">
       <HintPath>C:/Users/wchen/Documents/GitHub/COP-4331C-Project/GameFiles/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
@@ -290,6 +386,12 @@
     </Reference>
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
+    </Reference>
+    <Reference Include="XInputDotNetPure">
+      <HintPath>C:/Users/wchen/Documents/GitHub/COP-4331C-Project/GameFiles/Assets/Scripts/InputManager/Addons/XInput/Plugins/XInputDotNetPure.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityInputConverter">
+      <HintPath>C:/Users/wchen/Documents/GitHub/COP-4331C-Project/GameFiles/Assets/Scripts/InputManager/Source/Editor/Library/UnityInputConverter.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

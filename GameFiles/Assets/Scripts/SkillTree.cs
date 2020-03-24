@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Luminosity.IO;
 
 public class SkillTree : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class SkillTree : MonoBehaviour
     void Update()
     {
         
-        if (Input.GetKeyDown(KeyCode.T)) //default skill tree key
+        if (InputManager.GetButtonDown("SkillTree")) 
         {
             canvas.gameObject.SetActive(!canvas.gameObject.activeSelf);
         }

@@ -48,8 +48,6 @@ public class KeyBindings : MonoBehaviour
     }
 
     
-
-    
     /*public void inputKeyID(int keyID)
     {
         Event e;

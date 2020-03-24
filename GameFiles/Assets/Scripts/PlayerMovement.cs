@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-
+using Luminosity.IO;
 [RequireComponent(typeof(BoxCollider2D))]
 public class PlayerMovement : MonoBehaviour
 {
@@ -47,8 +47,8 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         // Update movement inputs
-        moveInputx = Input.GetAxis("Horizontal");
-        moveInputy = Input.GetAxis("Vertical");
+        moveInputx = InputManager.GetAxis("Horizontal");
+        moveInputy = InputManager.GetAxis("Vertical");
     }
 
     // Called when the player collides with another collidable object

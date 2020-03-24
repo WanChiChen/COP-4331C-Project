@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using Luminosity.IO;
 
 
 public class Inventory : MonoBehaviour
@@ -56,7 +56,7 @@ public class Inventory : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.I)) //default inventory key
+        if(InputManager.GetButtonDown("Inventory"))
         {
             ui.gameObject.SetActive(!ui.gameObject.activeSelf);
         }

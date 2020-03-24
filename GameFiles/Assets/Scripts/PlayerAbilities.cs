@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Luminosity.IO;
 public class PlayerAbilities : MonoBehaviour
 {
     public GameObject player;
@@ -78,7 +78,7 @@ public class PlayerAbilities : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (InputManager.GetButtonDown("Fire1"))
         {
             Shoot();
         }
