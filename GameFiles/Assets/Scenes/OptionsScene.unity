@@ -243,7 +243,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 127434796}
         m_MethodName: inputKeyID
-        m_Mode: 5
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -401,7 +401,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 272725699}
         m_MethodName: inputKeyID
-        m_Mode: 5
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -986,7 +986,45 @@ MonoBehaviour:
         m_gamepadButton: 0
         m_gamepadAxis: 0
         m_gamepadIndex: 0
-  m_playerOneDefault: 85c52da314c14ce8bc1999635dc6e642
+  - m_name: Menu
+    m_description: 
+    m_isExpanded: 1
+    m_uniqueID: e2f73f4280f04a5986db51ec383fad63
+    m_actions:
+    - m_name: Up
+      m_description: 
+      m_bindings:
+      - m_positive: 0
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 0
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: Down
+      m_description: 
+      m_bindings: []
+    - m_name: Left
+      m_description: 
+      m_bindings: []
+    - m_name: Right
+      m_description: 
+      m_bindings: []
+    - m_name: Submit
+      m_description: 
+      m_bindings: []
+    - m_name: Cancel
+      m_description: 
+      m_bindings: []
+  m_playerOneDefault: e2f73f4280f04a5986db51ec383fad63
   m_playerTwoDefault: 
   m_playerThreeDefault: 
   m_playerFourDefault: 
@@ -1040,8 +1078,8 @@ MonoBehaviour:
   m_DownButton: Down
   m_LeftButton: Left
   m_RightButton: Right
-  m_SubmitButton: UI_Submit
-  m_CancelButton: UI_Cancel
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
   m_ForceModuleActive: 0
 --- !u!114 &835923042
 MonoBehaviour:
@@ -1989,7 +2027,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2006339807}
         m_MethodName: inputKeyID
-        m_Mode: 5
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2210,7 +2248,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2100210159}
         m_MethodName: inputKeyID
-        m_Mode: 5
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

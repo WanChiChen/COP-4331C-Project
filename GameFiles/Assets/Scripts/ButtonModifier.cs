@@ -51,11 +51,13 @@ public class ButtonModifier : MonoBehaviour
     }
     
 
-    public void inputKeyID(string keyName)
+    public void inputKeyID()
     {
         InputManager.StartInputScan(settings, result =>
         {
-            InputAction inputAction = InputManager.GetAction("Default", keyName);
+            InputAction inputAction = InputManager.GetAction("Default", ID);
+            Debug.Log(ID);
+            Debug.Log(inputAction);
             if (direction == 1)
             {
                 inputAction.Bindings[0].Positive = result.Key;
