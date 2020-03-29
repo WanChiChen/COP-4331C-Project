@@ -58,8 +58,6 @@ public class PlayerAbilities : MonoBehaviour
             health.currentHealth = health.startingHealth;
         movement.speed += movementUpdate;
         damage += damageUpdate;
-
-
     }
 
     void useSkill(Skill skill)
@@ -69,23 +67,25 @@ public class PlayerAbilities : MonoBehaviour
             health.currentHealth = health.startingHealth;
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
         if (InputManager.GetButtonDown("Fire1"))
         {
-            Shoot();
+            Shoot("Prefabs/bullet_prefab/bullet");
         }
-       
+        if (InputManager.GetButtonDown("Ability1"))
+        {
+            Shoot("Prefabs/bullet_prefab/ability1");
+        }
+        if (InputManager.GetButtonDown("Ability2"))
+        {
+            health.TakeDamage(-10);
+        }
     }
-    void Shoot()
+    void Shoot(string prefabName)
     {
+        bullet = Resources.Load<GameObject>(prefabName);
         Instantiate(bullet, firepoint.position, firepoint.rotation);
     }
 }
