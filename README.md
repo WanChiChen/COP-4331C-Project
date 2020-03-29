@@ -185,3 +185,32 @@ Kevin Samsoe || LifeAlertt
 - [Demonstration](https://youtu.be/y0KKW2E-zvY)
   
   - New features to this sprint and their timestamps in description (may need to click "show more" to see entire list)
+  
+ ## Sprint 8
+
+- [Responsibilities](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/Sprint8Responsibilities.md)
+
+- [Requirements](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/Requirements.md)
+
+- [Burndown Chart]()
+
+- [Velocity Chart]()
+
+- [Trello Board](https://trello.com/b/V1pN2FpK/project)
+
+- Design Documents
+
+  - [Architecure](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/Architecture.md)
+  - [Class Diagrams](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/Architecture.md#major-classes)
+  - [Sequence Diagrams](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/Architecture.md#program-organization)
+  
+- [Source Code](https://github.com/wc6255/COP-4331C-Project/tree/master/GameFiles/Assets/Scripts)
+
+- [Unit Tests](https://github.com/wc6255/COP-4331C-Project/tree/master/GameFiles/Assets/UnitTests)
+
+- [Tests Overview](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/Tests.md)
+  
+- [Demonstration]()
+  
+  - New features to this sprint and their timestamps in description (may need to click "show more" to see entire list)
+
