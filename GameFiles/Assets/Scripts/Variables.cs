@@ -1,7 +1,7 @@
 ﻿// Store variables that persist through scenes
 public static class Variables
 {
-    private static int gameLevel;
+    private static int gameLevel = 0;
 
     public static int GameLevel
     {

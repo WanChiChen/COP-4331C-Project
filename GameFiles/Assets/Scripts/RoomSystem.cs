@@ -47,6 +47,7 @@ public class RoomSystem : MonoBehaviour
         {
             Instantiate(levelExiter, rooms[rooms.Count - 1].transform.position, Quaternion.identity);
             genFinished = true;
+            Debug.Log("GameLevel:" + Variables.GameLevel);
         }
 
         roomSpawners = GameObject.FindGameObjectsWithTag("roomSpawner"); // Update array with all room spawners
