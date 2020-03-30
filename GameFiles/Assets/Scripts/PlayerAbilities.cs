@@ -8,6 +8,8 @@ public class PlayerAbilities : MonoBehaviour
     PlayerHealth health;
     PlayerMovement movement;
     public List<Ability> abilities = new List<Ability>();
+    public int[] cooldowns = new int[5];
+    public int[] usableAbilities = new int[5];
     public AbilityDatabase db;
 
     public Transform firepoint;
@@ -29,36 +31,57 @@ public class PlayerAbilities : MonoBehaviour
 
     private void Start()
     {
-        learnAbility(db.getAbility(1));
+        learnAbility(db.getAbility(2));
         learnAbility(db.getAbility(3));
     }
 
     public void learnAbility(Ability ability)
     {
+        int index;
         abilities.Add(ability);
         if (ability.type == 0)
         {
             updateStats(ability);
         }
+        if (ability.type == 1 || ability.type == 2)
+        {
+            index = abilities.FindIndex(searchAbility => searchAbility == ability);
+            cooldowns[index] = ability.modifiers[2];
+            usableAbilities[index] = 1;
+        }
     }
 
     public void learnAbility(int abilityID)
     {
+        int index;
         Ability ability = db.getAbility(abilityID);
         abilities.Add(ability);
         if(ability.type == 0)
         {
             updateStats(ability);
         }
+        if (ability.type == 1 || ability.type == 2)
+        {
+            index = abilities.FindIndex(searchAbility => searchAbility == ability);
+            cooldowns[index] = ability.modifiers[2];
+            usableAbilities[index] = 1;
+        }
     }
 
     public void learnAbility(string title)
     {
+        int index;
         Ability ability = db.getAbility(title);
         abilities.Add(ability);
         if (ability.type == 0)
         {
             updateStats(ability);
+        }
+        if(ability.type == 1 || ability.type == 2)
+        {
+            index = abilities.FindIndex(searchAbility => searchAbility == ability);
+            cooldowns[index] = ability.modifiers[2];
+            usableAbilities[index] = 1;
         }
     }
 
@@ -76,12 +99,20 @@ public class PlayerAbilities : MonoBehaviour
         damage += damageUpdate;
     }
 
-    void useAbility(Ability ability)
+    IEnumerator useAbility(int index)
     {
-        health.TakeDamage(ability.modifiers[0] * -1);
-        if(ability.type == 2)
+        Ability ability = abilities[index];
+        if(usableAbilities[index] == 1)
         {
-            Shoot(ability.prefab);
+            health.TakeDamage(ability.modifiers[0] * -1);
+            damage += ability.modifiers[1];
+            if (ability.type == 2)
+            {
+                Shoot(ability.prefab);
+            }
+            usableAbilities[index] = 0;
+            yield return new WaitForSecondsRealtime(cooldowns[index]);
+            usableAbilities[index] = 1;
         }
     }
 
@@ -95,11 +126,11 @@ public class PlayerAbilities : MonoBehaviour
         }
         if (InputManager.GetButtonDown("Ability1"))
         {
-            useAbility(abilities[0]);
+            StartCoroutine(useAbility(0));
         }
         if (InputManager.GetButtonDown("Ability2"))
         {
-            useAbility(abilities[1]);
+            StartCoroutine(useAbility(1));
         }
     }
     void Shoot(GameObject bullet)

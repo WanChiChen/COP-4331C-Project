@@ -1362,6 +1362,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  cooldowns: 0000000000000000000000000000000000000000
+  usableAbilities: 0000000000000000000000000000000000000000
+  db: {fileID: 916925811}
   firepoint: {fileID: 1023678952}
   bullet: {fileID: 5770026337282706964, guid: 33eccfb871c5d0d4f93d16e932d72fbc, type: 3}
   damage: 1
