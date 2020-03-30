@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\EnemyFunctionality\EnemyAttack.cs" />
     <Compile Include="Assets\Scripts\EnemyFunctionality\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\EnemyFunctionality\EnemyProjectile.cs" />
+    <Compile Include="Assets\Scripts\EnemyFunctionality\MeleeAttack.cs" />
     <Compile Include="Assets\Scripts\EnemyFunctionality\MeleeMovement.cs" />
     <Compile Include="Assets\Scripts\EnemyFunctionality\RangedAttack.cs" />
     <Compile Include="Assets\Scripts\EnemyFunctionality\RangedMovement.cs" />
