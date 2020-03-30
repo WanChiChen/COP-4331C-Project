@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class RoomSystem : MonoBehaviour
 {
@@ -48,9 +47,6 @@ public class RoomSystem : MonoBehaviour
         {
             Instantiate(levelExiter, rooms[rooms.Count - 1].transform.position, Quaternion.identity);
             genFinished = true;
-            Debug.Log("GameLevel: " + Variables.GameLevel);
-            Debug.Log("Level Size: " + rooms.Count);
-            ValidateSize();
         }
 
         roomSpawners = GameObject.FindGameObjectsWithTag("roomSpawner"); // Update array with all room spawners
@@ -66,36 +62,5 @@ public class RoomSystem : MonoBehaviour
 
         // If program makes it here, level is done generating
         layoutFinished = true;
-    }
-
-    // Checks to make sure the level generated is an apporpriate size for the current level
-    private void ValidateSize()
-    {
-        if(Variables.GameLevel < 5)
-        {
-            // If too small or too big, load new level
-            if(rooms.Count < 7 || rooms.Count > 15)
-            {
-                SceneManager.LoadScene("SampleScene");  // Load new level
-            }
-        }
-
-        else if(Variables.GameLevel < 20)
-        {
-            // If too small or too big, load new level
-            if (rooms.Count < 11 || rooms.Count > 28)
-            {
-                SceneManager.LoadScene("SampleScene");  // Load new level
-            }
-        }
-
-        else
-        {
-            // If too small or too big, load new level
-            if (rooms.Count < 17 || rooms.Count > 100)
-            {
-                SceneManager.LoadScene("SampleScene");  // Load new level
-            }
-        }
     }
 }

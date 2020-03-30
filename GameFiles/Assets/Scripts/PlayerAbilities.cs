@@ -8,9 +8,7 @@ public class PlayerAbilities : MonoBehaviour
     PlayerHealth health;
     PlayerMovement movement;
     public List<Ability> abilities = new List<Ability>();
-    public int[] cooldowns = new int[5];
-    public int[] usableAbilities = new int[5];
-    public AbilityDatabase db;
+    AbilityDatabase db;
 
     public Transform firepoint;
     public GameObject bullet;
@@ -28,61 +26,24 @@ public class PlayerAbilities : MonoBehaviour
     {
         Awake();
     }
-
-    private void Start()
-    {
-        learnAbility(db.getAbility(2));
-        learnAbility(db.getAbility(3));
-    }
-
     public void learnAbility(Ability ability)
     {
-        int index;
         abilities.Add(ability);
-        if (ability.type == 0)
-        {
-            updateStats(ability);
-        }
-        if (ability.type == 1 || ability.type == 2)
-        {
-            index = abilities.FindIndex(searchAbility => searchAbility == ability);
-            cooldowns[index] = ability.modifiers[2];
-            usableAbilities[index] = 1;
-        }
+        updateStats(ability);
     }
 
     public void learnAbility(int abilityID)
     {
-        int index;
         Ability ability = db.getAbility(abilityID);
         abilities.Add(ability);
-        if(ability.type == 0)
-        {
-            updateStats(ability);
-        }
-        if (ability.type == 1 || ability.type == 2)
-        {
-            index = abilities.FindIndex(searchAbility => searchAbility == ability);
-            cooldowns[index] = ability.modifiers[2];
-            usableAbilities[index] = 1;
-        }
+        updateStats(ability);
     }
 
     public void learnAbility(string title)
     {
-        int index;
         Ability ability = db.getAbility(title);
         abilities.Add(ability);
-        if (ability.type == 0)
-        {
-            updateStats(ability);
-        }
-        if(ability.type == 1 || ability.type == 2)
-        {
-            index = abilities.FindIndex(searchAbility => searchAbility == ability);
-            cooldowns[index] = ability.modifiers[2];
-            usableAbilities[index] = 1;
-        }
+        updateStats(ability);
     }
 
     void updateStats(Ability ability)
@@ -97,23 +58,21 @@ public class PlayerAbilities : MonoBehaviour
             health.currentHealth = health.startingHealth;
         movement.speed += movementUpdate;
         damage += damageUpdate;
+
+
     }
 
-    IEnumerator useAbility(int index)
+    void useSkill(Skill skill)
     {
-        Ability ability = abilities[index];
-        if(usableAbilities[index] == 1)
-        {
-            health.TakeDamage(ability.modifiers[0] * -1);
-            damage += ability.modifiers[1];
-            if (ability.type == 2)
-            {
-                Shoot(ability.prefab);
-            }
-            usableAbilities[index] = 0;
-            yield return new WaitForSecondsRealtime(cooldowns[index]);
-            usableAbilities[index] = 1;
-        }
+        health.currentHealth += skill.modifiers[0];
+        if (health.currentHealth > health.startingHealth)
+            health.currentHealth = health.startingHealth;
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
     }
 
     // Update is called once per frame
@@ -121,27 +80,12 @@ public class PlayerAbilities : MonoBehaviour
     {
         if (InputManager.GetButtonDown("Fire1"))
         {
-            bullet = Resources.Load<GameObject>("Prefabs/bullet_prefab/bullet");
-            Shoot(bullet);
+            Shoot();
         }
-        if (InputManager.GetButtonDown("Ability1"))
-        {
-            StartCoroutine(useAbility(0));
-        }
-        if (InputManager.GetButtonDown("Ability2"))
-        {
-            StartCoroutine(useAbility(1));
-        }
+       
     }
-    void Shoot(GameObject bullet)
+    void Shoot()
     {
         Instantiate(bullet, firepoint.position, firepoint.rotation);
-    }
-
-    void swapAbilityPosition(int index1, int index2)
-    {
-        Ability temp = abilities[index2];
-        abilities[index2] = abilities[index1];
-        abilities[index1] = temp;
     }
 }

@@ -9,7 +9,6 @@ public class ExitScript : MonoBehaviour
     {
         if(other.CompareTag("Player")) // If object is player, generate new level
         {
-            Variables.GameLevel = Variables.GameLevel + 1;
             SceneManager.LoadScene("SampleScene");  // Load new level
         }
     }

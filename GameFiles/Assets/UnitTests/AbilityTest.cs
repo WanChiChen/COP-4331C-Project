@@ -14,7 +14,7 @@ public class AbilityTest
         modifiers[0] = 10;
         modifiers[1] = 20;
         modifiers[2] = 30;
-        testAbility = new Ability(1, 0, "TestAbility", "AbilityDescription", modifiers);
+        testAbility = new Ability(1, "TestAbility", "AbilityDescription", modifiers);
 
         Assert.IsNotNull(testAbility);
     }
@@ -28,7 +28,7 @@ public class AbilityTest
         modifiers[0] = 10;
         modifiers[1] = 20;
         modifiers[2] = 30;
-        originalAbility = new Ability(1, 0, "TestAbility", "AbilityDescription", modifiers);
+        originalAbility = new Ability(1, "TestAbility", "AbilityDescription", modifiers);
         testAbility = new Ability(originalAbility);
 
         Assert.IsNotNull(testAbility);
@@ -51,7 +51,7 @@ public class AbilityTest
         modifiers[1] = 20;
         modifiers[2] = 30;
 
-        testAbility = new Ability(1, 0, "TestAbility", "AbilityDescription", modifiers);
+        testAbility = new Ability(1, "TestAbility", "AbilityDescription", modifiers);
         playerHealth.wakeUp();
         playerAbilities.wakeUp();
         initialHealth = playerHealth.startingHealth;
@@ -79,7 +79,7 @@ public class AbilityTest
         modifiers[1] = 20;
         modifiers[2] = 30;
 
-        testAbility = new Ability(1, 0, "TestAbility", "AbilityDescription", modifiers);
+        testAbility = new Ability(1, "TestAbility", "AbilityDescription", modifiers);
         playerHealth.wakeUp();
         playerAbilities.wakeUp();
         initialHealth = playerHealth.currentHealth;
@@ -107,7 +107,7 @@ public class AbilityTest
         modifiers[1] = 20;
         modifiers[2] = 30;
 
-        testAbility = new Ability(1, 0, "TestAbility", "AbilityDescription", modifiers);
+        testAbility = new Ability(1, "TestAbility", "AbilityDescription", modifiers);
         playerMovement.wakeUp();
         playerAbilities.wakeUp();
         initialSpeed = playerMovement.speed;
@@ -132,7 +132,7 @@ public class AbilityTest
         modifiers[1] = 20;
         modifiers[2] = 30;
 
-        testAbility = new Ability(1, 0, "TestAbility", "AbilityDescription", modifiers);
+        testAbility = new Ability(1, "TestAbility", "AbilityDescription", modifiers);
         playerAbilities.wakeUp();
         initialDamage = playerAbilities.damage;
         playerAbilities.learnAbility(testAbility);

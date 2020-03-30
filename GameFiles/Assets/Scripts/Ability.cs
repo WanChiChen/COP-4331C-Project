@@ -5,49 +5,31 @@ using UnityEngine;
 public class Ability
 {
     public int id;
-    public int type; //0 for passive, 1 for active, 2 for attack
     public string title;
     public string description;
     public Sprite icon;
-    public GameObject prefab;
     public int[] modifiers = new int[3];
     /*
-     * passive ability:
      * modifier[0] = health modifier
      * modifier[1] = speed modifier
      * modifier[2] = damage modifier
-     * 
-     * active ability:
-     * modifier[0] = health modifier
-     * modifier[1] = damage modifier
-     * modifier[2] = cooldown
-     * 
-     * damage ability:
-     * modifier[0] = health modifier
-     * modifier[1] = prefab id
-     * modifier[2] = cooldown
-     * 
      */
 
-    public Ability(int id, int type, string title, string description, int[] modifiers)
+    public Ability(int id, string title, string description, int[] modifiers)
     {
         this.id = id;
-        this.type = type;
         this.title = title;
         this.description = description;
         this.icon = Resources.Load<Sprite>("Sprites/Items/TestItem");
-        this.prefab = Resources.Load<GameObject>("Prefabs/bullet_prefab/"+title);
         this.modifiers = modifiers;
     }
 
     public Ability(Ability ability)
     {
         this.id = ability.id;
-        this.type = ability.type;
         this.title = ability.title;
         this.description = ability.description;
         this.icon = ability.icon;
-        this.prefab = ability.prefab;
         this.modifiers = ability.modifiers;
     }
 
