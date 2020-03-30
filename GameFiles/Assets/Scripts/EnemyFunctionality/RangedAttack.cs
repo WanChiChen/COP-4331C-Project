@@ -22,6 +22,7 @@ public class RangedAttack : MonoBehaviour
         yield return new WaitForSeconds(cooldown);
         if (Player != null)
         {
+            print("Attacked");
             GameObject projectile = Instantiate(EnemyBullet, transform.position, Quaternion.identity);
             Vector2 myPos = transform.position;
             Vector2 playerPos = Player.position;

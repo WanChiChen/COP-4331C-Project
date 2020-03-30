@@ -162,8 +162,8 @@ MonoBehaviour:
   cooldown: 4
   dmg: 10
   projectileForce: 2
-  Player: {fileID: 5487746939971185391, guid: ca37beff78c0a96499c6567c091a9c3b, type: 3}
-  EnemyBullet: {fileID: 8440614124825676034, guid: 37e55f92c1e952f4bba794cb80233d64,
+  Player: {fileID: 6224695456176996124, guid: 711a287ab2b46424fa07942e36e7dff5, type: 3}
+  EnemyBullet: {fileID: 8440614124825676034, guid: 9606020cd95afbc4f9e34a16eb69258d,
     type: 3}
 --- !u!114 &1404242788204388889
 MonoBehaviour:
@@ -178,4 +178,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  detectDist: 50
   runAwayDist: 25

@@ -135,4 +135,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   body: {fileID: 5770026337282706967}
-  dmg: 1
+  dmg: 100
