@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using NUnit.Framework;
+using System.Threading.Tasks;
 
 public class AbilityTest 
 {
@@ -139,5 +140,126 @@ public class AbilityTest
         finalDamage = playerAbilities.damage; ;
 
         Assert.AreEqual(initialDamage + modifiers[2], finalDamage);
+    }
+
+    [Test]
+    public void testActiveAbility()
+    {
+        Ability testAbility;
+        PlayerAbilities playerAbilities;
+        PlayerHealth playerHealth;
+        GameObject player;
+        int[] modifiers = new int[3];
+        int initialHealth, finalHealth, index;
+
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerHealth = player.GetComponent<PlayerHealth>();
+        playerAbilities = player.GetComponent<PlayerAbilities>();
+        modifiers[0] = 10;
+        modifiers[1] = 20;
+        modifiers[2] = 30;
+
+        testAbility = new Ability(1, 1, "TestAbility", "AbilityDescription", modifiers);
+        playerHealth.wakeUp();
+        playerAbilities.wakeUp();
+        initialHealth = playerHealth.currentHealth;
+        playerHealth.TakeDamage(30);
+        playerAbilities.learnAbility(testAbility);
+        index = playerAbilities.abilities.FindIndex(searchAbility => searchAbility == testAbility);
+        playerAbilities.StartCoroutine(playerAbilities.useAbility(index));
+        finalHealth = playerHealth.currentHealth;
+
+        Assert.AreEqual(initialHealth - 30 + modifiers[0], finalHealth);
+    }
+
+    [Test]
+    public void testActiveAbilityInitialUsability()
+    {
+        Ability testAbility;
+        PlayerAbilities playerAbilities;
+        PlayerHealth playerHealth;
+        GameObject player;
+        int[] modifiers = new int[3];
+        int initialUsability, finalUsability, index;
+
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerHealth = player.GetComponent<PlayerHealth>();
+        playerAbilities = player.GetComponent<PlayerAbilities>();
+        modifiers[0] = 10;
+        modifiers[1] = 20;
+        modifiers[2] = 30;
+
+        testAbility = new Ability(1, 1, "TestAbility", "AbilityDescription", modifiers);
+        playerHealth.wakeUp();
+        playerAbilities.wakeUp();
+        playerAbilities.learnAbility(testAbility);
+        index = playerAbilities.abilities.FindIndex(searchAbility => searchAbility == testAbility);
+        initialUsability = playerAbilities.usableAbilities[index];
+        playerAbilities.StartCoroutine(playerAbilities.useAbility(index));
+        finalUsability = playerAbilities.usableAbilities[index];
+
+        Assert.AreEqual(initialUsability, 1);
+    }
+
+    [Test]
+    public void testActiveAbilityUnusableOnCooldown()
+    {
+        Ability testAbility;
+        PlayerAbilities playerAbilities;
+        PlayerHealth playerHealth;
+        GameObject player;
+        int[] modifiers = new int[3];
+        int initialUsability, finalUsability, index;
+
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerHealth = player.GetComponent<PlayerHealth>();
+        playerAbilities = player.GetComponent<PlayerAbilities>();
+        modifiers[0] = 10;
+        modifiers[1] = 20;
+        modifiers[2] = 30;
+
+        testAbility = new Ability(1, 1, "TestAbility", "AbilityDescription", modifiers);
+        playerHealth.wakeUp();
+        playerAbilities.wakeUp();
+        playerAbilities.learnAbility(testAbility);
+        index = playerAbilities.abilities.FindIndex(searchAbility => searchAbility == testAbility);
+        initialUsability = playerAbilities.usableAbilities[index];
+        playerAbilities.StartCoroutine(playerAbilities.useAbility(index));
+        finalUsability = playerAbilities.usableAbilities[index];
+
+        Assert.AreEqual(finalUsability, 0);
+    }
+
+    [Test]
+    public void testActiveAbilityUsableAfterCooldown()
+    {
+        Ability testAbility;
+        PlayerAbilities playerAbilities;
+        PlayerHealth playerHealth;
+        GameObject player;
+        int[] modifiers = new int[3];
+        int initialUsability, finalUsability, index;
+        Task useAbility;
+
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerHealth = player.GetComponent<PlayerHealth>();
+        playerAbilities = player.GetComponent<PlayerAbilities>();
+        modifiers[0] = 10;
+        modifiers[1] = 20;
+        modifiers[2] = 1;
+
+        testAbility = new Ability(1, 1, "TestAbility", "AbilityDescription", modifiers);
+        playerHealth.wakeUp();
+        playerAbilities.wakeUp();
+        playerAbilities.learnAbility(testAbility);
+        index = playerAbilities.abilities.FindIndex(searchAbility => searchAbility == testAbility);
+        initialUsability = playerAbilities.usableAbilities[index];
+        useAbility = Task.Run(() =>
+        {
+            playerAbilities.StartCoroutine(playerAbilities.useAbility(index));  
+        });
+        finalUsability = playerAbilities.usableAbilities[index];
+
+        Assert.AreEqual(finalUsability, 1);
     }
 }

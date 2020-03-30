@@ -99,7 +99,7 @@ public class PlayerAbilities : MonoBehaviour
         damage += damageUpdate;
     }
 
-    IEnumerator useAbility(int index)
+    public IEnumerator useAbility(int index)
     {
         Ability ability = abilities[index];
         if(usableAbilities[index] == 1)

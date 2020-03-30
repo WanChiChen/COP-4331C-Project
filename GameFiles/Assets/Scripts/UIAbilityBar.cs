@@ -22,7 +22,7 @@ public class UIAbilityBar : MonoBehaviour
     void Start()
     {
         
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < numAbilities; i++)
         {
             GameObject instance = Instantiate(slotPrefab);
             instance.transform.SetParent(slotPanel);
@@ -30,7 +30,6 @@ public class UIAbilityBar : MonoBehaviour
 
             uiAbilities[i].index = i;
             uiAbilities[i].showAbility(abilities.abilities[0]);
-            Debug.Log("dddd" + i);
 
         }
     }
