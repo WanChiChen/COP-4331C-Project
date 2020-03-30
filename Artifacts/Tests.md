@@ -26,4 +26,12 @@
 |PlayerAbility|testCorrectCurrentHealthModification|Tests that player correctly receives current health modification upon learning an ability| initialHealth + healthModifier = finalHealth|
 |PlayerAbility|testCorrectSpeedModification|Tests that player correctly receives speed modification upon learning an ability|initialSpeed + speedModifier = finalSpeed|
 |PlayerAbility|testCorrectDamageModification|Tests that player correctly receives damage modification upon learning an ability|initialDamage + damageModifier = finalDamage|
+|PlayerAbility|testActiveAbility|Tests that an ability can be used and correctly modifies any necessary player stats| initial health + healthModifier = finalHealth|
+|PlayerAbility|testActiveAbilityInitialUsability|Tests that an ability can be used upon being learned|initialUsability == 1|
+|PlayerAbility|testActiveAbilityUnusableOnCooldown|Tests that an ability cannot be used when it is on cooldown|finalUsability == 0|
+|PlayerAbility|testActiveAbilityUsableAfterCooldown|Tests that an ability can be used after cooldown expires|finalUsability == 1
+1|
+|UIAbility|Manual Test| Tests that abilities learned by player not on cooldown are displayed on hotbar | Learned ability sprites are visible in original form|
+|UIAbility|Manual Test| Tests that abilities learned by player that are on cooldown have that status shown in the UI | Learned ability sprites on cooldown have red overlay|
+|UIAbility|Manual Test| Tests that abilities yet to be learned by player have that status shown in the UI | Unlearned ability sprites have red overlay|
 
