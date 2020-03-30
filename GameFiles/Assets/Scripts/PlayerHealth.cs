@@ -7,10 +7,14 @@ public class PlayerHealth : MonoBehaviour
     public int startingHealth = 100;                            // The amount of health the player starts the game with.
     public int currentHealth;                                   // The current health the player has.
     public Slider healthSlider;                                 // Reference to the UI's health bar.
+    public Text healthText;                                     // Reference to UI health display
 
     PlayerMovement playerMovement;                              // Reference to the player's movement.
     bool isDead;                                                // Whether the player is dead.
     bool damaged;                                               // True when the player gets damaged.
+
+    GameObject sceneControlObject;
+    SceneControl control;
 
 
     void Awake()
@@ -19,9 +23,15 @@ public class PlayerHealth : MonoBehaviour
         InitializeMovement();
 
         // Set the initial health of the player.
-        currentHealth = startingHealth;
+        currentHealth = 80;
 
         healthSlider.value = currentHealth;
+
+        updateText(currentHealth, startingHealth);
+
+        //Initialize Scene Control
+        sceneControlObject = GameObject.Find("SceneControlObject");
+        control = sceneControlObject.GetComponent<SceneControl>();
     }
 
 
@@ -49,8 +59,9 @@ public class PlayerHealth : MonoBehaviour
         // Reduce the current health by the damage amount.
         currentHealth -= amount;
 
-        // Set the health bar's value to the current health.
+        // Update UI to the current health.
         healthSlider.value = currentHealth;
+        updateText(currentHealth, startingHealth);
 
         // If the player has lost all it's health and the death flag hasn't been set yet...
         if (currentHealth <= 0 && !isDead)
@@ -58,6 +69,16 @@ public class PlayerHealth : MonoBehaviour
             // ... it should die.
             Death();
         }
+
+        if(currentHealth >= startingHealth)
+        {
+            currentHealth = startingHealth;
+        }
+    }
+
+    public void updateText(int currentHealth, int totalHealth)
+    {
+        healthText.text = ("HP: " + currentHealth + " / " + totalHealth);
     }
 
     public bool isAlive()
@@ -77,6 +98,9 @@ public class PlayerHealth : MonoBehaviour
 
         // Turn off the movement scripts.
         playerMovement.enabled = false;
+
+        //Swap to Game Over Scene
+        control.LoadGameScene(3);
 
     }
 

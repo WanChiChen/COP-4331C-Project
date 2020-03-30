@@ -14,12 +14,16 @@ public class MeleeMovement : EnemyMovement
     // Update is called once per frame
     void Update()
     {
-        Vector2 distance = player.transform.position - this.transform.position;
         //checks distace from player, when close begins to move towards.
-        Debug.Log(distance.sqrMagnitude);
-        if (distance.sqrMagnitude < detectDist)
+        //Debug.Log((target.transform.position - this.transform.position).sqrMagnitude);
+        if ((player.transform.position - this.transform.position).sqrMagnitude < detectDist)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
         }
+        if ((player.transform.position - this.transform.position).sqrMagnitude < .08)
+        {
+            //attack
+        }
+
     }
 }

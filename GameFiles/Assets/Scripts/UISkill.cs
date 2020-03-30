@@ -7,12 +7,12 @@ using UnityEngine.EventSystems;
 public class UISkill : MonoBehaviour, IPointerClickHandler
 {
     public Ability ability;
-    private Image abilityImage;
-    GameObject player;
-    PlayerExperience exp;
-    PlayerAbilities playerAbilities;
+    public Image abilityImage;
+    public GameObject player;
+    public PlayerExperience exp;
+    public PlayerAbilities playerAbilities;
 
-    public void OnPointerClick(PointerEventData eventData)
+    public virtual void OnPointerClick(PointerEventData eventData)
     {
         Debug.Log("ability clicked!");
         if (exp.skillPoints > 0)
@@ -25,7 +25,7 @@ public class UISkill : MonoBehaviour, IPointerClickHandler
         
     }
 
-    public void showAbility(Ability ability)
+    public virtual void showAbility(Ability ability)
     {
         this.ability = ability;
         if (this.ability != null)

@@ -16,6 +16,7 @@ public class RangedMovement : EnemyMovement
     // Update is called once per frame
     void Update()
     {
+
         Vector2 distance = player.transform.position - this.transform.position; 
 
         //checks distace from player, when close begins to move away.
@@ -25,7 +26,7 @@ public class RangedMovement : EnemyMovement
         }
         if (distance.sqrMagnitude > runAwayDist && distance.sqrMagnitude < detectDist)
         {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, player.position, -1 * speed * Time.deltaTime);
         }
     }
 

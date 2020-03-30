@@ -11,7 +11,9 @@ public class AbilityDatabase : MonoBehaviour
     {
         abilities = new List<Ability>()
         {
-            new Ability(1, "TestAbility", "Test Ability", new int[]{4,4,4})
+            new Ability(1, 0,"ability1", "Passive Ability", new int[]{4,4,4}),
+            new Ability(2, 1,"ability2", "Active Ability", new int[]{10,0,5}),
+            new Ability(3, 2,"ability3", "Test Damage Ability", new int[]{-10,0,5}),
         };
         Debug.Log("built");
     }
