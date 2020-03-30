@@ -12,10 +12,11 @@ public class EnemyProjectile : MonoBehaviour
         
         if (collision.tag != "Enemy" && collision.tag != "roomSpawner" && collision.tag != "OriginRoom" && collision.tag != "Item")
         {
-            if (collision.GetComponent<RecDmg>() != null)
+            if (collision.GetComponent<PlayerHealth>() != null)
             {
                 print(collision.tag);
-                collision.GetComponent<RecDmg>().DealDamage(damage);
+                int dmg = Mathf.FloorToInt(damage);
+                collision.GetComponent<PlayerHealth>().TakeDamage(dmg);
             }
             Destroy(gameObject);
         }
