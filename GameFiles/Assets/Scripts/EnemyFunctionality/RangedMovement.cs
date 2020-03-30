@@ -16,7 +16,6 @@ public class RangedMovement : EnemyMovement
     // Update is called once per frame
     void Update()
     {
-
         Vector2 distance = player.transform.position - this.transform.position; 
 
         //checks distace from player, when close begins to move away.
