@@ -23,7 +23,8 @@ public class PlayerDeathTest
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         PlayerHealth health = player.GetComponent<PlayerHealth>();
-        health.InitializeMovement();
+        health.wakeUp();
+        health.inTest = true;
         health.currentHealth = health.startingHealth;
         health.TakeDamage(health.currentHealth);
 

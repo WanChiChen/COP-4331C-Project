@@ -15,7 +15,7 @@ public class PlayerHealth : MonoBehaviour
 
     GameObject sceneControlObject;
     SceneControl control;
-
+    public bool inTest = false;                                 // Used for Unit Tests
 
     void Awake()
     {
@@ -100,7 +100,8 @@ public class PlayerHealth : MonoBehaviour
         playerMovement.enabled = false;
 
         //Swap to Game Over Scene
-        control.LoadGameScene(3);
+        if(!inTest)
+            control.LoadGameScene(3);
 
     }
 
