@@ -15,7 +15,7 @@ public class PlayerAbilities : MonoBehaviour
     public Transform firepoint;
     public GameObject bullet;
 
-    public int damage = 1;
+    public int damage = 0;
 
     void Awake()
     {
@@ -113,6 +113,7 @@ public class PlayerAbilities : MonoBehaviour
             usableAbilities[index] = 0;
             yield return new WaitForSecondsRealtime(cooldowns[index]);
             usableAbilities[index] = 1;
+            damage -= ability.modifiers[1];
         }
     }
 

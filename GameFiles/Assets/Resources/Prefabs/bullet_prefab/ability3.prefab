@@ -71,7 +71,7 @@ PrefabInstance:
     - target: {fileID: 5770026337282706964, guid: 33eccfb871c5d0d4f93d16e932d72fbc,
         type: 3}
       propertyPath: m_Name
-      value: ability1
+      value: ability3
       objectReference: {fileID: 0}
     - target: {fileID: 5770026337282706965, guid: 33eccfb871c5d0d4f93d16e932d72fbc,
         type: 3}
@@ -81,7 +81,7 @@ PrefabInstance:
     - target: {fileID: 5770026337282706965, guid: 33eccfb871c5d0d4f93d16e932d72fbc,
         type: 3}
       propertyPath: dmg
-      value: 30
+      value: 110
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33eccfb871c5d0d4f93d16e932d72fbc, type: 3}

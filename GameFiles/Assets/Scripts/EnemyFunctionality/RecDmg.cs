@@ -6,7 +6,20 @@ public class RecDmg : MonoBehaviour
 {
     public float health;
     public float maxHealth;
+    public GameObject player;
+    public PlayerAbilities playerAbilities;
 
+    private void Awake()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerAbilities = player.GetComponent<PlayerAbilities>();
+    }
+
+    // For testing purposes
+    public void wakeUp()
+    {
+        Awake();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -16,7 +29,7 @@ public class RecDmg : MonoBehaviour
 
     public void DealDamage(float damage)
     {
-        health -= damage;
+        health -= (damage + playerAbilities.damage);
         CheckDeath();
     }
 
