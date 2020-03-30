@@ -13,6 +13,9 @@ public class PlayerHealth : MonoBehaviour
     bool isDead;                                                // Whether the player is dead.
     bool damaged;                                               // True when the player gets damaged.
 
+    GameObject sceneControlObject;
+    SceneControl control;
+
 
     void Awake()
     {
@@ -25,6 +28,10 @@ public class PlayerHealth : MonoBehaviour
         healthSlider.value = currentHealth;
 
         updateText(currentHealth, startingHealth);
+
+        //Initialize Scene Control
+        sceneControlObject = GameObject.Find("SceneControlObject");
+        control = sceneControlObject.GetComponent<SceneControl>();
     }
 
 
@@ -91,6 +98,9 @@ public class PlayerHealth : MonoBehaviour
 
         // Turn off the movement scripts.
         playerMovement.enabled = false;
+
+        //Swap to Game Over Scene
+        control.LoadGameScene(3);
 
     }
 
