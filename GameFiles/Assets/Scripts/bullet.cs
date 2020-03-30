@@ -9,7 +9,7 @@ public class bullet : MonoBehaviour
     PlayerAbilities skill;
     public float speed = 10;
     public Rigidbody2D body;
-    public float dmg;
+    public float damage;
 
     private void Awake()
     {
@@ -25,7 +25,13 @@ public class bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        //collides with enemy
+        if (collision.GetComponent<RecDmg>() != null)
+        {
+            Debug.Log("Bullet collided with " + collision.gameObject.name, collision.gameObject);
+            collision.GetComponent<RecDmg>().DealDamage(damage);
+            //reduce enemy health by damage
+        }
         // Check if trigger is a room spawner node or origin node
         if (!collision.CompareTag("roomSpawner") && !collision.CompareTag("OriginRoom") && !collision.CompareTag("Item"))
         {
@@ -33,12 +39,7 @@ public class bullet : MonoBehaviour
             Destroy(gameObject);
         }
         
-        //collides with enemy
-        //if(collision.CompareTag("Enemy"))
-       // {
-        //    dmg = skill.damage;
-            //reduce enemy health by damage
-        //}
+       
     }
    
     private void Update()
