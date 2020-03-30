@@ -157,7 +157,6 @@
     <Compile Include="Assets\Scripts\Item.cs" />
     <Compile Include="Assets\Scripts\ItemBehavior.cs" />
     <Compile Include="Assets\Scripts\ItemDatabase.cs" />
-    <Compile Include="Assets\Scripts\KeyBindings.cs" />
     <Compile Include="Assets\Scripts\MainCamera.cs" />
     <Compile Include="Assets\Scripts\NeuralNetwork.cs" />
     <Compile Include="Assets\Scripts\PlayerAbilities.cs" />
@@ -168,13 +167,13 @@
     <Compile Include="Assets\Scripts\RoomSpawner.cs" />
     <Compile Include="Assets\Scripts\RoomSystem.cs" />
     <Compile Include="Assets\Scripts\SceneControl.cs" />
-    <Compile Include="Assets\Scripts\Skill.cs" />
     <Compile Include="Assets\Scripts\SkillCanvas.cs" />
     <Compile Include="Assets\Scripts\SkillTree.cs" />
     <Compile Include="Assets\Scripts\UIInventory.cs" />
     <Compile Include="Assets\Scripts\UIItem.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\UISkill.cs" />
+    <Compile Include="Assets\Scripts\Variables.cs" />
     <Compile Include="Assets\Scripts\Weapon.cs" />
     <Compile Include="Assets\Scripts\bullet.cs" />
     <None Include="Assets\Scripts\InputManager\Addons\UIInputModule\Editor\Resources\ui_input_module_index.xml" />

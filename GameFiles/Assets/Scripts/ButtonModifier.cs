@@ -2,16 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Luminosity.IO;
 
 public class ButtonModifier : MonoBehaviour
 {
-    KeyBindings binds;
-    GameObject keyBindings;
-    public int ID;
+    public string ID;
+    public int direction;
+    ScanSettings settings;
+
     // Start is called before the first frame update
     void Start()
     {
-        changeButtonText(binds.keyCodes[ID]);
+        if(direction == 1)
+        {
+            changeButtonText(InputManager.GetAction("Default", ID).Bindings[0].Positive);
+        }
+
+        if (direction == 0)
+        {
+            changeButtonText(InputManager.GetAction("Default", ID).Bindings[0].Negative);
+        }
+
     }
 
     // Update is called once per frame
@@ -22,37 +33,41 @@ public class ButtonModifier : MonoBehaviour
 
     private void Awake()
     {
-        keyBindings = GameObject.Find("Key Bindings");
-        binds = keyBindings.GetComponent<KeyBindings>();
-        
+        settings = new ScanSettings
+        {
+            ScanFlags = ScanFlags.Key,
+            // If the player presses this key the scan will be canceled.
+            CancelScanKey = KeyCode.Escape,
+            // If the player doesn't press any key within the specified number
+            // of seconds the scan will be canceled.
+            Timeout = 10
+        };
     }
 
     public void changeButtonText(KeyCode key)
     {
         string text = key.ToString();
         this.gameObject.GetComponentInChildren<Text>().text = text;
-        binds.changeKey(ID, key);
     }
+    
 
-    public void inputKey(int key)
+    public void inputKeyID()
     {
-        switch (key)
+        InputManager.StartInputScan(settings, result =>
         {
-            case 0:
-                changeButtonText(KeyCode.A);
-                break;
-            case 1:
-                changeButtonText(KeyCode.B);
-                break;
-            case 2:
-                changeButtonText(KeyCode.C);
-                break;
-            case 3:
-                changeButtonText(KeyCode.D);
-                break;
-        }
-
-        
-
+            InputAction inputAction = InputManager.GetAction("Default", ID);
+            Debug.Log(ID);
+            Debug.Log(inputAction);
+            if (direction == 1)
+            {
+                inputAction.Bindings[0].Positive = result.Key;
+            }
+            if (direction == 0)
+            {
+                inputAction.Bindings[0].Negative = result.Key;
+            }
+            changeButtonText(result.Key);
+            return true;
+        });
     }
 }
