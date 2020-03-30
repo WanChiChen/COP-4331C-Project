@@ -17,7 +17,7 @@ public class RangedMovement : EnemyMovement
     void Update()
     {
 
-        Vector2 distance = player.transform.position - this.transform.position); 
+        Vector2 distance = player.transform.position - this.transform.position; 
 
         //checks distace from player, when close begins to move away.
         if (distance.sqrMagnitude < runAwayDist)
