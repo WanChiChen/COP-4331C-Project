@@ -210,7 +210,7 @@ Kevin Samsoe || LifeAlertt
 
 - [Tests Overview](https://github.com/wc6255/COP-4331C-Project/blob/master/Artifacts/Tests.md)
   
-- [Demonstration]()
+- [Demonstration](https://youtu.be/NoWAPGTkOPU)
   
   - New features to this sprint and their timestamps in description (may need to click "show more" to see entire list)
 
