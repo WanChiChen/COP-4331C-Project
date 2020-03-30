@@ -20,10 +20,5 @@ public class MeleeMovement : EnemyMovement
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
         }
-        if ((player.transform.position - this.transform.position).sqrMagnitude < .08)
-        {
-            //attack
-        }
-
     }
 }

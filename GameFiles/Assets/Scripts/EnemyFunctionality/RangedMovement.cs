@@ -26,7 +26,7 @@ public class RangedMovement : EnemyMovement
         }
         if (distance.sqrMagnitude > runAwayDist && distance.sqrMagnitude < detectDist)
         {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, -1 * speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
         }
     }
 
