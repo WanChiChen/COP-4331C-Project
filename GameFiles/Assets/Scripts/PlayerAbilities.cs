@@ -8,7 +8,7 @@ public class PlayerAbilities : MonoBehaviour
     PlayerHealth health;
     PlayerMovement movement;
     public List<Ability> abilities = new List<Ability>();
-    AbilityDatabase db;
+    public AbilityDatabase db;
 
     public Transform firepoint;
     public GameObject bullet;
@@ -26,24 +26,40 @@ public class PlayerAbilities : MonoBehaviour
     {
         Awake();
     }
+
+    private void Start()
+    {
+        learnAbility(db.getAbility(1));
+        learnAbility(db.getAbility(3));
+    }
+
     public void learnAbility(Ability ability)
     {
         abilities.Add(ability);
-        updateStats(ability);
+        if (ability.type == 0)
+        {
+            updateStats(ability);
+        }
     }
 
     public void learnAbility(int abilityID)
     {
         Ability ability = db.getAbility(abilityID);
         abilities.Add(ability);
-        updateStats(ability);
+        if(ability.type == 0)
+        {
+            updateStats(ability);
+        }
     }
 
     public void learnAbility(string title)
     {
         Ability ability = db.getAbility(title);
         abilities.Add(ability);
-        updateStats(ability);
+        if (ability.type == 0)
+        {
+            updateStats(ability);
+        }
     }
 
     void updateStats(Ability ability)
@@ -60,11 +76,13 @@ public class PlayerAbilities : MonoBehaviour
         damage += damageUpdate;
     }
 
-    void useSkill(Skill skill)
+    void useAbility(Ability ability)
     {
-        health.currentHealth += skill.modifiers[0];
-        if (health.currentHealth > health.startingHealth)
-            health.currentHealth = health.startingHealth;
+        health.TakeDamage(ability.modifiers[0] * -1);
+        if(ability.type == 2)
+        {
+            Shoot(ability.prefab);
+        }
     }
 
     // Update is called once per frame
@@ -72,20 +90,27 @@ public class PlayerAbilities : MonoBehaviour
     {
         if (InputManager.GetButtonDown("Fire1"))
         {
-            Shoot("Prefabs/bullet_prefab/bullet");
+            bullet = Resources.Load<GameObject>("Prefabs/bullet_prefab/bullet");
+            Shoot(bullet);
         }
         if (InputManager.GetButtonDown("Ability1"))
         {
-            Shoot("Prefabs/bullet_prefab/ability1");
+            useAbility(abilities[0]);
         }
         if (InputManager.GetButtonDown("Ability2"))
         {
-            health.TakeDamage(-10);
+            useAbility(abilities[1]);
         }
     }
-    void Shoot(string prefabName)
+    void Shoot(GameObject bullet)
     {
-        bullet = Resources.Load<GameObject>(prefabName);
         Instantiate(bullet, firepoint.position, firepoint.rotation);
+    }
+
+    void swapAbilityPosition(int index1, int index2)
+    {
+        Ability temp = abilities[index2];
+        abilities[index2] = abilities[index1];
+        abilities[index1] = temp;
     }
 }

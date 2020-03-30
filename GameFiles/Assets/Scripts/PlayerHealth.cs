@@ -62,6 +62,11 @@ public class PlayerHealth : MonoBehaviour
             // ... it should die.
             Death();
         }
+
+        if(currentHealth >= startingHealth)
+        {
+            currentHealth = startingHealth;
+        }
     }
 
     public void updateText(int currentHealth, int totalHealth)
