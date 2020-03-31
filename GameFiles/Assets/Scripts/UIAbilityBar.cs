@@ -29,7 +29,16 @@ public class UIAbilityBar : MonoBehaviour
             uiAbilities.Add(instance.GetComponentInChildren<UIAbility>());
 
             uiAbilities[i].index = i;
-            uiAbilities[i].showAbility(abilities.abilities[0]);
+            
+            if (i == numAbilities - 1)
+            {
+                uiAbilities[i].showAbility(null);
+            }
+
+            else
+            {
+                uiAbilities[i].showAbility(abilities.abilities[0]);
+            }
 
         }
     }

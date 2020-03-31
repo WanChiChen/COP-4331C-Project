@@ -7,15 +7,37 @@ using UnityEngine.EventSystems;
 public class UIAbility : UISkill
 {
     public int index;
+    private UIAbility selectedAbility;
+
     void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         playerAbilities = player.GetComponent<PlayerAbilities>();
         abilityImage = this.gameObject.GetComponent<Image>();
+        selectedAbility = GameObject.Find("SelectedAbility").GetComponent<UIAbility>();
     }
 
     public override void OnPointerClick(PointerEventData eventData)
     {
+        if(this.ability != null)
+        {
+            if (selectedAbility.ability != null)
+            {
+                Ability clone = new Ability(selectedAbility.ability);
+                selectedAbility.showAbility(this.ability);
+                showAbility(clone);
+            }
+            else
+            {
+                selectedAbility.showAbility(this.ability);
+                showAbility(null);
+            }
+        }
+        else if (selectedAbility.ability != null)
+        {
+            showAbility(selectedAbility.ability);
+            selectedAbility.showAbility(null);
+        }
         Debug.Log("Ability Bar clicked!");
     }
 
