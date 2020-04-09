@@ -59,6 +59,10 @@ public class PlayerHealth : MonoBehaviour
         // Reduce the current health by the damage amount.
         currentHealth -= amount;
 
+        // Add amount to total damage taken
+        Variables.PlayerDamageTaken += amount;
+        Debug.Log("PlayerDamageTaken: " + Variables.PlayerDamageTaken);
+
         // Update UI to the current health.
         healthSlider.value = currentHealth;
         updateText(currentHealth, startingHealth);
