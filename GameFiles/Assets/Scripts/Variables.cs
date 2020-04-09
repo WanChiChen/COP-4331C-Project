@@ -3,6 +3,8 @@ public static class Variables
 {
     private static int gameLevel = 0;
     private static int playerDamageTaken = 0;
+    private static float currentDPS = 0;
+    private static float highestDPS = 0;
 
     public static int GameLevel
     {
@@ -27,4 +29,29 @@ public static class Variables
             playerDamageTaken = value;
         }
     }
+
+    public static float CurrentDPS
+    {
+        get
+        {
+            return currentDPS;
+        }
+        set
+        {
+            currentDPS = value;
+        }
+    }
+
+    public static float HighestDPS
+    {
+        get
+        {
+            return highestDPS;
+        }
+        set
+        {
+            highestDPS = value;
+        }
+    }
 }
+

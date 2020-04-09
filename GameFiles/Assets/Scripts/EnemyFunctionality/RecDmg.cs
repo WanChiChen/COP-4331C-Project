@@ -30,6 +30,7 @@ public class RecDmg : MonoBehaviour
     public void DealDamage(float damage)
     {
         health -= (damage + playerAbilities.damage);
+        Variables.CurrentDPS += (damage + playerAbilities.damage);
         CheckDeath();
     }
 

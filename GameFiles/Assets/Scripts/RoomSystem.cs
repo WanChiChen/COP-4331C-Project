@@ -51,6 +51,7 @@ public class RoomSystem : MonoBehaviour
             Debug.Log("GameLevel: " + Variables.GameLevel);
             Debug.Log("Level Size: " + rooms.Count);
             ValidateSize();
+            InvokeRepeating("CalculateDPS", 1F, 1F);
         }
 
         roomSpawners = GameObject.FindGameObjectsWithTag("roomSpawner"); // Update array with all room spawners
@@ -66,6 +67,18 @@ public class RoomSystem : MonoBehaviour
 
         // If program makes it here, level is done generating
         layoutFinished = true;
+    }
+
+    // Record the damage done by the player the previous second
+    private void CalculateDPS()
+    {
+        if(Variables.CurrentDPS > Variables.HighestDPS)
+        {
+            Variables.HighestDPS = Variables.CurrentDPS;
+            Debug.Log("HighestDPS: " + Variables.HighestDPS);
+        }
+
+        Variables.CurrentDPS = 0;
     }
 
     // Checks to make sure the level generated is an apporpriate size for the current level
