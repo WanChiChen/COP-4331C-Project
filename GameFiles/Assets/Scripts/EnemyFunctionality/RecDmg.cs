@@ -31,6 +31,13 @@ public class RecDmg : MonoBehaviour
     {
         health -= (damage + playerAbilities.damage);
         Variables.CurrentDPS += (damage + playerAbilities.damage);
+        
+        if((damage + playerAbilities.damage) > Variables.SingleTargetDPS)
+        {
+            Variables.SingleTargetDPS = (damage + playerAbilities.damage);
+            Debug.Log("SingleTargetDPS: " + Variables.SingleTargetDPS);
+        }
+
         CheckDeath();
     }
 

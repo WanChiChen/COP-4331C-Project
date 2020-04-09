@@ -5,6 +5,7 @@ public static class Variables
     private static int playerDamageTaken = 0;
     private static float currentDPS = 0;
     private static float highestDPS = 0;
+    private static float singleTargetDPS = 0;
 
     public static int GameLevel
     {
@@ -51,6 +52,18 @@ public static class Variables
         set
         {
             highestDPS = value;
+        }
+    }
+
+    public static float SingleTargetDPS
+    {
+        get
+        {
+            return singleTargetDPS;
+        }
+        set
+        {
+            singleTargetDPS = value;
         }
     }
 }
