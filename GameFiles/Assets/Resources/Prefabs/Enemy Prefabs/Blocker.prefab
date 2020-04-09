@@ -14,9 +14,8 @@ GameObject:
   - component: {fileID: 5990788882538640480}
   - component: {fileID: -2088129976588522043}
   - component: {fileID: 7166761746633578187}
-  - component: {fileID: 1125883217388555773}
   m_Layer: 0
-  m_Name: MeleeEnemy
+  m_Name: Blocker
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -126,6 +125,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 100
+  player: {fileID: 0}
+  playerAbilities: {fileID: 0}
 --- !u!114 &-2088129976588522043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,6 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66a829a6a22ff6c4e8d921889fc34149, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  runAwayParam: 0
   speed: 1
   detectDist: 40
 --- !u!50 &7166761746633578187
@@ -161,17 +163,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &1125883217388555773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5837789125503133558}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dc562e3a0501ca418c810cb08a5fdb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 10
-  body: {fileID: 7166761746633578187}

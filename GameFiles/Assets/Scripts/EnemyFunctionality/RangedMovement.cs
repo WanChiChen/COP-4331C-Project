@@ -5,8 +5,6 @@ using UnityEngine;
 public class RangedMovement : EnemyMovement
 {
    
-    public float runAwayDist;
-
     // Start is called before the first frame update
     public override void Start()
     {
@@ -20,11 +18,11 @@ public class RangedMovement : EnemyMovement
         Vector2 distance = player.transform.position - this.transform.position; 
 
         //checks distace from player, when close begins to move away.
-        if (distance.sqrMagnitude < runAwayDist)
+        if (distance.sqrMagnitude < runAwayParam)
         {
            transform.position = Vector2.MoveTowards(transform.position, player.position, -1 * speed * Time.deltaTime);
         }
-        if (distance.sqrMagnitude > runAwayDist && distance.sqrMagnitude < detectDist)
+        if (distance.sqrMagnitude > runAwayParam && distance.sqrMagnitude < detectDist)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
         }

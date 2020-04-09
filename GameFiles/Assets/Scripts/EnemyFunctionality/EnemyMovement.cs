@@ -4,6 +4,7 @@ using UnityEngine;
 
 public abstract class EnemyMovement : MonoBehaviour
 {
+    public float runAwayParam;
     public float speed;
     public float detectDist;
     protected Transform player;
