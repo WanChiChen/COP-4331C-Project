@@ -3,9 +3,10 @@ public static class Variables
 {
     private static int gameLevel = 0;
     private static int playerDamageTaken = 0;
-    private static float currentDPS = 0;
-    private static float highestDPS = 0;
-    private static float singleTargetDPS = 0;
+    private static float currentDPS = 0f;
+    private static float highestDPS = 0f;
+    private static float singleTargetDPS = 0f;
+    private static float averageDistance = 0f;
 
     public static int GameLevel
     {
@@ -64,6 +65,18 @@ public static class Variables
         set
         {
             singleTargetDPS = value;
+        }
+    }
+
+    public static float AverageDistance
+    {
+        get
+        {
+            return averageDistance;
+        }
+        set
+        {
+            averageDistance = value;
         }
     }
 }

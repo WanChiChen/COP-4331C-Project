@@ -8,6 +8,9 @@ public class RoomSystem : MonoBehaviour
     // List of generated rooms
     public List<GameObject> rooms = new List<GameObject>();
 
+    // List for calculating average distances
+    public List<float> distances = new List<float>();
+
     // Array of room spawners
     public GameObject[] roomSpawners;
 
@@ -35,6 +38,17 @@ public class RoomSystem : MonoBehaviour
     // Flag to check if enitre level generation is finished
     public bool genFinished;
 
+    // Array of enemies
+    public GameObject[] enemies;
+
+    // Player object
+    private GameObject player;
+
+    void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
+
     private void LateUpdate()
     {
         // Check if level generation is finished, if it is then we dont need to do the rest of the update
@@ -52,6 +66,8 @@ public class RoomSystem : MonoBehaviour
             Debug.Log("Level Size: " + rooms.Count);
             ValidateSize();
             InvokeRepeating("CalculateDPS", 1F, 1F);
+            InvokeRepeating("AddAverageDistance", 2F, 2F);
+            InvokeRepeating("CalculateAverageDistance", 40F, 40F);
         }
 
         roomSpawners = GameObject.FindGameObjectsWithTag("roomSpawner"); // Update array with all room spawners
@@ -79,6 +95,49 @@ public class RoomSystem : MonoBehaviour
         }
 
         Variables.CurrentDPS = 0;
+    }
+
+    // Calculate average distance from nearest enemy
+    private void AddAverageDistance()
+    {
+        try
+        {
+            enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+            float distance = Vector3.Distance(player.GetComponent<Transform>().position, enemies[0].GetComponent<Transform>().position);
+
+            foreach (GameObject enemy in enemies)
+            {
+                if (Vector3.Distance(player.GetComponent<Transform>().position, enemy.GetComponent<Transform>().position) > distance)
+                {
+                    distance = Vector3.Distance(player.GetComponent<Transform>().position, enemy.GetComponent<Transform>().position);
+                }
+            }
+
+            distances.Add(distance);
+
+            if (distances.Count > 100)
+            {
+                distances.RemoveAt(0);
+            }
+        }
+        catch (System.Exception e)
+        {
+        }
+    }
+
+    // Calculates average distances recorded
+    private void CalculateAverageDistance()
+    {
+        float sum = 0;
+
+        foreach(float dist in distances)
+        {
+            sum += dist;
+        }
+
+        Variables.AverageDistance = sum / distances.Count;
+        Debug.Log("AverageDistance: " + Variables.AverageDistance);
     }
 
     // Checks to make sure the level generated is an apporpriate size for the current level
