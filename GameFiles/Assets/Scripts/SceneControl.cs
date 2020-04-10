@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Luminosity.IO;
 
 public class SceneControl : MonoBehaviour
 {
@@ -34,5 +35,24 @@ public class SceneControl : MonoBehaviour
     public void LoadGameScene(int sceneID)
     {
         SceneManager.LoadScene(sceneID);
+    }
+
+    public void SavePlayerPref()
+    {
+        InputManager.Save();
+    }
+
+    public void LoadPlayerPref()
+    {
+        InputManager.Load();
+    }
+
+    private void Awake()
+    {
+        LoadPlayerPref();
+        if(SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            InputManager.SetControlScheme("Default", PlayerID.One);
+        }
     }
 }
