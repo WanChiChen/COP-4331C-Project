@@ -176,6 +176,7 @@
     <Compile Include="Assets\Scripts\RoomSystem.cs" />
     <Compile Include="Assets\Scripts\SceneControl.cs" />
     <Compile Include="Assets\Scripts\SkillCanvas.cs" />
+    <Compile Include="Assets\Scripts\SkillTooltip.cs" />
     <Compile Include="Assets\Scripts\SkillTree.cs" />
     <Compile Include="Assets\Scripts\UIAbility.cs" />
     <Compile Include="Assets\Scripts\UIAbilityBar.cs" />

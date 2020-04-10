@@ -11,7 +11,7 @@ public class AbilityDatabase : MonoBehaviour
     {
         abilities = new List<Ability>()
         {
-            new Ability(1, 0,"ability1", "Passive Ability", new int[]{4,4,4}),
+            new Ability(1, 0,"Hit the Gym", "Slightly Raises Base Stats", new int[]{4,4,4}),
             new Ability(2, 1,"ability2", "Active Ability", new int[]{10,10,5}),
             new Ability(3, 2,"ability3", "Damage Ability", new int[]{-10,0,5}),
             new Ability(4, 1,"ability4", "Active Ability 2", new int[]{-10,50,5}),

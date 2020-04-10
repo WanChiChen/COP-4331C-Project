@@ -24,7 +24,7 @@ public class Ability
      * 
      * damage ability:
      * modifier[0] = health modifier
-     * modifier[1] = prefab id
+     * modifier[1] = damage done
      * modifier[2] = cooldown
      * 
      */

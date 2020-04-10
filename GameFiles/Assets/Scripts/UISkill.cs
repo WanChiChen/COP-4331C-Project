@@ -4,13 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class UISkill : MonoBehaviour, IPointerClickHandler
+public class UISkill : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public Ability ability;
     public Image abilityImage;
     public GameObject player;
     public PlayerExperience exp;
     public PlayerAbilities playerAbilities;
+    public SkillTooltip toolTip;
+    public GameObject toolTipObject;
 
     public virtual void OnPointerClick(PointerEventData eventData)
     {
@@ -57,5 +59,21 @@ public class UISkill : MonoBehaviour, IPointerClickHandler
         exp = player.GetComponent<PlayerExperience>();
         playerAbilities = player.GetComponent<PlayerAbilities>();
         abilityImage = this.gameObject.GetComponent<Image>();
+        toolTip = GameObject.Find("SkillToolTipText").GetComponent<SkillTooltip>();
+        toolTipObject = GameObject.Find("SkillToolTip");
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        toolTipObject.SetActive(true);
+        if (this.ability != null)
+        {
+            toolTip.generateToolTip(this.ability);
+        }
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        toolTipObject.SetActive(false);
     }
 }
