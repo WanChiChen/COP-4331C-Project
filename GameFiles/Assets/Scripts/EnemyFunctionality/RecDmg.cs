@@ -6,13 +6,16 @@ public class RecDmg : MonoBehaviour
 {
     public float health;
     public float maxHealth;
+    public int exp;
     public GameObject player;
     public PlayerAbilities playerAbilities;
+    public PlayerExperience playerExperience;
 
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         playerAbilities = player.GetComponent<PlayerAbilities>();
+        playerExperience = player.GetComponent<PlayerExperience>();
     }
 
     // For testing purposes
@@ -54,6 +57,7 @@ public class RecDmg : MonoBehaviour
         if (health <= 0)
         {
             Debug.Log("killed");
+            playerExperience.collectExperience(exp);
             Destroy(gameObject);
         }
     }

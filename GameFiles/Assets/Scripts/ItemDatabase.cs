@@ -11,11 +11,7 @@ public class ItemDatabase : MonoBehaviour
     {
         items = new List<Item>()
         {
-            new Item(1, "TestItem", "Test Description",
-            new Dictionary<string, int>
-            {
-                {"TestAttribute", 1}
-            })
+            new Item(1, 1, "TestEquipment", "Test Description", new int[] {0,10,0,0})
         };
     }
 

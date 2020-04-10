@@ -4,7 +4,7 @@ using UnityEngine;
 using NUnit.Framework;
 
 public class ItemsTest
-{   
+{   /*
     [Test]
     public void testGetItemByID()
     {
@@ -94,5 +94,5 @@ public class ItemsTest
 
     }
 
-    
+    */
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerExperience : MonoBehaviour
 {
@@ -8,6 +9,11 @@ public class PlayerExperience : MonoBehaviour
     public int level; //player's current level
     public int expThreshold; //exp needed to reach next level
     public int skillPoints; //players can spend points on new abilities
+    public int totalSkillPoints; //total skill points obtained
+
+    public Slider expSlider;
+    public Text expText;
+    public Text skillText;
 
     // Start is called before the first frame update
     void Awake()
@@ -16,6 +22,8 @@ public class PlayerExperience : MonoBehaviour
         level = 1;
         expThreshold = 100;
         skillPoints = 1;
+        totalSkillPoints = skillPoints;
+        updateText();
     }
 
     // Update is called once per frame
@@ -32,6 +40,7 @@ public class PlayerExperience : MonoBehaviour
         {
             levelUp();
         }
+        updateText();
     }
 
     // called when player exp increases past current threshold
@@ -43,9 +52,18 @@ public class PlayerExperience : MonoBehaviour
             level++;
             expThreshold = (int)((double)expThreshold * 1.2);
             skillPoints++;
+            totalSkillPoints++;
         }
 
         if (exp < 0)
             exp = 0;
+    }
+
+    public void updateText()
+    {
+        expText.text = ("Level: " + level + " EXP: " + exp + " / " + expThreshold);
+        expSlider.maxValue = expThreshold;
+        expSlider.value = exp;
+        skillText.text = ("Points Available: " + skillPoints + "\nPoints Obtained: " + totalSkillPoints);
     }
 }

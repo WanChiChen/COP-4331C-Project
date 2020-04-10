@@ -7,10 +7,10 @@ using UnityEngine.EventSystems;
 public class UIItem : MonoBehaviour, IPointerClickHandler
 {
     public Item item;
-    private Image itemImage;
-    private UIItem selectedItem;
+    public Image itemImage;
+    public UIItem selectedItem;
 
-    public void OnPointerClick(PointerEventData eventData)
+    public virtual void OnPointerClick(PointerEventData eventData)
     {
         if(this.item != null)
         {
@@ -51,7 +51,7 @@ public class UIItem : MonoBehaviour, IPointerClickHandler
     private void Awake()
     {
         itemImage = this.gameObject.GetComponent<Image>();
-        updateItem(null); // test
+        updateItem(null);
         selectedItem = GameObject.Find("SelectedItem").GetComponent<UIItem>();
     }
 }

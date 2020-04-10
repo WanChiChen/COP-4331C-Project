@@ -4,7 +4,7 @@ using UnityEngine;
 using NUnit.Framework;
 
 public class EquipmentTest 
-{
+{   /*
     [Test]
     public void testInitializeEquipment()
     {
@@ -101,5 +101,5 @@ public class EquipmentTest
         finalSpeed = playerMovement.speed;
         Assert.AreEqual(initialSpeed + attributes[1], finalSpeed);
 
-    }
-}
+    }*/
+} 

@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 public class UIAbility : UISkill
 {
     public int index;
+    private int tempIndex;
     private UIAbility selectedAbility;
 
     void Awake()
@@ -15,6 +16,7 @@ public class UIAbility : UISkill
         playerAbilities = player.GetComponent<PlayerAbilities>();
         abilityImage = this.gameObject.GetComponent<Image>();
         selectedAbility = GameObject.Find("SelectedAbility").GetComponent<UIAbility>();
+        selectedAbility.showAbility(null);
     }
 
     public override void OnPointerClick(PointerEventData eventData)
@@ -24,21 +26,33 @@ public class UIAbility : UISkill
             if (selectedAbility.ability != null)
             {
                 Ability clone = new Ability(selectedAbility.ability);
+
                 selectedAbility.showAbility(this.ability);
+                selectedAbility.ability = this.ability;
+
+                ability = clone;
                 showAbility(clone);
+
+                playerAbilities.abilities[index] = clone;
+                
             }
             else
             {
                 selectedAbility.showAbility(this.ability);
+                selectedAbility.ability = this.ability;
+                
                 showAbility(null);
+                ability = null;
             }
         }
         else if (selectedAbility.ability != null)
         {
             showAbility(selectedAbility.ability);
+            playerAbilities.abilities[index] = selectedAbility.ability;
+            ability = selectedAbility.ability;
+            selectedAbility.ability = null;
             selectedAbility.showAbility(null);
         }
-        Debug.Log("Ability Bar clicked!");
     }
 
     // Start is called before the first frame update
@@ -57,20 +71,25 @@ public class UIAbility : UISkill
         else
         {
             abilityImage.color = Color.clear;
+            abilityImage.sprite = null;
         }
     }
     
     // Update is called once per frame
     void Update()
     {
-        if(playerAbilities.usableAbilities[index] == 0)
+        if(ability != null)
         {
-            updateAbility(ability, 0);
+            if (playerAbilities.usableAbilities[index] == 0)
+            {
+                updateAbility(ability, 0);
+            }
+            if (playerAbilities.usableAbilities[index] == 1)
+            {
+                updateAbility(ability, 1);
+            }
         }
-        if (playerAbilities.usableAbilities[index] == 1)
-        {
-            updateAbility(ability, 1);
-        }
+        
     }
 
    public void updateAbility(Ability ability, int flag)
