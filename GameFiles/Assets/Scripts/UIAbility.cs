@@ -16,6 +16,7 @@ public class UIAbility : UISkill
         playerAbilities = player.GetComponent<PlayerAbilities>();
         abilityImage = this.gameObject.GetComponent<Image>();
         selectedAbility = GameObject.Find("SelectedAbility").GetComponent<UIAbility>();
+        selectedAbility.showAbility(null);
     }
 
     public override void OnPointerClick(PointerEventData eventData)
@@ -25,14 +26,11 @@ public class UIAbility : UISkill
             if (selectedAbility.ability != null)
             {
                 Ability clone = new Ability(selectedAbility.ability);
-                //tempIndex = selectedAbility.index;
 
                 selectedAbility.showAbility(this.ability);
-                //selectedAbility.index = this.index;
                 selectedAbility.ability = this.ability;
 
                 ability = clone;
-                //index = tempIndex;
                 showAbility(clone);
 
                 playerAbilities.abilities[index] = clone;
@@ -41,7 +39,6 @@ public class UIAbility : UISkill
             else
             {
                 selectedAbility.showAbility(this.ability);
-                //selectedAbility.index = this.index;
                 selectedAbility.ability = this.ability;
                 
                 showAbility(null);

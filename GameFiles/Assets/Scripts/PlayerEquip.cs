@@ -7,9 +7,9 @@ public class PlayerEquip : MonoBehaviour
     public GameObject player;
     PlayerHealth health;
     PlayerMovement movement;
-    Weapon damage;
+    PlayerAbilities damage;
     int[] slots= new int[4];
-    Equipment[] equippedItems = new Equipment[4];
+    Item[] equippedItems = new Item[4];
 
     /*
      * slots[0] = head armor
@@ -24,33 +24,37 @@ public class PlayerEquip : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         health = player.GetComponent<PlayerHealth>();
         movement = player.GetComponent<PlayerMovement>();
+        damage = player.GetComponent<PlayerAbilities>();
     }
 
-    public void Equip(Equipment equip)
+    public void Equip(Item equip)
     {
-        int slot = equip.slot;
+        int slot = equip.modifiers[0];
         if (slots[slot] > 0)
         {
             Unequip(slot);
         }
         slots[slot]++;
 
-        health.startingHealth += equip.attributes[0];
-        movement.speed += equip.attributes[1];
+        health.startingHealth += equip.modifiers[1];
+        health.TakeDamage(0);
+        damage.damage += equip.modifiers[2];
+        movement.speed += equip.modifiers[3];
         equippedItems[slot] = equip;
 
     }
 
     public void Unequip(int slot)
     {
-        Equipment unequipped;
+        Item unequipped;
 
         if(slots[slot] > 0)
         {
             unequipped = equippedItems[slot];
-            health.startingHealth -= unequipped.attributes[0];
-            movement.speed -= unequipped.attributes[1];
-
+            health.startingHealth -= unequipped.modifiers[1];
+            health.TakeDamage(0);
+            damage.damage -= unequipped.modifiers[2];
+            movement.speed -= unequipped.modifiers[3];
             slots[slot]--;
             equippedItems[slot] = null;
         }  

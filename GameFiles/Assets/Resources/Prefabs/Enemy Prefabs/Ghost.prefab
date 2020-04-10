@@ -126,8 +126,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 100
+  exp: 0
   player: {fileID: 0}
   playerAbilities: {fileID: 0}
+  playerExperience: {fileID: 0}
 --- !u!114 &545341901400122163
 MonoBehaviour:
   m_ObjectHideFlags: 0
