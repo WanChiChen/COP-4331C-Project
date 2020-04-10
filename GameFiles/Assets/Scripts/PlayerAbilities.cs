@@ -33,6 +33,9 @@ public class PlayerAbilities : MonoBehaviour
     {
         learnAbility(db.getAbility(2));
         learnAbility(db.getAbility(3));
+        learnAbility(db.getAbility(4));
+        learnAbility(db.getAbility(5));
+        learnAbility(db.getAbility(6));
     }
 
     public void learnAbility(Ability ability)
@@ -133,13 +136,25 @@ public class PlayerAbilities : MonoBehaviour
         {
             StartCoroutine(useAbility(1));
         }
+        if (InputManager.GetButtonDown("Ability3"))
+        {
+            StartCoroutine(useAbility(2));
+        }
+        if (InputManager.GetButtonDown("Ability4"))
+        {
+            StartCoroutine(useAbility(3));
+        }
+        if (InputManager.GetButtonDown("Ability5"))
+        {
+            StartCoroutine(useAbility(4));
+        }
     }
     void Shoot(GameObject bullet)
     {
         Instantiate(bullet, firepoint.position, firepoint.rotation);
     }
 
-    void swapAbilityPosition(int index1, int index2)
+    public void swapAbilityPosition(int index1, int index2)
     {
         Ability temp = abilities[index2];
         abilities[index2] = abilities[index1];

@@ -13,7 +13,10 @@ public class AbilityDatabase : MonoBehaviour
         {
             new Ability(1, 0,"ability1", "Passive Ability", new int[]{4,4,4}),
             new Ability(2, 1,"ability2", "Active Ability", new int[]{10,10,5}),
-            new Ability(3, 2,"ability3", "Test Damage Ability", new int[]{-10,0,5}),
+            new Ability(3, 2,"ability3", "Damage Ability", new int[]{-10,0,5}),
+            new Ability(4, 1,"ability4", "Active Ability 2", new int[]{-10,50,5}),
+            new Ability(5, 1,"ability5", "Active Ability 3", new int[]{30,-10,5}),
+            new Ability(6, 2,"ability6", "Damage Ability 2", new int[]{0,1,7}),
         };
         Debug.Log("built");
     }

@@ -35,7 +35,7 @@ public class Ability
         this.type = type;
         this.title = title;
         this.description = description;
-        this.icon = Resources.Load<Sprite>("Sprites/Items/TestItem");
+        this.icon = Resources.Load<Sprite>("Sprites/Abilities/"+title);
         this.prefab = Resources.Load<GameObject>("Prefabs/bullet_prefab/"+title);
         this.modifiers = modifiers;
     }

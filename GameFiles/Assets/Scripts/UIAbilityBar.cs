@@ -30,14 +30,13 @@ public class UIAbilityBar : MonoBehaviour
 
             uiAbilities[i].index = i;
             
-            if (i == numAbilities - 1)
+            if(abilities.abilities[i] != null)
             {
-                uiAbilities[i].showAbility(null);
+                uiAbilities[i].showAbility(abilities.abilities[i]);
             }
-
             else
             {
-                uiAbilities[i].showAbility(abilities.abilities[0]);
+                uiAbilities[i].showAbility(null);
             }
 
         }
