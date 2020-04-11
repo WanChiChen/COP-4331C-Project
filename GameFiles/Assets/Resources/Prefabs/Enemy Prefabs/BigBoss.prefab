@@ -12,6 +12,10 @@ GameObject:
   - component: {fileID: 1458874564393362772}
   - component: {fileID: 1898121711917560722}
   - component: {fileID: 623022709554188767}
+  - component: {fileID: -2702555185298086740}
+  - component: {fileID: 1154399996719570322}
+  - component: {fileID: -2359361535339826019}
+  - component: {fileID: -7804083258561203323}
   m_Layer: 0
   m_Name: BigBoss
   m_TagString: Enemy
@@ -27,7 +31,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5357817786849874309}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.50810504, y: 1.1358453, z: -66.410576}
+  m_LocalPosition: {x: 0.50810504, y: 1.1358453, z: 5.41058}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -93,7 +97,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.05}
@@ -130,3 +134,67 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &-2702555185298086740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5357817786849874309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c131bf6728a6f15498d5bfedf0edb130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 30
+  cooldown: 0.8
+  dmg: 15
+  projectileForce: 5
+  EnemyBullet: {fileID: 8440614124825676034, guid: 7928e99ec46660b4eacf9446fee1b915,
+    type: 3}
+--- !u!114 &1154399996719570322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5357817786849874309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dc562e3a0501ca418c810cb08a5fdb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 100
+  body: {fileID: 0}
+--- !u!114 &-2359361535339826019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5357817786849874309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 787898f938c13644cb8ab88cfe118076, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  maxHealth: 300
+  exp: 300
+  player: {fileID: 0}
+  playerAbilities: {fileID: 0}
+  playerExperience: {fileID: 0}
+--- !u!114 &-7804083258561203323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5357817786849874309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f839a83a1fb04a443a5e2143317528d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Blocker: {fileID: 7006990800564064217, guid: fa0153e1af306174fb19df01d4d3f34f, type: 3}
+  detect: 32

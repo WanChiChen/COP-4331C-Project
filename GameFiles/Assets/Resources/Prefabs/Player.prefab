@@ -249,6 +249,7 @@ MonoBehaviour:
   currentHealth: 0
   healthSlider: {fileID: 0}
   healthText: {fileID: 0}
+  inTest: 0
 --- !u!114 &4263057966011803941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,6 +293,10 @@ MonoBehaviour:
   level: 0
   expThreshold: 0
   skillPoints: 0
+  totalSkillPoints: 0
+  expSlider: {fileID: 0}
+  expText: {fileID: 0}
+  skillText: {fileID: 0}
 --- !u!114 &4263057966011803936
 MonoBehaviour:
   m_ObjectHideFlags: 0

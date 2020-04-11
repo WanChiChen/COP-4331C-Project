@@ -23,7 +23,7 @@ public class PlayerHealth : MonoBehaviour
         InitializeMovement();
 
         // Set the initial health of the player.
-        currentHealth = 80;
+        currentHealth = startingHealth;
 
         healthSlider.value = currentHealth;
 

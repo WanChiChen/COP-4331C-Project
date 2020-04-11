@@ -79,6 +79,7 @@
     <Compile Include="Assets\Scripts\EnemyFunctionality\RangedAttack.cs" />
     <Compile Include="Assets\Scripts\EnemyFunctionality\RangedMovement.cs" />
     <Compile Include="Assets\Scripts\EnemyFunctionality\RecDmg.cs" />
+    <Compile Include="Assets\Scripts\EnemyFunctionality\Wall.cs" />
     <Compile Include="Assets\Scripts\ExitScript.cs" />
     <Compile Include="Assets\Scripts\FollowMousePosition.cs" />
     <Compile Include="Assets\Scripts\InputManager\Addons\InputEvents\Editor\InputEventGroupInspector.cs" />
