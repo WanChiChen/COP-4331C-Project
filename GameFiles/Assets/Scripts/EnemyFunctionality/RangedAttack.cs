@@ -29,7 +29,7 @@ public class RangedAttack : EnemyAttack
         yield return new WaitForSeconds(cooldown);
         if (distance.sqrMagnitude <= range)
         {
-            print("THiS" + distance);
+           
             GameObject projectile = Instantiate(EnemyBullet, transform.position, Quaternion.identity);
             Vector2 myPos = transform.position;
             Vector2 playerPos = player.position;
