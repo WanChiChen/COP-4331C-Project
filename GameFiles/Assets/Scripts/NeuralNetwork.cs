@@ -13,10 +13,16 @@ public class NeuralNetwork : MonoBehaviour
     // Array of output layer nodes;
     public List<AINode> outputLayer = new List<AINode>();
 
+    // Player object
+    private GameObject player;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        // Get player object
+        player = GameObject.FindGameObjectWithTag("Player");
+
         // Numbers are the number of nodes for input, hidden, and output layers respectively
         InitializeNetwork(5, 4, 8);
 
@@ -34,10 +40,20 @@ public class NeuralNetwork : MonoBehaviour
     // Send inputs to input layer nodes
     private void SendInputs()
     {
-        foreach(AINode node in inputLayer)
-        {
-            node.SetInput(1);
-        }
+        // Send average diustance from enemies to first input node
+        inputLayer[0].SetInput(Variables.AverageDistance / 10f);
+
+        // Send average damage taken by player to second input node
+        inputLayer[1].SetInput((float)Variables.PlayerDamageTaken / 100f);
+
+        // Send highest dps to third input node
+        inputLayer[2].SetInput(Variables.HighestDPS / 100f);
+
+        // Send highest single target dps to fourth input
+        inputLayer[3].SetInput(Variables.SingleTargetDPS / 100f);
+
+        // Send player max hp to fifth input
+        inputLayer[4].SetInput((float)player.GetComponent<PlayerHealth>().startingHealth / 200f);
     }
 
     // Initialize nodes in each layer

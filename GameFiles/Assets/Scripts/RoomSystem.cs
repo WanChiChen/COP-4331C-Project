@@ -44,9 +44,16 @@ public class RoomSystem : MonoBehaviour
     // Player object
     private GameObject player;
 
+    // Neural Network
+    private NeuralNetwork network;
+
+    // Enemy configurations
+    public int[] enemyConfigs = {1, 2, 3, 4, 5, 6, 7, 8};
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        network = GameObject.FindGameObjectWithTag("Network").GetComponent<NeuralNetwork>();
     }
 
     private void LateUpdate()
@@ -65,9 +72,10 @@ public class RoomSystem : MonoBehaviour
             Debug.Log("GameLevel: " + Variables.GameLevel);
             Debug.Log("Level Size: " + rooms.Count);
             ValidateSize();
+            SpawnEnemies();
             InvokeRepeating("CalculateDPS", 1F, 1F);
             InvokeRepeating("AddAverageDistance", 2F, 2F);
-            InvokeRepeating("CalculateAverageDistance", 40F, 40F);
+            InvokeRepeating("CalculateAverageDistance", 30F, 30F);
         }
 
         roomSpawners = GameObject.FindGameObjectsWithTag("roomSpawner"); // Update array with all room spawners
@@ -139,6 +147,72 @@ public class RoomSystem : MonoBehaviour
         Variables.AverageDistance = sum / distances.Count;
         Debug.Log("AverageDistance: " + Variables.AverageDistance);
     }
+
+    // Spawn enemies within the rooms
+    private void SpawnEnemies()
+    {
+        List<int> enemyConfigsPriority = new List<int>();
+        List<int> used = new List<int>();
+        List<AINode> outputCopy = new List<AINode>();
+        AINode tempNode;
+        int index = 0;
+
+        foreach(AINode node in network.outputLayer)
+        {
+            outputCopy.Add(node);
+        }
+
+        foreach(AINode node in outputCopy)
+        {
+            Debug.Log("Output: " + node.GetOutput());
+        }
+
+        Debug.Log("OutputCopyCount: " + outputCopy.Count);
+
+        for (int i = 0; i < outputCopy.Count; i++)
+        {
+            tempNode = outputCopy[0];
+
+            for (int j = 0; j < outputCopy.Count; j++)
+            {
+                if((outputCopy[j].GetOutput() >= tempNode.GetOutput()) && !IsUsed(j, used))
+                {
+                    tempNode = outputCopy[j];
+                    index = j;
+                }
+            }
+
+            enemyConfigsPriority.Add(enemyConfigs[index]);
+            Debug.Log("count: " + enemyConfigsPriority.Count);
+            used.Add(index);
+        }
+
+        foreach (int val in used)
+        {
+            Debug.Log("used: " + val);
+        }
+
+        foreach (int val in enemyConfigsPriority)
+        {
+            Debug.Log("val: " + val);
+        }
+    }
+
+    private bool IsUsed(int num, List<int> used)
+    {
+        foreach(int n in used)
+        {
+            if(num == n)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    // Create a prioritized list of enemy spawns
+
 
     // Checks to make sure the level generated is an apporpriate size for the current level
     private void ValidateSize()
