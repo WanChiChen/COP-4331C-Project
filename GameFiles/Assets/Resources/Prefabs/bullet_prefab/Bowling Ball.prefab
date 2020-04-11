@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4249909231649687805}
   - component: {fileID: 4249909231649687806}
   m_Layer: 0
-  m_Name: ability6
+  m_Name: Bowling Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 30e71d15dd8f9744f9a7467b2dd63758, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0be23b1fd9c5537469fe24e863727bc4, type: 3}
   m_Color: {r: 0.29971242, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0

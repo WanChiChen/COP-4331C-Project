@@ -22,8 +22,7 @@ public class SkillCanvas : MonoBehaviour
             instance.transform.SetParent(slotPanel);
             uiAbilities.Add(instance.GetComponentInChildren<UISkill>());
 
-            uiAbilities[i].showAbility(db.getAbility(1)); //change 0 to i when other abilities have been created
-            Debug.Log("SkillCanvas " + i);
+            uiAbilities[i].showAbility(db.getAbility(i+1));
         }
     }
 

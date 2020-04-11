@@ -5330,6 +5330,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4263057966011803936, guid: fd514ee3ce264c04f98aea61291de0fe,
         type: 3}
+      propertyPath: cooldowns.Array.size
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4263057966011803936, guid: fd514ee3ce264c04f98aea61291de0fe,
+        type: 3}
+      propertyPath: usableAbilities.Array.size
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4263057966011803936, guid: fd514ee3ce264c04f98aea61291de0fe,
+        type: 3}
       propertyPath: db
       value: 
       objectReference: {fileID: 916925811}

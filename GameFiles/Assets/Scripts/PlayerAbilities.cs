@@ -8,8 +8,8 @@ public class PlayerAbilities : MonoBehaviour
     PlayerHealth health;
     PlayerMovement movement;
     public List<Ability> abilities = new List<Ability>();
-    public int[] cooldowns = new int[5];
-    public int[] usableAbilities = new int[5];
+    public int[] cooldowns = new int[16];
+    public int[] usableAbilities = new int[16];
     public AbilityDatabase db;
 
     public Transform firepoint;
@@ -49,6 +49,7 @@ public class PlayerAbilities : MonoBehaviour
         if (ability.type == 1 || ability.type == 2)
         {
             index = abilities.FindIndex(searchAbility => searchAbility == ability);
+            Debug.LogError(index + " " + cooldowns.Length);
             cooldowns[index] = ability.modifiers[2];
             usableAbilities[index] = 1;
         }
