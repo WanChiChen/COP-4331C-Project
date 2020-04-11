@@ -63,6 +63,14 @@ public class PlayerHealth : MonoBehaviour
         Variables.PlayerDamageTaken += amount;
         Debug.Log("PlayerDamageTaken: " + Variables.PlayerDamageTaken);
 
+       
+
+        //check overheal
+        if (currentHealth >= startingHealth)
+        {
+            currentHealth = startingHealth;
+        }
+
         // Update UI to the current health.
         healthSlider.value = currentHealth;
         updateText(currentHealth, startingHealth);
@@ -74,10 +82,7 @@ public class PlayerHealth : MonoBehaviour
             Death();
         }
 
-        if(currentHealth >= startingHealth)
-        {
-            currentHealth = startingHealth;
-        }
+        
     }
 
     public void updateText(int currentHealth, int totalHealth)

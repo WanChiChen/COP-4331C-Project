@@ -27,7 +27,7 @@ public class bullet : MonoBehaviour
     {
         
         // Check if trigger is a room spawner node or origin node
-        if (!collision.CompareTag("roomSpawner") && !collision.CompareTag("OriginRoom") && !collision.CompareTag("Item"))
+        if (!collision.CompareTag("roomSpawner") && !collision.CompareTag("OriginRoom") && !collision.CompareTag("Item") && !collision.CompareTag("Player"))
         {
             Debug.Log("Bullet collided with " + collision.gameObject.name, collision.gameObject);
             Destroy(gameObject);

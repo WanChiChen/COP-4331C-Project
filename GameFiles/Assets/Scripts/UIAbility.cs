@@ -23,35 +23,46 @@ public class UIAbility : UISkill
     {
         if(this.ability != null)
         {
-            if (selectedAbility.ability != null)
+            if(playerAbilities.usableAbilities[index] == 1)
             {
-                Ability clone = new Ability(selectedAbility.ability);
+                if (selectedAbility.ability != null)
+                {
+                    Ability clone = new Ability(selectedAbility.ability);
+                    tempIndex = selectedAbility.index;
 
-                selectedAbility.showAbility(this.ability);
-                selectedAbility.ability = this.ability;
+                    selectedAbility.showAbility(this.ability);
+                    selectedAbility.ability = this.ability;
+                    selectedAbility.index = this.index;
 
-                ability = clone;
-                showAbility(clone);
+                    ability = clone;
+                    showAbility(clone);
 
-                playerAbilities.abilities[index] = clone;
-                
-            }
-            else
-            {
-                selectedAbility.showAbility(this.ability);
-                selectedAbility.ability = this.ability;
-                
-                showAbility(null);
-                ability = null;
+                    playerAbilities.barAbilities[index] = clone;
+                    playerAbilities.usableAbilities[index] = playerAbilities.usableAbilities[tempIndex];
+                    playerAbilities.cooldowns[index] = playerAbilities.cooldowns[tempIndex];
+
+                }
+                else
+                {
+                    selectedAbility.showAbility(this.ability);
+                    selectedAbility.ability = this.ability;
+                    selectedAbility.index = this.index;
+
+                    showAbility(null);
+                    ability = null;
+                }
             }
         }
         else if (selectedAbility.ability != null)
         {
             showAbility(selectedAbility.ability);
-            playerAbilities.abilities[index] = selectedAbility.ability;
+            playerAbilities.barAbilities[index] = selectedAbility.ability;
+            playerAbilities.usableAbilities[index] = playerAbilities.usableAbilities[selectedAbility.index];
+            playerAbilities.cooldowns[index] = playerAbilities.cooldowns[selectedAbility.index];
             ability = selectedAbility.ability;
             selectedAbility.ability = null;
             selectedAbility.showAbility(null);
+            selectedAbility.index = -1;
         }
     }
 

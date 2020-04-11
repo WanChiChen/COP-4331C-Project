@@ -13,18 +13,25 @@ public class UISkill : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler
     public PlayerAbilities playerAbilities;
     public SkillTooltip toolTip;
     public GameObject toolTipObject;
+    public UIAbilityBar bar;
 
     public virtual void OnPointerClick(PointerEventData eventData)
     {
         Debug.Log("ability clicked!");
-        if (exp.skillPoints > 0)
+        if (exp.skillPoints - ability.cost>= 0)
         {
             playerAbilities.learnAbility(this.ability);
-            exp.skillPoints--;
+            exp.skillPoints -= ability.cost;
+            exp.updateText();
             abilityImage.color = Color.red;
-            Debug.Log("ability learned!");
+
+            if(ability.type == 1 || ability.type == 2)
+            {
+                int index = bar.findEmptySlot();
+                bar.uiAbilities[index].showAbility(this.ability);
+                bar.uiAbilities[index].ability = this.ability;
+            }
         }
-        
     }
 
     public virtual void showAbility(Ability ability)
@@ -61,6 +68,7 @@ public class UISkill : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler
         abilityImage = this.gameObject.GetComponent<Image>();
         toolTip = GameObject.Find("SkillToolTipText").GetComponent<SkillTooltip>();
         toolTipObject = GameObject.Find("SkillToolTip");
+        bar = GameObject.Find("AbilityBarPanel").GetComponent<UIAbilityBar>();
     }
 
     public void OnPointerEnter(PointerEventData eventData)

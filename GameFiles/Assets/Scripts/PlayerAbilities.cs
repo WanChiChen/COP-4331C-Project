@@ -8,6 +8,7 @@ public class PlayerAbilities : MonoBehaviour
     PlayerHealth health;
     PlayerMovement movement;
     public List<Ability> abilities = new List<Ability>();
+    public Ability[] barAbilities = new Ability[16];
     public int[] cooldowns = new int[16];
     public int[] usableAbilities = new int[16];
     public AbilityDatabase db;
@@ -31,11 +32,13 @@ public class PlayerAbilities : MonoBehaviour
 
     private void Start()
     {
+        /*
         learnAbility(db.getAbility(2));
         learnAbility(db.getAbility(3));
         learnAbility(db.getAbility(4));
         learnAbility(db.getAbility(5));
         learnAbility(db.getAbility(6));
+        */
     }
 
     public void learnAbility(Ability ability)
@@ -49,9 +52,9 @@ public class PlayerAbilities : MonoBehaviour
         if (ability.type == 1 || ability.type == 2)
         {
             index = abilities.FindIndex(searchAbility => searchAbility == ability);
-            Debug.LogError(index + " " + cooldowns.Length);
             cooldowns[index] = ability.modifiers[2];
             usableAbilities[index] = 1;
+            barAbilities[index] = ability;
         }
     }
 
@@ -69,6 +72,7 @@ public class PlayerAbilities : MonoBehaviour
             index = abilities.FindIndex(searchAbility => searchAbility == ability);
             cooldowns[index] = ability.modifiers[2];
             usableAbilities[index] = 1;
+            barAbilities[index] = ability;
         }
     }
 
@@ -86,6 +90,7 @@ public class PlayerAbilities : MonoBehaviour
             index = abilities.FindIndex(searchAbility => searchAbility == ability);
             cooldowns[index] = ability.modifiers[2];
             usableAbilities[index] = 1;
+            barAbilities[index] = ability;
         }
     }
 
@@ -106,7 +111,7 @@ public class PlayerAbilities : MonoBehaviour
 
     public IEnumerator useAbility(int index)
     {
-        Ability ability = abilities[index];
+        Ability ability = barAbilities[index];
         if(usableAbilities[index] == 1)
         {
             health.TakeDamage(ability.modifiers[0] * -1);
@@ -154,12 +159,5 @@ public class PlayerAbilities : MonoBehaviour
     void Shoot(GameObject bullet)
     {
         Instantiate(bullet, firepoint.position, firepoint.rotation);
-    }
-
-    public void swapAbilityPosition(int index1, int index2)
-    {
-        Ability temp = abilities[index2];
-        abilities[index2] = abilities[index1];
-        abilities[index1] = temp;
     }
 }

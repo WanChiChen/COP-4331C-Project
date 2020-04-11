@@ -23,7 +23,7 @@ public class AbilityDatabase : MonoBehaviour
             new Ability(10, 0, 1, "Bench Press", "Significantly Raises Base Attack", new int[]{0,0,20}),
             new Ability(11, 0, 1, "Tank", "Signifcantly Raises Base Health, Lowers Base Speed", new int[]{300, -3, 0}),
             new Ability(12, 1, 1, "Trebuchet", "Heals and Raises Attack", new int[]{20,20, 5}),
-            new Ability(13, 1, 2, "Gym Rat", "High Boost to Base Stats", new int[]{20,5, 20 }),
+            new Ability(13, 0, 2, "Gym Rat", "High Boost to Base Stats", new int[]{20,5, 20 }),
             new Ability(14, 0, 3, "The Flash", "Ridiculous Speed Boost", new int[]{0, 20, 0}),
             new Ability(15, 0, 5, "Superman", "Very Large Base Stat Boost", new int[]{1000,50,1000}),
             new Ability(16, 1, 1, "Seppuku", "Why Would Pick This", new int[]{-80, -2, -10})

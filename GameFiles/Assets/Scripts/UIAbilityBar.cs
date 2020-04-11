@@ -11,7 +11,7 @@ public class UIAbilityBar : MonoBehaviour
     public GameObject slotPrefab;
     public Transform slotPanel;
 
-    const int numAbilities = 5;
+    const int numAbilities = 9;
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -29,7 +29,9 @@ public class UIAbilityBar : MonoBehaviour
             uiAbilities.Add(instance.GetComponentInChildren<UIAbility>());
 
             uiAbilities[i].index = i;
-            
+            uiAbilities[i].ability = null;
+            uiAbilities[i].showAbility(null);
+            /*
             if(abilities.abilities[i] != null)
             {
                 uiAbilities[i].showAbility(abilities.abilities[i]);
@@ -37,7 +39,7 @@ public class UIAbilityBar : MonoBehaviour
             else
             {
                 uiAbilities[i].showAbility(null);
-            }
+            }*/
 
         }
     }
@@ -46,5 +48,17 @@ public class UIAbilityBar : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public int findEmptySlot()
+    {
+        for (int i = 0; i < numAbilities; i++)
+        {
+            if(uiAbilities[i].ability == null)
+            {
+                return i;
+            }
+        }
+        return -1;
     }
 }
