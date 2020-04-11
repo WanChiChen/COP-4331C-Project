@@ -8,8 +8,8 @@ public class PlayerEquip : MonoBehaviour
     PlayerHealth health;
     PlayerMovement movement;
     PlayerAbilities damage;
-    int[] slots= new int[4];
-    Item[] equippedItems = new Item[4];
+    public int[] slots= new int[4];
+    public Item[] equippedItems = new Item[4];
 
     /*
      * slots[0] = head armor

@@ -175,6 +175,7 @@
     <Compile Include="Assets\Scripts\PlayerExperience.cs" />
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\PlayerProgressTracker.cs" />
     <Compile Include="Assets\Scripts\RoomSpawner.cs" />
     <Compile Include="Assets\Scripts\RoomSystem.cs" />
     <Compile Include="Assets\Scripts\SceneControl.cs" />

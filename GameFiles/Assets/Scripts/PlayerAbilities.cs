@@ -16,7 +16,7 @@ public class PlayerAbilities : MonoBehaviour
     public Transform firepoint;
     public GameObject bullet;
 
-    public int damage = 0;
+    public int damage;
 
     void Awake()
     {

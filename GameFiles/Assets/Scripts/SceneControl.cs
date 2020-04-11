@@ -6,6 +6,7 @@ using Luminosity.IO;
 
 public class SceneControl : MonoBehaviour
 {
+    public bool newGame = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,7 @@ public class SceneControl : MonoBehaviour
     public void LoadGameScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+        checkNewGame();
     }
 
     public void LoadMainMenuScene()
@@ -35,6 +37,7 @@ public class SceneControl : MonoBehaviour
     public void LoadGameScene(int sceneID)
     {
         SceneManager.LoadScene(sceneID);
+        checkNewGame();
     }
 
     public void SavePlayerPref()
@@ -53,6 +56,16 @@ public class SceneControl : MonoBehaviour
         if(SceneManager.GetActiveScene().buildIndex == 1)
         {
             InputManager.SetControlScheme("Default", PlayerID.One);
+        }
+    }
+
+    public void checkNewGame()
+    {
+        if(newGame == true)
+        {
+            PlayerProgressTracker progress = GameObject.Find("PlayerProgressTracker").GetComponent<PlayerProgressTracker>();
+            progress.loadDefault();
+            progress.updateProgress();
         }
     }
 }

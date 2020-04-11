@@ -214,6 +214,7 @@ MonoBehaviour:
   slotPrefab: {fileID: 232776111400844736, guid: 8f8eef4526eef5749b4d9bf484e5d0cb,
     type: 3}
   slotPanel: {fileID: 939134518}
+  playerAbilities: {fileID: 0}
   slotNum: 16
   db: {fileID: 916925811}
 --- !u!1 &23259226

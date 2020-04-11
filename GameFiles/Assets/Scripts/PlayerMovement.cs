@@ -25,7 +25,6 @@ public class PlayerMovement : MonoBehaviour
         InitializeRigidBody();
         input = new PlayerMovementInput();
 
-        speed = startingSpeed;
     }
 
     private void FixedUpdate()
