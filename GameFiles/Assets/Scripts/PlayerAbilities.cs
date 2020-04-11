@@ -96,6 +96,7 @@ public class PlayerAbilities : MonoBehaviour
 
         health.startingHealth += healthUpdate;
         health.currentHealth += healthUpdate;
+        health.TakeDamage(0);
         if (health.currentHealth > health.startingHealth)
             health.currentHealth = health.startingHealth;
         movement.speed += movementUpdate;

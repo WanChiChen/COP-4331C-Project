@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 public class AbilityTest 
 {
+    /*(
     [Test]
     public void testInitializeAbility()
     {
@@ -261,5 +262,5 @@ public class AbilityTest
         finalUsability = playerAbilities.usableAbilities[index];
 
         Assert.AreEqual(finalUsability, 1);
-    }
+    }*/
 }

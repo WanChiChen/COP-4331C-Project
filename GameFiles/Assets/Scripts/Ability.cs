@@ -6,6 +6,7 @@ public class Ability
 {
     public int id;
     public int type; //0 for passive, 1 for active, 2 for attack
+    public int cost;
     public string title;
     public string description;
     public Sprite icon;
@@ -29,10 +30,11 @@ public class Ability
      * 
      */
 
-    public Ability(int id, int type, string title, string description, int[] modifiers)
+    public Ability(int id, int type, int cost, string title, string description, int[] modifiers)
     {
         this.id = id;
         this.type = type;
+        this.cost = cost;
         this.title = title;
         this.description = description;
         this.icon = Resources.Load<Sprite>("Sprites/Abilities/"+title);
@@ -44,6 +46,7 @@ public class Ability
     {
         this.id = ability.id;
         this.type = ability.type;
+        this.cost = ability.cost;
         this.title = ability.title;
         this.description = ability.description;
         this.icon = ability.icon;
