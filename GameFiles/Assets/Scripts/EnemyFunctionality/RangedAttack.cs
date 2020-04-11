@@ -9,36 +9,37 @@ public class RangedAttack : EnemyAttack
     public float dmg;
     public float projectileForce;
     public GameObject EnemyBullet;
+    private Vector2 distance;
 
     // Start is called before the first frame update
     public override void Start()
     {
         base.Start();
-        
+        distance = player.transform.position - this.transform.position;
+        StartCoroutine(ShootPlayer());
     }
 
     void Update()
     {
-        Vector2 distance = player.transform.position - this.transform.position;
-        if (distance.sqrMagnitude <= range)
-        {
-            transform.LookAt(player);
-            StartCoroutine(ShootPlayer());
-        }
-
+        distance = player.transform.position - this.transform.position;
     }
 
     IEnumerator ShootPlayer()
     {
         yield return new WaitForSeconds(cooldown);
-        if (player != null)
+        if (distance.sqrMagnitude <= range)
         {
+            print("THiS" + distance);
             GameObject projectile = Instantiate(EnemyBullet, transform.position, Quaternion.identity);
             Vector2 myPos = transform.position;
             Vector2 playerPos = player.position;
             Vector2 direction = (playerPos - myPos).normalized;
             projectile.GetComponent<Rigidbody2D>().velocity = direction * projectileForce;
             projectile.GetComponent<EnemyProjectile>().damage = dmg;
+            
+        }
+        if (player != null)
+        {
             StartCoroutine(ShootPlayer());
         }
     }
