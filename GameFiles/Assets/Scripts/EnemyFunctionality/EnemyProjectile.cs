@@ -10,7 +10,7 @@ public class EnemyProjectile : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         
-        if (collision.tag != "Enemy" && collision.tag != "roomSpawner" && collision.tag != "OriginRoom" && collision.tag != "Item")
+        if (collision.tag != "Enemy" && collision.tag != "roomSpawner" && collision.tag != "OriginRoom" && collision.tag != "Item" && collision.tag != "Exit")
         {
             if (collision.GetComponent<PlayerHealth>() != null)
             {
