@@ -163,6 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c131bf6728a6f15498d5bfedf0edb130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  range: 20
   cooldown: 4
   dmg: 10
   projectileForce: 3
