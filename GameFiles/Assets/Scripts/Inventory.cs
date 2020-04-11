@@ -53,16 +53,4 @@ public class Inventory : MonoBehaviour
             ui.removeItem(itemDB.getItem(id));
         }
     }
-
-    private void Update()
-    {
-        if(InputManager.GetButtonDown("Inventory"))
-        {
-            ui.gameObject.SetActive(!ui.gameObject.activeSelf);
-        }
-    }
-    private void Start()
-    {
-        ui.gameObject.SetActive(!ui.gameObject.activeSelf);
-    }
 }

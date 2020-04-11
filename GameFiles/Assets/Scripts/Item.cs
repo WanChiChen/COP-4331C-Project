@@ -33,6 +33,7 @@ public class Item
         this.title = title;
         this.description = description;
         this.icon = Resources.Load<Sprite>("Sprites/Items/" + title);
+        this.prefab = Resources.Load<GameObject>("Prefabs/Item Prefabs/" + title);
         this.modifiers = modifiers;
     }
 
