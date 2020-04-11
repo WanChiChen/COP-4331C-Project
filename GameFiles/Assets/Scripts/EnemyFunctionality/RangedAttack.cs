@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RangedAttack : EnemyAttack
 {
-
+    public float range;
     public float cooldown;
     public float dmg;
     public float projectileForce;
@@ -14,7 +14,18 @@ public class RangedAttack : EnemyAttack
     public override void Start()
     {
         base.Start();
-        StartCoroutine(ShootPlayer());
+        
+    }
+
+    void Update()
+    {
+        Vector2 distance = player.transform.position - this.transform.position;
+        if (distance.sqrMagnitude <= range)
+        {
+            transform.LookAt(player);
+            StartCoroutine(ShootPlayer());
+        }
+
     }
 
     IEnumerator ShootPlayer()

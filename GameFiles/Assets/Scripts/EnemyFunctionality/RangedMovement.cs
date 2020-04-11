@@ -20,7 +20,7 @@ public class RangedMovement : EnemyMovement
         //checks distace from player, when close begins to move away.
         if (distance.sqrMagnitude < runAwayParam)
         {
-           transform.position = Vector2.MoveTowards(transform.position, player.position, -1 * speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, player.position, -1 * speed * Time.deltaTime);
         }
         if (distance.sqrMagnitude > runAwayParam && distance.sqrMagnitude < detectDist)
         {
