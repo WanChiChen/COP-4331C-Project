@@ -182,8 +182,10 @@ MonoBehaviour:
   maxHealth: 300
   exp: 300
   player: {fileID: 0}
+  items: 010000000100000001000000
   playerAbilities: {fileID: 0}
   playerExperience: {fileID: 0}
+  db: {fileID: 0}
 --- !u!114 &-7804083258561203323
 MonoBehaviour:
   m_ObjectHideFlags: 0
