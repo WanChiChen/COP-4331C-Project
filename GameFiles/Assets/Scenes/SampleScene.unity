@@ -3830,6 +3830,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rooms: []
+  distances: []
   roomSpawners: []
   southRooms:
   - {fileID: 2788489121267475264, guid: 9812d2c2b90cfed418f05b06a32f9e45, type: 3}
@@ -3893,6 +3894,15 @@ MonoBehaviour:
     type: 3}
   layoutFinished: 0
   genFinished: 0
+  enemyConfigs:
+  - {fileID: 1665813883075019686, guid: c606e0fc2279c16449054daff257f3ec, type: 3}
+  - {fileID: 8785789246895653144, guid: 12225f318c6020f428fbffb0bfcb0735, type: 3}
+  - {fileID: 3331587041490227682, guid: 3b27a0acd8ad15e468089beffebbba7f, type: 3}
+  - {fileID: 7306042205211971573, guid: cff8f2a96cb43644f9e4ca75f1a7ff47, type: 3}
+  - {fileID: 3294369347590267780, guid: bf8fb6003c5b6ae42b49db73954dcac2, type: 3}
+  - {fileID: 3090526844184616658, guid: c027604ac8a48bc4a99a8b67a0385622, type: 3}
+  - {fileID: 4367862954343762824, guid: 97c6df80025164745a5a312c3baa44fd, type: 3}
+  - {fileID: 381571952078788910, guid: 9b12bda67e104cf43877beade8b2db23, type: 3}
 --- !u!1 &1583918910
 GameObject:
   m_ObjectHideFlags: 0
