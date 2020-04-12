@@ -128,7 +128,7 @@ MonoBehaviour:
   maxHealth: 80
   exp: 15
   player: {fileID: 0}
-  items: 010000000100000001000000
+  items: 070000000800000009000000
   playerAbilities: {fileID: 0}
   playerExperience: {fileID: 0}
   db: {fileID: 0}

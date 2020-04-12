@@ -63,7 +63,7 @@ public class RecDmg : MonoBehaviour
 
     private void CheckDeath()
     {
-        GameObject item = db.getItem(items[generateLoot()]).prefab;
+        GameObject item = db.getItem(generateLoot()).prefab;
         Vector3 bias = new Vector3(3, 0, 0);
         if (health <= 0)
         {
