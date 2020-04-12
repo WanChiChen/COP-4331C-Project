@@ -13,38 +13,46 @@ public class PlayerProgressTracker : MonoBehaviour
     PlayerEquip equip;
     PlayerMovement movement;
     Inventory inventory;
+    UIInventory uiInventory;
+    UIAbilityBar abilityBar;
 
     public List<Item> characterItems = new List<Item>();
+    public List<UIItem> uiItems = new List<UIItem>();
     public List<Ability> abilitiesList = new List<Ability>();
     public Ability[] barAbilities = new Ability[16];
+    public List<UIAbility> uiAbilities = new List<UIAbility>();
     public int[] cooldowns = new int[16];
     public int[] usableAbilities = new int[16];
     public int damage;
     int[] slots = new int[4];
     Item[] equippedItems = new Item[4];
-    public int startingHealth;                    
+    public int startingHealth;
     public int currentHealth;
     public float speed;
 
-    public bool enteredPortal = false;
+    public bool newGame = false;
+
     // Update is called once per frame
     void Update()
     {
-        if(enteredPortal == true)
-        {
-            loadProgress();
-            enteredPortal = false;
-        }
+
+    }
+
+    private void Start()
+    {
+
     }
 
     public void updateProgress()
     {
         findObjects();
         characterItems = inventory.characterItems;
+        //uiItems = uiInventory.uiItems;
         abilitiesList = abilities.abilities;
         barAbilities = abilities.barAbilities;
         cooldowns = abilities.cooldowns;
         usableAbilities = abilities.usableAbilities;
+        uiAbilities = abilityBar.uiAbilities;
         damage = abilities.damage;
         slots = equip.slots;
         equippedItems = equip.equippedItems;
@@ -55,28 +63,33 @@ public class PlayerProgressTracker : MonoBehaviour
 
     public void loadProgress()
     {
+        findObjects();
         inventory.characterItems = characterItems;
+        //uiInventory.uiItems = uiItems;
         abilities.abilities = abilitiesList;
         abilities.barAbilities = barAbilities;
         abilities.cooldowns = cooldowns;
         abilities.usableAbilities = usableAbilities;
+        abilityBar.uiAbilities = uiAbilities;
         abilities.damage = damage;
         equip.slots = slots;
         equip.equippedItems = equippedItems;
         health.startingHealth = startingHealth;
         health.currentHealth = currentHealth;
         movement.speed = speed;
-        Debug.LogError(movement.speed + " " + speed);
     }
 
     public void loadDefault()
     {
-        inventory.characterItems = new List<Item>();
+        
+        findObjects();
+        //inventory.characterItems = new List<Item>();
         abilities.abilities = new List<Ability>();
         abilities.barAbilities = new Ability[16];
         abilities.cooldowns = new int[16];
         abilities.usableAbilities = new int[16];
         abilities.damage = 0;
+        //abilityBar.uiAbilities = new List<UIAbility>();
         equip.slots = new int[4];
         equip.equippedItems = new Item[4];
         health.startingHealth = 100;
@@ -93,5 +106,7 @@ public class PlayerProgressTracker : MonoBehaviour
         equip = player.GetComponent<PlayerEquip>();
         movement = player.GetComponent<PlayerMovement>();
         inventory = GameObject.Find("Inventory").GetComponent<Inventory>();
+        //uiInventory = GameObject.Find("InventoryPanel").GetComponent<UIInventory>();
+        abilityBar = GameObject.Find("AbilityBarPanel").GetComponent<UIAbilityBar>();
     }
 }

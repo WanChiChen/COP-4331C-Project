@@ -12,14 +12,13 @@ public class UIManager : MonoBehaviour
     //intialize object
     void Start()
     {
-
+        hidePaused();
     }
 
     private void Awake()
     {
         Time.timeScale = 1;
         pauseObjects = GameObject.FindGameObjectsWithTag("ShowOnPause");
-        hidePaused();
     }
 
     private void Update()

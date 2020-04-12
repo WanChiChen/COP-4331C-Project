@@ -20,27 +20,15 @@ public class UIAbilityBar : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
-        
+    {   
         for (int i = 0; i < numAbilities; i++)
         {
             GameObject instance = Instantiate(slotPrefab);
             instance.transform.SetParent(slotPanel);
             uiAbilities.Add(instance.GetComponentInChildren<UIAbility>());
-
             uiAbilities[i].index = i;
             uiAbilities[i].ability = null;
             uiAbilities[i].showAbility(null);
-            /*
-            if(abilities.abilities[i] != null)
-            {
-                uiAbilities[i].showAbility(abilities.abilities[i]);
-            }
-            else
-            {
-                uiAbilities[i].showAbility(null);
-            }*/
-
         }
     }
 
@@ -52,9 +40,11 @@ public class UIAbilityBar : MonoBehaviour
 
     public int findEmptySlot()
     {
+        
         for (int i = 0; i < numAbilities; i++)
         {
-            if(uiAbilities[i].ability == null)
+            Debug.Log(uiAbilities);
+            if (uiAbilities[i].ability == null)
             {
                 return i;
             }

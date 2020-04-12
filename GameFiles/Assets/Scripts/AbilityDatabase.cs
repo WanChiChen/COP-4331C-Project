@@ -31,7 +31,7 @@ public class AbilityDatabase : MonoBehaviour
         Debug.Log("built");
     }
 
-    private void Awake()
+    private void Start()
     {
         BuildDatabase();
     }

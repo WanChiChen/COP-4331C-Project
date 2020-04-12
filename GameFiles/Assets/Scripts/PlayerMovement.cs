@@ -24,7 +24,6 @@ public class PlayerMovement : MonoBehaviour
         boxCollider = GetComponent<BoxCollider2D>();
         InitializeRigidBody();
         input = new PlayerMovementInput();
-
     }
 
     private void FixedUpdate()

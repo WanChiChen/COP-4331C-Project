@@ -25,7 +25,7 @@ public class ItemDatabase : MonoBehaviour
         };
     }
 
-    private void Awake()
+    private void Start()
     {
         BuildDatabase();
     }

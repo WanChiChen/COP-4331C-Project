@@ -16,7 +16,6 @@ public class UIAbility : UISkill
         playerAbilities = player.GetComponent<PlayerAbilities>();
         abilityImage = this.gameObject.GetComponent<Image>();
         selectedAbility = GameObject.Find("SelectedAbility").GetComponent<UIAbility>();
-        selectedAbility.showAbility(null);
     }
 
     public override void OnPointerClick(PointerEventData eventData)
@@ -69,7 +68,7 @@ public class UIAbility : UISkill
     // Start is called before the first frame update
     void Start()
     {
-        
+        selectedAbility.showAbility(null);
     }
     public override void showAbility(Ability ability)
     {

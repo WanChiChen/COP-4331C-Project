@@ -24,7 +24,7 @@ public class ItemBehavior : MonoBehaviour
         }
         Debug.Log("Collided with player");
     }
-    void Start()
+    void Awake()
     {
         rbody = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");

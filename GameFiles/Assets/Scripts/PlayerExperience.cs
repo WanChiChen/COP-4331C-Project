@@ -15,8 +15,14 @@ public class PlayerExperience : MonoBehaviour
     public Text expText;
     public Text skillText;
 
-    // Start is called before the first frame update
+    
     void Awake()
+    {
+        
+    }
+
+    // Start is called before the first frame update
+    private void Start()
     {
         exp = 0;
         level = 1;

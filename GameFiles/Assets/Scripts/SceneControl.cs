@@ -8,11 +8,27 @@ public class SceneControl : MonoBehaviour
 {
     public bool newGame = false;
     LoadingScreen screen;
+    PlayerProgressTracker progress;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        LoadPlayerPref();
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            StartCoroutine(screen.hideScreen());
+            InputManager.SetControlScheme("Default", PlayerID.One);
+            if(Variables.GameLevel == 0)
+            {
+                progress.loadDefault();
+                progress.updateProgress();
+            }
+            if(Variables.GameLevel > 0)
+            {
+                progress.loadProgress();
+            }
+            
+        }
     }
 
     // Update is called once per frame
@@ -59,12 +75,7 @@ public class SceneControl : MonoBehaviour
     private void Awake()
     {
         screen = GameObject.Find("Input Manager").GetComponent<LoadingScreen>();
-        LoadPlayerPref();
-        if(SceneManager.GetActiveScene().buildIndex == 1)
-        {
-            StartCoroutine(screen.hideScreen());
-            InputManager.SetControlScheme("Default", PlayerID.One);
-        }
+        progress = GameObject.Find("PlayerProgressTracker").GetComponent<PlayerProgressTracker>();
     }
 
     public void checkNewGame()

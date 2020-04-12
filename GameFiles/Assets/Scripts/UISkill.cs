@@ -29,6 +29,7 @@ public class UISkill : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler
                 if (ability.type == 1 || ability.type == 2)
                 {
                     int index = bar.findEmptySlot();
+                    Debug.LogError(index);
                     bar.uiAbilities[index].showAbility(this.ability);
                     bar.uiAbilities[index].ability = this.ability;
                 }

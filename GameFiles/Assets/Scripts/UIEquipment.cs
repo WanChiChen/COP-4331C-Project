@@ -14,7 +14,6 @@ public class UIEquipment : UIItem
     private void Awake()
     {
         itemImage = this.gameObject.GetComponent<Image>();
-        updateItem(null);
         selectedItem = GameObject.Find("SelectedItem").GetComponent<UIItem>();
         playerEquip = GameObject.Find("Player").GetComponent<PlayerEquip>();
         toolTipObject = GameObject.Find("ItemToolTip");
@@ -69,7 +68,7 @@ public class UIEquipment : UIItem
     // Start is called before the first frame update
     void Start()
     {
-        
+        updateItem(null);
     }
 
     // Update is called once per frame

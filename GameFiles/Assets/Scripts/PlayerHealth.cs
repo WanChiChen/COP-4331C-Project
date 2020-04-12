@@ -4,7 +4,7 @@ using System.Collections;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int startingHealth = 100;                            // The amount of health the player starts the game with.
+    public int startingHealth;                            // The amount of health the player starts the game with.
     public int currentHealth;                                   // The current health the player has.
     public Slider healthSlider;                                 // Reference to the UI's health bar.
     public Text healthText;                                     // Reference to UI health display
@@ -22,16 +22,19 @@ public class PlayerHealth : MonoBehaviour
         // Setting up the references.
         InitializeMovement();
 
+        //Initialize Scene Control
+        sceneControlObject = GameObject.Find("SceneControlObject");
+        control = sceneControlObject.GetComponent<SceneControl>();
+    }
+
+    private void Start()
+    {
         // Set the initial health of the player.
         currentHealth = startingHealth;
 
         healthSlider.value = currentHealth;
 
         updateText(currentHealth, startingHealth);
-
-        //Initialize Scene Control
-        sceneControlObject = GameObject.Find("SceneControlObject");
-        control = sceneControlObject.GetComponent<SceneControl>();
     }
 
 

@@ -67,7 +67,6 @@
     <Compile Include="Assets\Scripts\Ability.cs" />
     <Compile Include="Assets\Scripts\AbilityDatabase.cs" />
     <Compile Include="Assets\Scripts\ButtonModifier.cs" />
-    <Compile Include="Assets\Scripts\DamageTesting.cs" />
     <Compile Include="Assets\Scripts\DontDestroyOnLoad.cs" />
     <Compile Include="Assets\Scripts\EmptyRoom.cs" />
     <Compile Include="Assets\Scripts\EnemyFunctionality\Boss.cs" />
@@ -192,7 +191,6 @@
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\UISkill.cs" />
     <Compile Include="Assets\Scripts\Variables.cs" />
-    <Compile Include="Assets\Scripts\Weapon.cs" />
     <Compile Include="Assets\Scripts\bullet.cs" />
     <None Include="Assets\Scripts\InputManager\Addons\UIInputModule\Editor\Resources\ui_input_module_index.xml" />
     <None Include="Assets\Scripts\InputManager\Examples\Common\Packages\KennyUI\on_screen_controls_license.txt" />

@@ -7,10 +7,10 @@ public class PlayerAbilities : MonoBehaviour
     public GameObject player;
     PlayerHealth health;
     PlayerMovement movement;
-    public List<Ability> abilities = new List<Ability>();
-    public Ability[] barAbilities = new Ability[16];
-    public int[] cooldowns = new int[16];
-    public int[] usableAbilities = new int[16];
+    public List<Ability> abilities;
+    public Ability[] barAbilities;
+    public int[] cooldowns;
+    public int[] usableAbilities;
     public AbilityDatabase db;
 
     public Transform firepoint;
@@ -32,13 +32,7 @@ public class PlayerAbilities : MonoBehaviour
 
     private void Start()
     {
-        /*
-        learnAbility(db.getAbility(2));
-        learnAbility(db.getAbility(3));
-        learnAbility(db.getAbility(4));
-        learnAbility(db.getAbility(5));
-        learnAbility(db.getAbility(6));
-        */
+
     }
 
     public void learnAbility(Ability ability)

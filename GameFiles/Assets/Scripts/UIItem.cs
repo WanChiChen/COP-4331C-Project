@@ -63,11 +63,14 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
         }
     }
 
+    void Start()
+    {
+        updateItem(null);
+    }
 
     private void Awake()
     {
         itemImage = this.gameObject.GetComponent<Image>();
-        updateItem(null);
         selectedItem = GameObject.Find("SelectedItem").GetComponent<UIItem>();
         toolTipObject = GameObject.Find("ItemToolTip");
         toolTip = GameObject.Find("ItemToolTipText").GetComponent<ItemToolTip>();
