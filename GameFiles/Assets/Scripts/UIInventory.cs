@@ -32,7 +32,6 @@ public class UIInventory : MonoBehaviour
     IEnumerator closeInventory()
     {
         float wait = 1;
-        Debug.LogError(wait);
         yield return new WaitForSecondsRealtime(wait);
         this.gameObject.SetActive(false);
     }

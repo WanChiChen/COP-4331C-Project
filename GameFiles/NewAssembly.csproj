@@ -81,14 +81,11 @@
     <Compile Include="Assets\Scripts\EnemyFunctionality\Wall.cs" />
     <Compile Include="Assets\Scripts\ExitScript.cs" />
     <Compile Include="Assets\Scripts\FollowMousePosition.cs" />
-    <Compile Include="Assets\Scripts\InputManager\Addons\InputEvents\Editor\InputEventGroupInspector.cs" />
-    <Compile Include="Assets\Scripts\InputManager\Addons\InputEvents\Editor\InputEventManagerInspector.cs" />
     <Compile Include="Assets\Scripts\InputManager\Addons\InputEvents\Runtime\InputEvent.cs" />
     <Compile Include="Assets\Scripts\InputManager\Addons\InputEvents\Runtime\InputEventGroup.cs" />
     <Compile Include="Assets\Scripts\InputManager\Addons\InputEvents\Runtime\InputEventManager.cs" />
     <Compile Include="Assets\Scripts\InputManager\Addons\InputEvents\Runtime\InputEventType.cs" />
     <Compile Include="Assets\Scripts\InputManager\Addons\InputEvents\Runtime\InputState.cs" />
-    <Compile Include="Assets\Scripts\InputManager\Addons\UIInputModule\Editor\Scripts\UIInputModuleVersionManager.cs" />
     <Compile Include="Assets\Scripts\InputManager\Addons\UIInputModule\Runtime\StandaloneInputModule.cs" />
     <Compile Include="Assets\Scripts\InputManager\Addons\UIInputModule\Runtime\UIInputAdapter.cs" />
     <Compile Include="Assets\Scripts\InputManager\Addons\XInput\Scripts\UWPGamepadAdapter.cs" />
@@ -115,15 +112,6 @@
     <Compile Include="Assets\Scripts\InputManager\Examples\Common\Scripts\HideCursorOnStart.cs" />
     <Compile Include="Assets\Scripts\InputManager\Examples\Common\Scripts\PathUtility.cs" />
     <Compile Include="Assets\Scripts\InputManager\Examples\Common\Scripts\PauseManager.cs" />
-    <Compile Include="Assets\Scripts\InputManager\Source\Editor\Scripts\GenericGamepadProfileInspector.cs" />
-    <Compile Include="Assets\Scripts\InputManager\Source\Editor\Scripts\GenericGamepadProfileSelectorInspector.cs" />
-    <Compile Include="Assets\Scripts\InputManager\Source\Editor\Scripts\GenericGamepadStateAdapterInspector.cs" />
-    <Compile Include="Assets\Scripts\InputManager\Source\Editor\Scripts\InputEditor.cs" />
-    <Compile Include="Assets\Scripts\InputManager\Source\Editor\Scripts\InputEditor_Data.cs" />
-    <Compile Include="Assets\Scripts\InputManager\Source\Editor\Scripts\InputManagerInspector.cs" />
-    <Compile Include="Assets\Scripts\InputManager\Source\Editor\Scripts\_Support\EditorToolbox.cs" />
-    <Compile Include="Assets\Scripts\InputManager\Source\Editor\Scripts\_Support\KeyCodeField.cs" />
-    <Compile Include="Assets\Scripts\InputManager\Source\Editor\Scripts\_Support\MenuCommands.cs" />
     <Compile Include="Assets\Scripts\InputManager\Source\Runtime\ActionReference.cs" />
     <Compile Include="Assets\Scripts\InputManager\Source\Runtime\BindingReference.cs" />
     <Compile Include="Assets\Scripts\InputManager\Source\Runtime\ButtonState.cs" />
@@ -192,21 +180,12 @@
     <Compile Include="Assets\Scripts\UISkill.cs" />
     <Compile Include="Assets\Scripts\Variables.cs" />
     <Compile Include="Assets\Scripts\bullet.cs" />
-    <None Include="Assets\Scripts\InputManager\Addons\UIInputModule\Editor\Resources\ui_input_module_index.xml" />
     <None Include="Assets\Scripts\InputManager\Examples\Common\Packages\KennyUI\on_screen_controls_license.txt" />
-    <None Include="Assets\Scripts\InputManager\Addons\UIInputModule\Editor\Resources\ui_input_modules\unity_2017_2_classic.txt" />
-    <None Include="Assets\Scripts\InputManager\Addons\UIInputModule\Editor\Resources\ui_input_modules\unity_2018_3_classic.txt" />
     <None Include="Assets\Scripts\InputManager\Examples\Common\Packages\KennyFonts\license.txt" />
-    <None Include="Assets\Scripts\InputManager\Addons\UIInputModule\Editor\Resources\ui_input_modules\unity_2018_3.txt" />
     <None Include="Assets\Scripts\InputManager\Examples\03 - Mobile Input\Data\default_input.xml" />
-    <None Include="Assets\Scripts\InputManager\Source\Editor\Resources\input_manager_project_settings.txt" />
-    <None Include="Assets\Scripts\InputManager\Addons\UIInputModule\Editor\Resources\ui_input_modules\unity_5_6.txt" />
-    <None Include="Assets\Scripts\InputManager\Addons\UIInputModule\Editor\Resources\ui_input_modules\unity_2017_2.txt" />
-    <None Include="Assets\Scripts\InputManager\Addons\UIInputModule\Editor\Resources\ui_input_modules\unity_5_6_classic.txt" />
     <None Include="Assets\Scripts\InputManager\Examples\Common\Packages\KennyUI\ui_pack_license.txt" />
     <None Include="Assets\Scripts\InputManager\Examples\01 - Controls Menu\Data\default_input.xml" />
     <None Include="Assets\Scripts\InputManager\Addons\XInput\Plugins\XInputDotNetPure_License.txt" />
-    <None Include="Assets\Scripts\InputManager\Source\Editor\Resources\input_manager_default_scheme.xml" />
     <Reference Include="UnityEditor.UI">
       <HintPath>C:/Users/wchen/Documents/GitHub/COP-4331C-Project/GameFiles/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
@@ -404,9 +383,6 @@
     </Reference>
     <Reference Include="XInputDotNetPure">
       <HintPath>C:/Users/wchen/Documents/GitHub/COP-4331C-Project/GameFiles/Assets/Scripts/InputManager/Addons/XInput/Plugins/XInputDotNetPure.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityInputConverter">
-      <HintPath>C:/Users/wchen/Documents/GitHub/COP-4331C-Project/GameFiles/Assets/Scripts/InputManager/Source/Editor/Library/UnityInputConverter.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

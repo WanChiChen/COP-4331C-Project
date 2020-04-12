@@ -908,6 +908,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemImage: {fileID: 0}
   selectedItem: {fileID: 0}
+  ui: {fileID: 0}
   index: 3
   playerEquip: {fileID: 0}
 --- !u!114 &267662655
@@ -2012,6 +2013,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemImage: {fileID: 0}
   selectedItem: {fileID: 0}
+  ui: {fileID: 0}
   index: 0
   playerEquip: {fileID: 0}
 --- !u!114 &837895023
@@ -2151,6 +2153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemImage: {fileID: 0}
   selectedItem: {fileID: 0}
+  ui: {fileID: 0}
 --- !u!114 &864120786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2688,7 +2691,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 13.6, y: -229.7}
+  m_AnchoredPosition: {x: 7, y: -348}
   m_SizeDelta: {x: 458.36, y: -39.65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1067465599
@@ -2887,7 +2890,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 474.79993, y: 185}
+  m_AnchoredPosition: {x: 23, y: -449.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1133852582
@@ -3220,6 +3223,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemImage: {fileID: 0}
   selectedItem: {fileID: 0}
+  ui: {fileID: 0}
   index: 1
   playerEquip: {fileID: 0}
 --- !u!114 &1253231335
@@ -3343,7 +3347,6 @@ GameObject:
   - component: {fileID: 1354765039}
   - component: {fileID: 1354765038}
   - component: {fileID: 1354765037}
-  - component: {fileID: 1354765036}
   m_Layer: 5
   m_Name: MainMenuButton
   m_TagString: Untagged
@@ -3371,19 +3374,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1354765036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1354765034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae9ef397a69bef44b8bc79883f3a246e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newGame: 0
 --- !u!114 &1354765037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3843,7 +3833,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 474.79993, y: 225.5}
+  m_AnchoredPosition: {x: 23, y: -409}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1764491727
@@ -3947,7 +3937,6 @@ GameObject:
   - component: {fileID: 1793895077}
   - component: {fileID: 1793895076}
   - component: {fileID: 1793895075}
-  - component: {fileID: 1793895078}
   m_Layer: 5
   m_Name: ExitButton
   m_TagString: Untagged
@@ -4065,19 +4054,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1793895073}
   m_CullTransparentMesh: 0
---- !u!114 &1793895078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1793895073}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae9ef397a69bef44b8bc79883f3a246e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newGame: 0
 --- !u!1 &1821351248
 GameObject:
   m_ObjectHideFlags: 0
@@ -4584,6 +4560,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemImage: {fileID: 0}
   selectedItem: {fileID: 0}
+  ui: {fileID: 0}
   index: 2
   playerEquip: {fileID: 0}
 --- !u!114 &2014089992

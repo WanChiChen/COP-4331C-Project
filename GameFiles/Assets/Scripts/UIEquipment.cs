@@ -71,12 +71,6 @@ public class UIEquipment : UIItem
         updateItem(playerEquip.equippedItems[index]);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public override void OnPointerEnter(PointerEventData eventData)
     {
         if (this.item != null)
