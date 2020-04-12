@@ -18,16 +18,6 @@ public class SceneControl : MonoBehaviour
         {
             StartCoroutine(screen.hideScreen());
             InputManager.SetControlScheme("Default", PlayerID.One);
-            if(Variables.GameLevel == 0)
-            {
-                progress.loadDefault();
-                progress.updateProgress();
-            }
-            if(Variables.GameLevel > 0)
-            {
-                progress.loadProgress();
-            }
-            
         }
     }
 
@@ -39,7 +29,6 @@ public class SceneControl : MonoBehaviour
     public void LoadGameScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
-        checkNewGame();
     }
 
     public void LoadMainMenuScene()
@@ -59,7 +48,6 @@ public class SceneControl : MonoBehaviour
             screen.gameObject.SetActive(true);
         }
         SceneManager.LoadScene(sceneID);
-        checkNewGame();
     }
 
     public void SavePlayerPref()
@@ -76,15 +64,5 @@ public class SceneControl : MonoBehaviour
     {
         screen = GameObject.Find("Input Manager").GetComponent<LoadingScreen>();
         progress = GameObject.Find("PlayerProgressTracker").GetComponent<PlayerProgressTracker>();
-    }
-
-    public void checkNewGame()
-    {
-        if(newGame == true)
-        {
-            PlayerProgressTracker progress = GameObject.Find("PlayerProgressTracker").GetComponent<PlayerProgressTracker>();
-            progress.loadDefault();
-            progress.updateProgress();
-        }
     }
 }

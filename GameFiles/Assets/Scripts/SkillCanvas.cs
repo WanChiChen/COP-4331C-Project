@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class SkillCanvas : MonoBehaviour
 {
-    public List<UISkill> uiAbilities = new List<UISkill>();
+    public List<UISkill> uiAbilities = Variables.uiSkills;
     public GameObject slotPrefab;
     public Transform slotPanel;
     public PlayerAbilities playerAbilities;

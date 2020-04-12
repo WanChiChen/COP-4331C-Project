@@ -4,8 +4,8 @@ using System.Collections;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int startingHealth;                            // The amount of health the player starts the game with.
-    public int currentHealth;                                   // The current health the player has.
+    public int startingHealth = Variables.startingHealth;                            // The amount of health the player starts the game with.
+    public int currentHealth = Variables.currentHealth;                                   // The current health the player has.
     public Slider healthSlider;                                 // Reference to the UI's health bar.
     public Text healthText;                                     // Reference to UI health display
 
@@ -29,8 +29,8 @@ public class PlayerHealth : MonoBehaviour
 
     private void Start()
     {
-        // Set the initial health of the player.
-        currentHealth = startingHealth;
+        startingHealth = Variables.startingHealth;
+        currentHealth = Variables.currentHealth;
 
         healthSlider.value = currentHealth;
 

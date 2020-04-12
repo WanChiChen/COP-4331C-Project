@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class PlayerExperience : MonoBehaviour
 {
-    public int exp; //player's current experience points
-    public int level; //player's current level
-    public int expThreshold; //exp needed to reach next level
-    public int skillPoints; //players can spend points on new abilities
-    public int totalSkillPoints; //total skill points obtained
+    public int exp = Variables.exp; //player's current experience points
+    public int level = Variables.level; //player's current level
+    public int expThreshold = Variables.expThreshold; //exp needed to reach next level
+    public int skillPoints = Variables.skillPoints; //players can spend points on new abilities
+    public int totalSkillPoints = Variables.totalSkillPoints; //total skill points obtained
 
     public Slider expSlider;
     public Text expText;
@@ -24,11 +24,11 @@ public class PlayerExperience : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        exp = 0;
-        level = 1;
-        expThreshold = 100;
-        skillPoints = 1;
-        totalSkillPoints = skillPoints;
+        exp = Variables.exp;
+        level = Variables.level;
+        expThreshold = Variables.expThreshold;
+        skillPoints = Variables.skillPoints;
+        totalSkillPoints = Variables.totalSkillPoints;
         updateText();
     }
 

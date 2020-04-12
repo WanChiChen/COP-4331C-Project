@@ -8,8 +8,8 @@ public class PlayerEquip : MonoBehaviour
     PlayerHealth health;
     PlayerMovement movement;
     PlayerAbilities damage;
-    public int[] slots;
-    public Item[] equippedItems;
+    public int[] slots = new int[4];
+    public Item[] equippedItems = new Item[4];
 
     /*
      * slots[0] = head armor
@@ -25,6 +25,12 @@ public class PlayerEquip : MonoBehaviour
         health = player.GetComponent<PlayerHealth>();
         movement = player.GetComponent<PlayerMovement>();
         damage = player.GetComponent<PlayerAbilities>();
+    }
+
+    private void Start()
+    {
+        slots = Variables.slots;
+        equippedItems = Variables.equippedItems;
     }
 
     public void Equip(Item equip)

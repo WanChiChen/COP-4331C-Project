@@ -52,6 +52,7 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
     public void updateItem(Item item)
     {
         this.item = item;
+        
         if(this.item != null)
         {
             itemImage.color = Color.white;
@@ -65,7 +66,10 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
 
     void Start()
     {
-        updateItem(null);
+        if(Variables.GameLevel == 0)
+        {
+            updateItem(null);
+        }
     }
 
     private void Awake()

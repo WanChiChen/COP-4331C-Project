@@ -7,6 +7,7 @@ public class UIAbilityBar : MonoBehaviour
 {
     GameObject player;
     PlayerAbilities abilities;
+    PlayerProgressTracker progress;
     public List<UIAbility> uiAbilities = new List<UIAbility>();
     public GameObject slotPrefab;
     public Transform slotPanel;
@@ -16,11 +17,12 @@ public class UIAbilityBar : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         abilities = player.GetComponent<PlayerAbilities>();
+        progress = GameObject.Find("PlayerProgressTracker").GetComponent<PlayerProgressTracker>();
     }
 
     // Start is called before the first frame update
     void Start()
-    {   
+    {
         for (int i = 0; i < numAbilities; i++)
         {
             GameObject instance = Instantiate(slotPrefab);
@@ -29,6 +31,14 @@ public class UIAbilityBar : MonoBehaviour
             uiAbilities[i].index = i;
             uiAbilities[i].ability = null;
             uiAbilities[i].showAbility(null);
+            abilities.barAbilities = Variables.barAbilities;
+            abilities.cooldowns = Variables.cooldowns;
+            abilities.usableAbilities = Variables.usableAbilities;
+            if (abilities.barAbilities[i] != null)
+            {
+                uiAbilities[i].showAbility(abilities.barAbilities[i]);
+                uiAbilities[i].ability = abilities.barAbilities[i];
+            }
         }
     }
 
@@ -43,7 +53,7 @@ public class UIAbilityBar : MonoBehaviour
         
         for (int i = 0; i < numAbilities; i++)
         {
-            Debug.Log(uiAbilities);
+            //Debug.Log(uiAbilities);
             if (uiAbilities[i].ability == null)
             {
                 return i;

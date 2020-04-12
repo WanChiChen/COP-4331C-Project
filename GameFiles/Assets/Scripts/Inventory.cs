@@ -53,4 +53,9 @@ public class Inventory : MonoBehaviour
             ui.removeItem(itemDB.getItem(id));
         }
     }
+
+    private void Start()
+    {
+        characterItems = Variables.characterItems;
+    }
 }

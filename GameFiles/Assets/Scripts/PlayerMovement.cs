@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField, Tooltip("Max speed, in units per second, that the character moves.")]
     public float startingSpeed = 4;
 
-    public float speed;
+    public float speed = Variables.speed;
 
     private BoxCollider2D boxCollider;
 
@@ -24,6 +24,11 @@ public class PlayerMovement : MonoBehaviour
         boxCollider = GetComponent<BoxCollider2D>();
         InitializeRigidBody();
         input = new PlayerMovementInput();
+    }
+
+    private void Start()
+    {
+        speed = Variables.speed;
     }
 
     private void FixedUpdate()

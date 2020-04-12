@@ -5130,10 +5130,25 @@ PrefabInstance:
       propertyPath: healthText
       value: 
       objectReference: {fileID: 377725614}
+    - target: {fileID: 4263057966011803947, guid: fd514ee3ce264c04f98aea61291de0fe,
+        type: 3}
+      propertyPath: startingHealth
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4263057966011803949, guid: fd514ee3ce264c04f98aea61291de0fe,
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4263057966011803950, guid: fd514ee3ce264c04f98aea61291de0fe,
+        type: 3}
+      propertyPath: speed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4263057966011803950, guid: fd514ee3ce264c04f98aea61291de0fe,
+        type: 3}
+      propertyPath: startingSpeed
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4263057966011803951, guid: fd514ee3ce264c04f98aea61291de0fe,
         type: 3}
