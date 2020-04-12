@@ -7,6 +7,8 @@ using Luminosity.IO;
 public class SceneControl : MonoBehaviour
 {
     public bool newGame = false;
+    LoadingScreen screen;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +38,10 @@ public class SceneControl : MonoBehaviour
 
     public void LoadGameScene(int sceneID)
     {
+        if (sceneID == 1)
+        {
+            screen.gameObject.SetActive(true);
+        }
         SceneManager.LoadScene(sceneID);
         checkNewGame();
     }
@@ -52,9 +58,11 @@ public class SceneControl : MonoBehaviour
 
     private void Awake()
     {
+        screen = GameObject.Find("Input Manager").GetComponent<LoadingScreen>();
         LoadPlayerPref();
         if(SceneManager.GetActiveScene().buildIndex == 1)
         {
+            StartCoroutine(screen.hideScreen());
             InputManager.SetControlScheme("Default", PlayerID.One);
         }
     }
