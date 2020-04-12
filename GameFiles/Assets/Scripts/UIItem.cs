@@ -4,11 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class UIItem : MonoBehaviour, IPointerClickHandler
+public class UIItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public Item item;
     public Image itemImage;
     public UIItem selectedItem;
+    GameObject toolTipObject;
+    ItemToolTip toolTip;
 
     public virtual void OnPointerClick(PointerEventData eventData)
     {
@@ -33,6 +35,20 @@ public class UIItem : MonoBehaviour, IPointerClickHandler
         }
     }
 
+    public virtual void OnPointerEnter(PointerEventData eventData)
+    {
+        if (this.item != null)
+        {
+            toolTipObject.SetActive(true);
+            toolTip.generateToolTip(this.item);
+        }
+    }
+
+    public virtual void OnPointerExit(PointerEventData eventData)
+    {
+        toolTipObject.SetActive(false);
+    }
+
     public void updateItem(Item item)
     {
         this.item = item;
@@ -53,5 +69,7 @@ public class UIItem : MonoBehaviour, IPointerClickHandler
         itemImage = this.gameObject.GetComponent<Image>();
         updateItem(null);
         selectedItem = GameObject.Find("SelectedItem").GetComponent<UIItem>();
+        toolTipObject = GameObject.Find("ItemToolTip");
+        toolTip = GameObject.Find("ItemToolTipText").GetComponent<ItemToolTip>();
     }
 }

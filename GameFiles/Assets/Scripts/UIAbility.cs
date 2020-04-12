@@ -115,4 +115,14 @@ public class UIAbility : UISkill
             abilityImage.color = Color.white;
         }
     }
+
+    public override void OnPointerEnter(PointerEventData eventData)
+    {
+
+    }
+
+    public override void OnPointerExit(PointerEventData eventData)
+    {
+
+    }
 }

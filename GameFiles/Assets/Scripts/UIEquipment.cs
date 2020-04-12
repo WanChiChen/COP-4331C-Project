@@ -8,6 +8,8 @@ public class UIEquipment : UIItem
 {
     public int index;
     public PlayerEquip playerEquip;
+    GameObject toolTipObject;
+    ItemToolTip toolTip;
 
     private void Awake()
     {
@@ -15,6 +17,8 @@ public class UIEquipment : UIItem
         updateItem(null);
         selectedItem = GameObject.Find("SelectedItem").GetComponent<UIItem>();
         playerEquip = GameObject.Find("Player").GetComponent<PlayerEquip>();
+        toolTipObject = GameObject.Find("ItemToolTip");
+        toolTip = GameObject.Find("ItemToolTipText").GetComponent<ItemToolTip>();
     }
     public override void OnPointerClick(PointerEventData eventData)
     {
@@ -72,5 +76,19 @@ public class UIEquipment : UIItem
     void Update()
     {
         
+    }
+
+    public override void OnPointerEnter(PointerEventData eventData)
+    {
+        if (this.item != null)
+        {
+            toolTipObject.SetActive(true);
+            toolTip.generateToolTip(this.item);
+        }
+    }
+
+    public override void OnPointerExit(PointerEventData eventData)
+    {
+        toolTipObject.SetActive(false);
     }
 }
