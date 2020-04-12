@@ -12,7 +12,6 @@ public class UIInventory : MonoBehaviour
 
     private void Awake()
     {
-        
         for (int i=0;i<slotNum;i++)
         {
             GameObject instance = Instantiate(slotPrefab);
@@ -23,19 +22,26 @@ public class UIInventory : MonoBehaviour
 
     private void Start()
     {
+        StartCoroutine(closeInventory());
         if (Variables.GameLevel > 0)
         {
             updateGUI();
         }
     }
 
+    IEnumerator closeInventory()
+    {
+        float wait = 1;
+        Debug.LogError(wait);
+        yield return new WaitForSecondsRealtime(wait);
+        this.gameObject.SetActive(false);
+    }
+
     public void updateGUI()
     {
         for(int i=0;i<slotNum;i++)
         {
-            Debug.LogError("update1" + Variables.uiItems[0].item);
             uiItems[i].updateItem(Variables.uiItems[i].item);
-            Debug.LogError("update2" + Variables.uiItems[0].item);
         }
     }
 
@@ -43,7 +49,6 @@ public class UIInventory : MonoBehaviour
     {
         uiItems[slot].updateItem(item);
         Variables.uiItems = uiItems;
-        Debug.LogError("UI3: " + Variables.uiItems[0]);
     }
 
     public void addItem(Item item)

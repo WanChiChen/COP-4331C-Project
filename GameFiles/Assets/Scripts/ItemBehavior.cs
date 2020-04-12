@@ -19,10 +19,12 @@ public class ItemBehavior : MonoBehaviour
     {
         if(collision.gameObject == player)
         {
+            Debug.LogError("Collided with player");
             inventory.collectItem(id);
             Destroy(this.gameObject);
+            Debug.LogError("Destroyed");
         }
-        Debug.Log("Collided with player");
+        
     }
     void Awake()
     {

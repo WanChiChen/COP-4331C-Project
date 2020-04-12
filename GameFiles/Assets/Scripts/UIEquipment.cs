@@ -68,7 +68,7 @@ public class UIEquipment : UIItem
     // Start is called before the first frame update
     void Start()
     {
-        updateItem(null);
+        updateItem(playerEquip.equippedItems[index]);
     }
 
     // Update is called once per frame

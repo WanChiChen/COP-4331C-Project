@@ -10,13 +10,19 @@ public class Inventory : MonoBehaviour
     public List<Item> characterItems = new List<Item>();
     public ItemDatabase itemDB;
     public UIInventory ui;
-    
+
+    private void Awake()
+    {
+        ui = GameObject.Find("InventoryPanel").GetComponent<UIInventory>();
+    }
+
     public void collectItem(int id)
     {
         Item itemToAdd = itemDB.getItem(id);
         ui.addItem(itemToAdd);
+        Debug.LogError("ui item added:" + id);
         characterItems.Add(itemToAdd);
-        Debug.Log("Item added:" + id);
+        Debug.LogError("Character Item added:" + id);
     }
 
     public void collectItem(string id)

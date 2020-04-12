@@ -9,6 +9,7 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
     public Item item;
     public Image itemImage;
     public UIItem selectedItem;
+    public UIInventory ui;
     GameObject toolTipObject;
     ItemToolTip toolTip;
 
@@ -70,6 +71,7 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
         {
             updateItem(null);
         }
+        selectedItem.updateItem(null);
     }
 
     private void Awake()
@@ -78,5 +80,6 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
         selectedItem = GameObject.Find("SelectedItem").GetComponent<UIItem>();
         toolTipObject = GameObject.Find("ItemToolTip");
         toolTip = GameObject.Find("ItemToolTipText").GetComponent<ItemToolTip>();
+        ui = GameObject.Find("InventoryPanel").GetComponent<UIInventory>();
     }
 }

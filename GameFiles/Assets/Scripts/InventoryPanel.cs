@@ -9,7 +9,7 @@ public class InventoryPanel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ui.gameObject.SetActive(!ui.gameObject.activeSelf);
+
     }
 
     // Update is called once per frame
