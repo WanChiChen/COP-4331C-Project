@@ -15,6 +15,7 @@ TagManager:
   - Network
   - AbilityDB
   - Enemy
+  - Exit
   layers:
   - Default
   - TransparentFX

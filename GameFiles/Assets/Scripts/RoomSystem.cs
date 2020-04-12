@@ -201,42 +201,42 @@ public class RoomSystem : MonoBehaviour
 
             if(rand < 30)
             {
-                GameObject currentLayout = Instantiate(enemyConfigsPriority[0], rooms[i].GetComponent<Transform>().position, Quaternion.identity);
+                GameObject currentLayout = Instantiate(enemyConfigsPriority[0], rooms[i].GetComponent<Transform>().position + new Vector3(0, 3, 0), Quaternion.identity);
             }
 
             else if(rand >= 30 && rand < 50)
             {
-                GameObject currentLayout = Instantiate(enemyConfigsPriority[1], rooms[i].GetComponent<Transform>().position, Quaternion.identity);
+                GameObject currentLayout = Instantiate(enemyConfigsPriority[1], rooms[i].GetComponent<Transform>().position + new Vector3(0, 3, 0), Quaternion.identity);
             }
 
             else if(rand >= 50 && rand < 65)
             {
-                GameObject currentLayout = Instantiate(enemyConfigsPriority[2], rooms[i].GetComponent<Transform>().position, Quaternion.identity);
+                GameObject currentLayout = Instantiate(enemyConfigsPriority[2], rooms[i].GetComponent<Transform>().position + new Vector3(0, 3, 0), Quaternion.identity);
             }
 
             else if(rand >= 65 && rand < 75)
             {
-                GameObject currentLayout = Instantiate(enemyConfigsPriority[3], rooms[i].GetComponent<Transform>().position, Quaternion.identity);
+                GameObject currentLayout = Instantiate(enemyConfigsPriority[3], rooms[i].GetComponent<Transform>().position + new Vector3(0, 3, 0), Quaternion.identity);
             }
 
             else if(rand >= 75 && rand < 83)
             {
-                GameObject currentLayout = Instantiate(enemyConfigsPriority[4], rooms[i].GetComponent<Transform>().position, Quaternion.identity);
+                GameObject currentLayout = Instantiate(enemyConfigsPriority[4], rooms[i].GetComponent<Transform>().position + new Vector3(0, 3, 0), Quaternion.identity);
             }
 
             else if(rand >= 83 && rand < 90)
             {
-                GameObject currentLayout = Instantiate(enemyConfigsPriority[5], rooms[i].GetComponent<Transform>().position, Quaternion.identity);
+                GameObject currentLayout = Instantiate(enemyConfigsPriority[5], rooms[i].GetComponent<Transform>().position + new Vector3(0, 3, 0), Quaternion.identity);
             }
 
             else if(rand >= 90 && rand < 96)
             {
-                GameObject currentLayout = Instantiate(enemyConfigsPriority[6], rooms[i].GetComponent<Transform>().position, Quaternion.identity);
+                GameObject currentLayout = Instantiate(enemyConfigsPriority[6], rooms[i].GetComponent<Transform>().position + new Vector3(0, 3, 0), Quaternion.identity);
             }
 
             else if(rand >= 96)
             {
-                GameObject currentLayout = Instantiate(enemyConfigsPriority[7], rooms[i].GetComponent<Transform>().position, Quaternion.identity);
+                GameObject currentLayout = Instantiate(enemyConfigsPriority[7], rooms[i].GetComponent<Transform>().position + new Vector3(0, 3, 0), Quaternion.identity);
             }
         }
     }
