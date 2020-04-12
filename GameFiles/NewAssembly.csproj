@@ -168,6 +168,8 @@
     <Compile Include="Assets\Scripts\Item.cs" />
     <Compile Include="Assets\Scripts\ItemBehavior.cs" />
     <Compile Include="Assets\Scripts\ItemDatabase.cs" />
+    <Compile Include="Assets\Scripts\ItemToolTip.cs" />
+    <Compile Include="Assets\Scripts\LoadingScreen.cs" />
     <Compile Include="Assets\Scripts\MainCamera.cs" />
     <Compile Include="Assets\Scripts\NeuralNetwork.cs" />
     <Compile Include="Assets\Scripts\PlayerAbilities.cs" />

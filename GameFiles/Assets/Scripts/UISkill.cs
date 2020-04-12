@@ -73,7 +73,7 @@ public class UISkill : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler
         bar = GameObject.Find("AbilityBarPanel").GetComponent<UIAbilityBar>();
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
+    public virtual void OnPointerEnter(PointerEventData eventData)
     {
         toolTipObject.SetActive(true);
         if (this.ability != null)
@@ -82,7 +82,7 @@ public class UISkill : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler
         }
     }
 
-    public void OnPointerExit(PointerEventData eventData)
+    public virtual void OnPointerExit(PointerEventData eventData)
     {
         toolTipObject.SetActive(false);
     }

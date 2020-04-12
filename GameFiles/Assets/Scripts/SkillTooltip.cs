@@ -12,6 +12,10 @@ public class SkillTooltip : MonoBehaviour
     {
         toolTip = this.gameObject.GetComponent<Text>();
         toolTipObject = GameObject.Find("SkillToolTip");
+    }
+
+    private void Start()
+    {
         toolTipObject.SetActive(false);
     }
 
@@ -25,6 +29,7 @@ public class SkillTooltip : MonoBehaviour
     {
         string stats="";
         string description="";
+        string cost = "Cost: " + ability.cost;
         if(ability.type == 0)
         {
             stats = "Base Health Increase: " + ability.modifiers[0] +
@@ -47,7 +52,7 @@ public class SkillTooltip : MonoBehaviour
             description = "Attack Ability. " + ability.description;
         }
 
-        toolTip.text = (ability.title + "\n" + description + "\n" + stats);
+        toolTip.text = (ability.title + "\n" + description + "\n" + stats + "\n" + cost);
 
     }
 }

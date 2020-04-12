@@ -41,7 +41,7 @@ public class ExitScript : MonoBehaviour
         {
             progress.updateProgress();
             Variables.GameLevel = Variables.GameLevel + 1;
-            SceneManager.LoadScene("SampleScene");  // Load new level
+            SceneManager.LoadScene(1);  // Load new level
             progress.enteredPortal = true;
         }
     }
